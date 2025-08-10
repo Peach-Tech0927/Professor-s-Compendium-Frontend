@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
+import { MenuIcon } from "lucide-react";
 
 export default function Home() {
-  return <Button>Click me</Button>;
+  return <MenuIcon />;
 }
