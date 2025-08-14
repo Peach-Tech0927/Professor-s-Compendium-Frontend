@@ -1,9 +1,11 @@
 [
+    
     {
-    "PK": "FACULTIES",
+    "PK": "FACULTIES", 
     "SK": "FACULTY#KEIZAI",
     "facultyName": "経済学部",
     "facultyDescription": "現代社会の経済を多角的に学ぶ。",
+    "FacultyImage":"https://hoeghogee",
     "departments": [
       {
         "name": "経済経営学科",
@@ -16,6 +18,7 @@
     "SK": "FACULTY#BUNGAKU",
     "facultyName": "文学部",
     "facultyDescription": "文化と人間を深く探求する。",
+    "FacultyImage":"https://hoeghogee",
     "departments": [
       {
         "name": "日本文学科",
@@ -27,6 +30,8 @@
       }
     ]
   },
+
+
   {
     "PK": "FACULTY#KEIZAI",
     "SK": "PROF#TANAKA",
@@ -36,7 +41,7 @@
     "mainPhoto": "https://example.com/photos/tanaka_main.jpg",
     "hoverPhoto": "https://example.com/photos/tanaka_hover.jpg",
     "researchTheme": "行動経済学の応用",
-    "officeLocation": "3号館 501研究室"
+    "officeLocation": "3-501"
   },
   {
     "PK": "FACULTY#KEIZAI",
@@ -47,16 +52,27 @@
     "mainPhoto": "https://example.com/photos/suzuki_main.jpg",
     "hoverPhoto": "https://example.com/photos/suzuki_hover.jpg",
     "researchTheme": "国際金融論",
-    "officeLocation": "3号館 502研究室"
+    "officeLocation": "3-502"
   },
+
+
   {
     "PK": "PROF#TANAKA",
     "SK": "METADATA",
     "professorName": "田中 太郎",
+    "professorNameRoma":"tanaka taro",
+    "post":"教授",
+    "ResearchField":"平安時代の文学",
     "socialLinks": {
       "x": "https://x.com/prof_tanaka",
       "facebook": "https://facebook.com/prof_tanaka"
+    }
     },
+
+
+    {
+    "PK": "PROF#TANAKA",
+    "SK": "PROFILE",
     "profileText": "私の専門は行動経済学です...",
     "profileImages": [
       "https://example.com/photos/tanaka_profile1.jpg",
@@ -75,6 +91,8 @@
       }
     ]
   },
+
+
   {
     "PK": "PROF#TANAKA",
     "SK": "COURSE#EC101",
@@ -84,7 +102,8 @@
     "style": "講義形式",
     "relatedQualification": "公認会計士（一部）",
     "targetGrade": ["1年生","2年生"],
-    "courseCode": "EC101"
+    "courseCode": "EC101",
+    "syllabusLinkUrl":"https://hogehoge"
   },
   {
     "PK": "PROF#TANAKA",
@@ -95,8 +114,11 @@
     "learningStyle": "演習・講義",
     "relatedQualification": null,
     "targetGrade": ["3年生以上"],
-    "courseCode": "EC305"
+    "courseCode": "EC305",
+    "syllabusLinkUrl":"https://hogehoge"
   },
+
+
   {
     "PK": "PROF#TANAKA",
     "SK": "SEMINAR",
@@ -117,11 +139,13 @@
       { "period": "4-7月", "task": "テーマ設定と文献調査" },
       { "period": "9-12月", "task": "中間発表と論文執筆" }
     ],
-    "activityDay": "毎週水曜日 5限",
+    "activityDay": ["水曜日 5限","金曜日 2限"],
     "keywords": ["実践的", "英語文献", "データ分析"],
     "graduateThemes": ["SNSが購買意欲に与える影響", "ナッジ理論を用いた食品ロス削減"],
     "youtubeUrl": "https://www.youtube.com/embed/xxxxx"
   },
+
+
   {
     "PK": "PROF#TANAKA",
     "SK": "PERSONAL",
@@ -141,8 +165,13 @@
       "text": "学生からは「話好き」とよく言われます。",
       "photo": "https://example.com/photos/tanaka_personality.jpg"
     },
+    "StudentDays":{
+      "text":"学生時代は勉強していました",
+      "photo":"https://example.com/photos/tanaka_student.jpg"
+    },
     "youtubeUrl": "https://www.youtube.com/embed/yyyyy"
   },
+  
   {
     "PK": "PROF#TANAKA",
     "SK": "KEYWORD#実践的",
