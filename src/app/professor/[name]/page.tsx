@@ -1,12 +1,13 @@
 import mockData from "@/data/mock-db.json";
 import ClientProfessorPage from "./page.client";
 
-export default function ProfessorPage({
+export default async function ProfessorPage({
   params,
 }: {
-  params: { name: string };
+  params: Promise<{ name: string }>;
 }) {
-  const professorId = params.name;
+  const { name } = await params;
+  const professorId = name;
 
   // mockdataから教授の基本情報を取得
   const basicInfo = mockData.find(
