@@ -1,40 +1,69 @@
+import Image from 'next/image'
 
-import { Card } from "@/components/ui/card"
-import Image from "next/image"
+interface Department {
+  name: string;
+  englishName: string;
+}
 
 interface FacultyCardProps {
-  title?: string
-  description?: string
-  imageSrc?: string
-  imageAlt?: string
+  facultyName: string;
+  facultyDescription: string;
+  FacultyImage: string;
+  departments: Department[];
 }
 
 export default function FacultyCard({ 
-  title = "タイトル", 
-  description = "ここにテキストの内容が入ります。画像と横並びで表示されます。長いテキストでも適切に調整されます。",
-  imageSrc = "/your-image.jpg",
-  imageAlt = "説明画像"
+  facultyName, 
+  facultyDescription, 
+  FacultyImage, 
+  departments 
 }: FacultyCardProps) {
   return (
-    <Card className="p-6">
-      <div className="flex items-center gap-6">
+    <div className=" w-full bg-white rounded-lg shadow-lg ">
+      {/* デスクトップ：横並び、モバイル：縦並び */}
+      <div className="flex flex-col lg:flex-row">
+        {/* カード内容（左側） */}
+        <div className="bg-blue-200 flex-1 p-6 lg:p-8">
         <div className="flex-1">
-          <h2 className="text-2xl font-bold mb-2">{title}</h2>
-          <p className="text-muted-foreground">
-            {description}
+          <h2 className="text-2xl font-bold text-gray-800 ">
+            {facultyName}
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            {facultyDescription}
           </p>
         </div>
-        
-        <div className="flex-shrink-0 w-[20vw] min-w-[150px] max-w-[250px]">
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            width={200}
-            height={150}
-            className="rounded-lg w-full h-auto object-cover aspect-[4/3]"
-          />
+      </div>
+        {/* 写真と学科一覧（右側） */}
+        <div className="w-full lg:w-96 flex-shrink-0 p-6"> 
+          {/* 写真コンポーネント */}
+          <div className="relative h-48 w-full mb-4">
+            <Image 
+              src={FacultyImage} 
+              alt={facultyName}
+              fill
+              className="object-cover rounded-lg"
+              sizes="(max-width: 1024px) 100vw, 384px"
+            />
+          </div>
+          
+          {/* 学科一覧 */}
+          <div className="space-y-2">
+            <h3 className="text-lg font-semibold text-gray-700 mb-2">
+              学科一覧
+            </h3>
+            {departments.map((dept, index) => (
+              <div key={index} className="border-l-4 border-blue-500 pl-3 py-1">
+                <div className="font-medium text-gray-800">
+                  {dept.name}
+                </div>
+                <div className="text-sm text-gray-500 break-words leading-relaxed">
+                  {dept.englishName}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </Card>
+    </div>
   )
 }
