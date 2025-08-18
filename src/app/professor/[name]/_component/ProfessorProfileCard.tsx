@@ -26,8 +26,8 @@ const ProfessorProfileCard: React.FC<ProfessorProfileCardProps> = ({
   mainPhotoUrl,
 }) => {
   return (
-    <div className="flex justify-center m-20">
-      <div className="flex border-1 border-[#D5A5A5] rounded-2xl overflow-hidden relative">
+    <div className="flex justify-center m-4 md:m-20">
+      <div className="flex flex-col md:flex-row border-1 border-[#D5A5A5] rounded-2xl overflow-hidden relative w-full md:w-auto">
         <Link href={xLink}>
           <Image
             src={"/xIcon.png"}
@@ -46,7 +46,7 @@ const ProfessorProfileCard: React.FC<ProfessorProfileCardProps> = ({
             className="absolute bottom-4 right-19"
           />
         </Link>
-        <div className="bg-[#f3c4c5] px-10 py-3">
+        <div className="bg-[#f3c4c5] px-4 justify-center flex md:px-10 py-3">
           <Image
             src={mainPhotoUrl}
             alt={professorName}
@@ -54,10 +54,10 @@ const ProfessorProfileCard: React.FC<ProfessorProfileCardProps> = ({
             height={300}
           />
         </div>
-        <div className="bg-[#fffafa] py-4 pl-20 pr-80 py-10">
-          <p className="text-6xl mt-7">{professorName}</p>
+        <div className="bg-[#fffafa] py-4 px-6 md:pl-20 md:pr-80 md:py-10">
+          <p className="text-4xl md:text-6xl mt-7">{professorName}</p>
           <p
-            className="text-4xl mb-4 tracking-wide"
+            className="text-2xl md:text-4xl mb-4 tracking-wide"
             style={{ fontFamily: "var(--font-roboto-slab)" }}
           >
             {professorNameRoma}
