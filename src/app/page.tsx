@@ -1,4 +1,3 @@
-import ProfessorProfileCard from "@/app/professor/[name]/_component/ProfessorProfileCard";
 import { MenuIcon } from "lucide-react";
 
 export default function Home() {
