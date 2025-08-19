@@ -1,0 +1,192 @@
+[
+  {
+    "PK": "FACULTIES",
+    "SK": "FACULTY#KEIZAI",
+    "facultyName": "経済学部",
+    "facultyDescription": "現代社会の経済を多角的に学ぶ。",
+    "FacultyImage": "https://hoeghogee",
+    "departments": [
+      {
+        "name": "経済経営学科",
+        "englishName": "Department of Economics and Management"
+      }
+    ]
+  },
+  {
+    "PK": "FACULTIES",
+    "SK": "FACULTY#BUNGAKU",
+    "facultyName": "文学部",
+    "facultyDescription": "文化と人間を深く探求する。",
+    "FacultyImage": "https://hoeghogee",
+    "departments": [
+      {
+        "name": "日本文学科",
+        "englishName": "Department of Japanese Literature"
+      },
+      {
+        "name": "英米文学科",
+        "englishName": "Department of English and American Literature"
+      }
+    ]
+  },
+
+  {
+    "PK": "FACULTY#KEIZAI",
+    "SK": "PROF#TANAKA",
+    "professorName": "田中 太郎",
+    "yomigana": "たなか たろう",
+    "department": "経済経営学科",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "https://example.com/photos/tanaka_hover.jpg",
+    "researchTheme": "行動経済学の応用",
+    "officeLocation": "3-501"
+  },
+  {
+    "PK": "FACULTY#KEIZAI",
+    "SK": "PROF#SUZUKI",
+    "professorName": "鈴木 一郎",
+    "yomigana": "すずき いちろう",
+    "department": "経済経営学科",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "https://example.com/photos/suzuki_hover.jpg",
+    "researchTheme": "国際金融論",
+    "officeLocation": "3-502"
+  },
+
+  {
+    "PK": "PROF#TANAKA",
+    "SK": "METADATA",
+    "professorName": "田中 太郎",
+    "professorNameRoma": "tanaka taro",
+    "post": "教授",
+    "ResearchField": "平安時代の文学",
+    "socialLinks": {
+      "x": "https://x.com/prof_tanaka",
+      "facebook": "https://facebook.com/prof_tanaka"
+    }
+  },
+
+  {
+    "PK": "PROF#TANAKA",
+    "SK": "PROFILE",
+    "profileText": "私の専門は行動経済学です...",
+    "profileImages": [
+      "https://example.com/photos/tanaka_profile1.jpg",
+      "https://example.com/photos/tanaka_profile2.jpg"
+    ],
+    "careerHistory": [
+      {
+        "year": "2010年",
+        "event": "〇〇大学 経済学部 卒業",
+        "photo": "https://example.com/photos/tanaka_career1.jpg"
+      },
+      {
+        "year": "2015年",
+        "event": "△△大学院 博士課程修了",
+        "photo": null
+      }
+    ]
+  },
+
+  {
+    "PK": "PROF#TANAKA",
+    "SK": "COURSE#EC101",
+    "courseName": "ミクロ経済学入門",
+    "description": "経済学の基本的な考え方を学びます。",
+    "learningPoints": "市場のメカニズムを理解する",
+    "style": "講義形式",
+    "relatedQualification": "公認会計士（一部）",
+    "targetGrade": ["1年生", "2年生"],
+    "courseCode": "EC101",
+    "syllabusLinkUrl": "https://hogehoge"
+  },
+  {
+    "PK": "PROF#TANAKA",
+    "SK": "COURSE#EC305",
+    "courseName": "ゲーム理論",
+    "description": "戦略的意思決定を数理的に分析します。",
+    "learningPoints": "交渉力・分析力を養う",
+    "learningStyle": "演習・講義",
+    "relatedQualification": null,
+    "targetGrade": ["3年生以上"],
+    "courseCode": "EC305",
+    "syllabusLinkUrl": "https://hogehoge"
+  },
+
+  {
+    "PK": "PROF#TANAKA",
+    "SK": "SEMINAR",
+    "seminarName": "田中太郎 研究会",
+    "description": "行動経済学の理論を実践に応用するゼミです。",
+    "descriptionImage": "https://example.com/photos/seminar_main.jpg",
+    "appealPoint": {
+      "text": "毎年、企業と連携したプロジェクトを実施しています。",
+      "image": ["https://example.com/photos/seminar_appeal.jpg"]
+    },
+    "researchProcess": [
+      {
+        "text": "前期は基礎文献の輪読を行います。",
+        "image": "https://example.com/photos/seminar_proc1.jpg"
+      }
+    ],
+    "annualSchedule": [
+      { "period": "4-7月", "task": "テーマ設定と文献調査" },
+      { "period": "9-12月", "task": "中間発表と論文執筆" }
+    ],
+    "activityDay": ["水曜日 5限", "金曜日 2限"],
+    "keywords": ["実践的", "英語文献", "データ分析"],
+    "graduateThemes": [
+      "SNSが購買意欲に与える影響",
+      "ナッジ理論を用いた食品ロス削減"
+    ],
+    "youtubeUrl": "https://www.youtube.com/embed/xxxxx"
+  },
+
+  {
+    "PK": "PROF#TANAKA",
+    "SK": "PERSONAL",
+    "hobby": {
+      "text": "週末はロードバイクで遠出するのが趣味です。",
+      "photo": "https://example.com/photos/tanaka_hobby.jpg"
+    },
+    "occupationalHazard": {
+      "text": "スーパーに行くとつい商品の価格設定を分析してしまいます。",
+      "photo": "https://example.com/photos/tanaka_job.jpg"
+    },
+    "favoriteFood": {
+      "text": "好きな食べ物はカレーです。特にスパイスから作るのが好き。",
+      "photo": "https://example.com/photos/tanaka_food.jpg"
+    },
+    "personality": {
+      "text": "学生からは「話好き」とよく言われます。",
+      "photo": "https://example.com/photos/tanaka_personality.jpg"
+    },
+    "StudentDays": {
+      "text": "学生時代は勉強していました",
+      "photo": "https://example.com/photos/tanaka_student.jpg"
+    },
+    "youtubeUrl": "https://www.youtube.com/embed/yyyyy"
+  },
+
+  {
+    "PK": "PROF#TANAKA",
+    "SK": "KEYWORD#実践的",
+    "GSI1PK": "KEYWORD#実践的",
+    "professorId": "TANAKA",
+    "professorName": "田中 太郎"
+  },
+  {
+    "PK": "PROF#TANAKA",
+    "SK": "KEYWORD#英語文献",
+    "GSI1PK": "KEYWORD#英語文献",
+    "professorId": "TANAKA",
+    "professorName": "田中 太郎"
+  },
+  {
+    "PK": "PROF#TANAKA",
+    "SK": "KEYWORD#データ分析",
+    "GSI1PK": "KEYWORD#データ分析",
+    "professorId": "TANAKA",
+    "professorName": "田中 太郎"
+  }
+]
