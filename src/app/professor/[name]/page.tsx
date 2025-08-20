@@ -50,11 +50,11 @@ export default async function ProfessorPage({
     />
     <div className="flex justify-center items-center">
         <Tabs defaultValue="account" className="display flex justify-center items-center">
-            <TabsList>
-                <TabsTrigger value="profile" className="px-4">プロフィール</TabsTrigger>
-                <TabsTrigger value="course" className="px-4">担当授業</TabsTrigger>
-                <TabsTrigger value="seminor-info" className="px-4">ゼミ情報</TabsTrigger>
-                <TabsTrigger value="personal" className="px-4">パーソナル</TabsTrigger>
+            <TabsList className="grid grid-cols-4">
+                <TabsTrigger value="profile" className="flex-1">プロフィール</TabsTrigger>
+                <TabsTrigger value="course" className="flex-1">担当授業</TabsTrigger>
+                <TabsTrigger value="seminor-info" className="flex-1">ゼミ情報</TabsTrigger>
+                <TabsTrigger value="personal" className="flex-1">パーソナル</TabsTrigger>
             </TabsList>
             <TabsContent value="profile">ここはプロフィール画面です</TabsContent>
             <TabsContent value="course">ここは担当授業画面です</TabsContent>
