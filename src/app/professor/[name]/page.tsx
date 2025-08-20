@@ -50,7 +50,7 @@ export default async function ProfessorPage({
     />
     <div className="flex justify-center items-center">
         <Tabs defaultValue="account" className="display flex justify-center items-center">
-            <TabsList className="grid grid-cols-4">
+            <TabsList className="grid grid-cols-4 h-10">
                 <TabsTrigger value="profile" className="flex-1">プロフィール</TabsTrigger>
                 <TabsTrigger value="course" className="flex-1">担当授業</TabsTrigger>
                 <TabsTrigger value="seminor-info" className="flex-1">ゼミ情報</TabsTrigger>
