@@ -12,18 +12,6 @@ import { Sidebar, SidebarContent } from "@/components/ui/sidebar";
 
 // export default MenuIcon;
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <SidebarProvider>
-      <AppSidebar />
-      <main>
-        <SidebarTrigger />
-        {children}
-      </main>
-    </SidebarProvider>
-  );
-}
-
 export function AppSidebar() {
   return (
     <Sidebar>
