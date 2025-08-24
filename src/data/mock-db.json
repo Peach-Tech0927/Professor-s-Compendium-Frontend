@@ -69,10 +69,11 @@
   {
     "PK": "PROF#TANAKA",
     "SK": "PROFILE",
-    "profileText": "私の専門は行動経済学です...",
+    "profileText": "2015年から近世文学のゼミを担当しています。芭蕉とその弟子たちの活躍した元禄・宝永期の俳諧を中心に研究しています。『元禄江戸俳壇の研究―蕉風と元禄諸派の俳諧』（ぺりかん社、2015年）",
     "profileImages": [
-      "https://example.com/photos/tanaka_profile1.jpg",
-      "https://example.com/photos/tanaka_profile2.jpg"
+      "/ProfileExample.png",
+      "/ProfileExample.png",
+      "/ProfileExample.png"
     ],
     "careerHistory": [
       {
