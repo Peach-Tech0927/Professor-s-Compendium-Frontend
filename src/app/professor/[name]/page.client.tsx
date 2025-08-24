@@ -13,6 +13,8 @@ type ClientProfessorPageProps = {
   post: string;
   researchField: string;
   mainPhotoUrl: string;
+  profileText: string;
+  profileImages: string[];
 };
 
 const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
@@ -25,6 +27,8 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
   post,
   researchField,
   mainPhotoUrl,
+  profileText,
+  profileImages,
 }) => {
   return (
     <>
@@ -59,7 +63,10 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
             </TabsTrigger>
           </TabsList>
           <TabsContent value="profile" className="w-full">
-            <ProfileView />
+            <ProfileView
+              profileText={profileText}
+              profileImages={profileImages}
+            />
           </TabsContent>
           <TabsContent value="course" className="w-full">
             ここは担当授業画面です

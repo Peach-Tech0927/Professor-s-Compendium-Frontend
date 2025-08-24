@@ -1,7 +1,6 @@
 import mockData from "@/data/mock-db.json";
 import ClientProfessorPage from "./page.client";
 
-
 export default async function ProfessorPage({
   params,
 }: {
@@ -26,6 +25,11 @@ export default async function ProfessorPage({
     (item) => item.PK === `PROF#${professorId}` && item.SK === "SEMINAR"
   );
 
+  // プロフィール情報を取得
+  const profile = mockData.find(
+    (item) => item.PK === `PROF#${professorId}` && item.SK === "PROFILE"
+  );
+
   if (!basicInfo) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -36,17 +40,19 @@ export default async function ProfessorPage({
 
   return (
     <>
-    <ClientProfessorPage
-      xLink={metadata?.socialLinks?.x || ""}
-      facebookLink={metadata?.socialLinks?.facebook || ""}
-      professorName={metadata?.professorName || ""}
-      professorNameRoma={metadata?.professorNameRoma || ""}
-      faculty={"文学部"}
-      seminarName={seminar?.seminarName || ""}
-      post={metadata?.post || ""}
-      researchField={metadata?.ResearchField || ""}
-      mainPhotoUrl={basicInfo?.mainPhoto || ""}
-    />
+      <ClientProfessorPage
+        xLink={metadata?.socialLinks?.x || ""}
+        facebookLink={metadata?.socialLinks?.facebook || ""}
+        professorName={metadata?.professorName || ""}
+        professorNameRoma={metadata?.professorNameRoma || ""}
+        faculty={"文学部"}
+        seminarName={seminar?.seminarName || ""}
+        post={metadata?.post || ""}
+        researchField={metadata?.ResearchField || ""}
+        mainPhotoUrl={basicInfo?.mainPhoto || ""}
+        profileText={profile?.profileText || ""}
+        profileImages={profile?.profileImages || []}
+      />
     </>
   );
 }
