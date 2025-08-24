@@ -42,7 +42,7 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
       <div className="flex justify-center items-center">
         <Tabs
           defaultValue="account"
-          className="display flex justify-center items-center"
+          className="display flex justify-center items-center w-full"
         >
           <TabsList className="grid grid-cols-4 h-10 rounded-sm">
             <TabsTrigger value="profile" className="flex-1 rounded-sm">
@@ -58,12 +58,18 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
               パーソナル
             </TabsTrigger>
           </TabsList>
-          <TabsContent value="profile">
+          <TabsContent value="profile" className="w-full">
             <ProfileView />
           </TabsContent>
-          <TabsContent value="course">ここは担当授業画面です</TabsContent>
-          <TabsContent value="seminor-info">ここはゼミ情報です</TabsContent>
-          <TabsContent value="personal">ここはパーソナル情報です</TabsContent>
+          <TabsContent value="course" className="w-full">
+            ここは担当授業画面です
+          </TabsContent>
+          <TabsContent value="seminor-info" className="w-full">
+            ここはゼミ情報です
+          </TabsContent>
+          <TabsContent value="personal" className="w-full">
+            ここはパーソナル情報です
+          </TabsContent>
         </Tabs>
       </div>
     </>
