@@ -1,7 +1,5 @@
 import mockData from "@/data/mock-db.json";
 import ClientProfessorPage from "./page.client";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-
 
 export default async function ProfessorPage({
   params,
@@ -27,6 +25,11 @@ export default async function ProfessorPage({
     (item) => item.PK === `PROF#${professorId}` && item.SK === "SEMINAR"
   );
 
+  // プロフィール情報を取得
+  const profile = mockData.find(
+    (item) => item.PK === `PROF#${professorId}` && item.SK === "PROFILE"
+  );
+
   if (!basicInfo) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -37,31 +40,19 @@ export default async function ProfessorPage({
 
   return (
     <>
-    <ClientProfessorPage
-      xLink={metadata?.socialLinks?.x || ""}
-      facebookLink={metadata?.socialLinks?.facebook || ""}
-      professorName={metadata?.professorName || ""}
-      professorNameRoma={metadata?.professorNameRoma || ""}
-      faculty={"文学部"}
-      seminarName={seminar?.seminarName || ""}
-      post={metadata?.post || ""}
-      researchField={metadata?.ResearchField || ""}
-      mainPhotoUrl={basicInfo?.mainPhoto || ""}
-    />
-    <div className="flex justify-center items-center">
-        <Tabs defaultValue="account" className="display flex justify-center items-center">
-            <TabsList className="grid grid-cols-4 h-10 rounded-sm">
-                <TabsTrigger value="profile" className="flex-1 rounded-sm">プロフィール</TabsTrigger>
-                <TabsTrigger value="course" className="flex-1 rounded-sm">担当授業</TabsTrigger>
-                <TabsTrigger value="seminor-info" className="flex-1 rounded-sm">ゼミ情報</TabsTrigger>
-                <TabsTrigger value="personal" className="flex-1 rounded-sm">パーソナル</TabsTrigger>
-            </TabsList>
-            <TabsContent value="profile">ここはプロフィール画面です</TabsContent>
-            <TabsContent value="course">ここは担当授業画面です</TabsContent>
-            <TabsContent value="seminor-info">ここはゼミ情報です</TabsContent>
-            <TabsContent value="personal">ここはパーソナル情報です</TabsContent>
-        </Tabs>
-    </div>
+      <ClientProfessorPage
+        xLink={metadata?.socialLinks?.x || ""}
+        facebookLink={metadata?.socialLinks?.facebook || ""}
+        professorName={metadata?.professorName || ""}
+        professorNameRoma={metadata?.professorNameRoma || ""}
+        faculty={"文学部"}
+        seminarName={seminar?.seminarName || ""}
+        post={metadata?.post || ""}
+        researchField={metadata?.ResearchField || ""}
+        mainPhotoUrl={basicInfo?.mainPhoto || ""}
+        profileText={profile?.profileText || ""}
+        profileImages={profile?.profileImages || []}
+      />
     </>
   );
 }

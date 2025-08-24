@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import ProfessorCard from "@/components/professorCard";
 import { MenuIcon } from "lucide-react";
 
