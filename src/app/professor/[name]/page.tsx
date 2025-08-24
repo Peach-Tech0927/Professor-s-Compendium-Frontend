@@ -1,6 +1,5 @@
 import mockData from "@/data/mock-db.json";
 import ClientProfessorPage from "./page.client";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 
 export default async function ProfessorPage({
@@ -48,20 +47,6 @@ export default async function ProfessorPage({
       researchField={metadata?.ResearchField || ""}
       mainPhotoUrl={basicInfo?.mainPhoto || ""}
     />
-    <div className="flex justify-center items-center">
-        <Tabs defaultValue="account" className="display flex justify-center items-center">
-            <TabsList className="grid grid-cols-4 h-10 rounded-sm">
-                <TabsTrigger value="profile" className="flex-1 rounded-sm">プロフィール</TabsTrigger>
-                <TabsTrigger value="course" className="flex-1 rounded-sm">担当授業</TabsTrigger>
-                <TabsTrigger value="seminor-info" className="flex-1 rounded-sm">ゼミ情報</TabsTrigger>
-                <TabsTrigger value="personal" className="flex-1 rounded-sm">パーソナル</TabsTrigger>
-            </TabsList>
-            <TabsContent value="profile">ここはプロフィール画面です</TabsContent>
-            <TabsContent value="course">ここは担当授業画面です</TabsContent>
-            <TabsContent value="seminor-info">ここはゼミ情報です</TabsContent>
-            <TabsContent value="personal">ここはパーソナル情報です</TabsContent>
-        </Tabs>
-    </div>
     </>
   );
 }
