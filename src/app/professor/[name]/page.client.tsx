@@ -45,7 +45,7 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
       />
       <div className="flex justify-center items-center">
         <Tabs
-          defaultValue="account"
+          defaultValue="profile"
           className="display flex justify-center items-center w-full"
         >
           <TabsList className="grid grid-cols-4 h-10 rounded-sm">
