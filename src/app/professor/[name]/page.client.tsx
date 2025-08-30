@@ -2,7 +2,7 @@
 import ProfessorProfileCard from "./_component/ProfessorProfileCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProfileView from "./_component/ProfileView";
-
+import SeminorInfoView from "./_component/SeminorInfoView";
 type ClientProfessorPageProps = {
   xLink: string;
   facebookLink: string;
@@ -72,7 +72,7 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
             ここは担当授業画面です
           </TabsContent>
           <TabsContent value="seminor-info" className="w-full">
-            ここはゼミ情報です
+            <SeminorInfoView />
           </TabsContent>
           <TabsContent value="personal" className="w-full">
             ここはパーソナル情報です
