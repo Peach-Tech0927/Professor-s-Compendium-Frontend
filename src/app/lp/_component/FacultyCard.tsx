@@ -20,11 +20,11 @@ export default function FacultyCard({
   departments 
 }: FacultyCardProps) {
   return (
-    <div className=" w-3/5 bg-white rounded-lg shadow-lg">
+    <div className="w-full lg:w-1/2 p-4 bg-white rounded-lg shadow-lg">
       {/* デスクトップ：横並び、モバイル：縦並び */}
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row rounded-lg">
         {/* カード内容（左側） */}
-        <div className="bg-blue-200 w-full lg:w-96 p-6 lg:p-8">
+        <div className="bg-blue-200 w-full lg:w-96 p-6 lg:p-8 flex items-center">
         <div className="flex-1">
           <h2 className="text-2xl font-bold text-gray-800 mb-2 ">
             {facultyName}
