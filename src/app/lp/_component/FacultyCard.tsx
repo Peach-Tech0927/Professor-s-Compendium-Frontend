@@ -1,3 +1,4 @@
+import { Dice1 } from 'lucide-react';
 import Image from 'next/image'
 
 interface Department {
@@ -19,13 +20,13 @@ export default function FacultyCard({
   departments 
 }: FacultyCardProps) {
   return (
-    <div className=" w-full bg-white rounded-lg shadow-lg ">
+    <div className=" w-3/5 bg-white rounded-lg shadow-lg">
       {/* デスクトップ：横並び、モバイル：縦並び */}
       <div className="flex flex-col lg:flex-row">
         {/* カード内容（左側） */}
-        <div className="bg-blue-200 flex-1 p-6 lg:p-8">
+        <div className="bg-blue-200 w-full lg:w-96 p-6 lg:p-8">
         <div className="flex-1">
-          <h2 className="text-2xl font-bold text-gray-800 ">
+          <h2 className="text-2xl font-bold text-gray-800 mb-2 ">
             {facultyName}
           </h2>
           <p className="text-gray-600 leading-relaxed">
@@ -65,5 +66,6 @@ export default function FacultyCard({
         </div>
       </div>
     </div>
+    
   )
 }
