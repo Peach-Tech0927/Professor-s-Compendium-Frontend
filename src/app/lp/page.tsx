@@ -12,6 +12,18 @@ export default function LandingPage() {
             {
               name: "経済経営学科",
               englishName: "Department of Economics and Management"
+            },
+            {
+              name: "経済ファイナンス学科",
+              englishName: "Department of Economics and Finance"
+            },
+            {
+              name: "経済マネジメント学科",
+              englishName: "Department of Economics and Management"
+            },
+            {
+              name: "経済経済学科",
+              englishName: "Department of Economics and Management"
             }
           ]}
         />
