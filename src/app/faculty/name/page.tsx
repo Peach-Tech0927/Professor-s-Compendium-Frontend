@@ -1,5 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
-
 const FacultyPage = () => {
   return(
     <>
@@ -9,7 +7,7 @@ const FacultyPage = () => {
         <div className="absolute inset-0 bg-white/60" />
 
         <div className="relative flex items-center flex-col">
-          <h1 className="text-[5.5rem] font-bold">文学部</h1>
+          <h1 className="text-[5.5rem] font-bold pt-20">文学部</h1>
           <p className="mt-1 font-bold text-2xl font-serif tracking-tight">Faculty of Humanities</p>
           <p className="mt-10 font-normal max-w-2xl mb-10">説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文</p>
         </div>
