@@ -3,8 +3,8 @@ import { Geist, Geist_Mono, Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import {
   SidebarProvider,
-  SidebarTrigger,
   SidebarInset,
+  SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
 
@@ -42,7 +42,7 @@ export default function RootLayout({
         <SidebarProvider>
           <AppSidebar />
           <SidebarInset>
-            <div className="flex items-center p-4">
+            <div className="absolute top-4 left-4 z-20">
               <SidebarTrigger />
             </div>
             {children}
