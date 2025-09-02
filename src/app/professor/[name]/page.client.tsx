@@ -2,7 +2,7 @@
 import ProfessorProfileCard from "./_component/ProfessorProfileCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProfileView from "./_component/ProfileView";
-import SeminorInfoView from "./_component/SeminorInfoView";
+import SeminarInfoView from "./_component/SeminarInfoView";
 type ClientProfessorPageProps = {
   xLink: string;
   facebookLink: string;
@@ -15,6 +15,8 @@ type ClientProfessorPageProps = {
   mainPhotoUrl: string;
   profileText: string;
   profileImages: string[];
+  seminarDescription: string;
+  seminarDescriptionImage: string;
 };
 
 const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
@@ -29,6 +31,8 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
   mainPhotoUrl,
   profileText,
   profileImages,
+  seminarDescription,
+  seminarDescriptionImage,
 }) => {
   return (
     <>
@@ -72,9 +76,10 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
             ここは担当授業画面です
           </TabsContent>
           <TabsContent value="seminor-info" className="w-full">
-            <SeminorInfoView
-               profileText={profileText}
-               profileImages={profileImages}
+            <SeminarInfoView
+               seminarName={seminarName}
+               description={seminarDescription}
+               descriptionImage={seminarDescriptionImage}
              />
           </TabsContent>
           <TabsContent value="personal" className="w-full">
