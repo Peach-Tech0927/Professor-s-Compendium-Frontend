@@ -119,7 +119,7 @@
     "SK": "SEMINAR",
     "seminarName": "田中太郎 研究会",
     "description": "行動経済学の理論を実践に応用するゼミです。",
-    "descriptionImage": "https://example.com/photos/seminar_main.jpg",
+    "descriptionImage": "/ProfileExample.png",
     "appealPoint": {
       "text": "毎年、企業と連携したプロジェクトを実施しています。",
       "image": ["https://example.com/photos/seminar_appeal.jpg"]

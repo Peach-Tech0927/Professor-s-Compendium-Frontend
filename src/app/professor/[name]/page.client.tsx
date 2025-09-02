@@ -72,7 +72,10 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
             ここは担当授業画面です
           </TabsContent>
           <TabsContent value="seminor-info" className="w-full">
-            <SeminorInfoView />
+            <SeminorInfoView
+               profileText={profileText}
+               profileImages={profileImages}
+             />
           </TabsContent>
           <TabsContent value="personal" className="w-full">
             ここはパーソナル情報です
