@@ -19,7 +19,7 @@ export const CareerTimeline = ({
   return (
     <Timeline className="mt-8">
       {careerHistory.map((item, index) => (
-        <TimelineItem key={index} isEven={index % 2 === 1}>
+        <TimelineItem key={index} isEven={(index + 1) % 2 === 1}>
           <TimelineHeader>
             <TimelineTitle>{item.year}</TimelineTitle>
           </TimelineHeader>
