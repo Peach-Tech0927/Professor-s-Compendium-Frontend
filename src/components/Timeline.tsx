@@ -1,11 +1,13 @@
 import { cn } from "@/lib/utils";
 import React from "react";
+import Image from "next/image";
 
 export type TimelineItemType = {
   id: number;
   title: string;
   description?: string;
   time: string;
+  image?: string;
 };
 
 const Timeline = React.forwardRef<
@@ -25,8 +27,8 @@ const TimelineItem = React.forwardRef<
     className={cn(
       "group relative pb-8 w-full h-[200px]",
       isEven
-        ? "flex flex-col items-end pl-8 pr-[60%] before:absolute before:right-[48%] before:top-4 before:h-[2px] before:w-[7%] before:h-[1px] before:mr-15 before:bg-gray-200"
-        : "flex flex-col items-start pr-8 pl-[52%] before:absolute before:left-[48%] before:top-4 before:h-[2px] before:w-[7%] before:h-[1px] before:ml-15 before:bg-gray-200",
+        ? "flex flex-col items-end pl-8 pr-[60%] before:absolute before:right-[48%] before:top-3 before:h-[2px] before:w-[7%] before:h-[1px] before:mr-15 before:bg-gray-200"
+        : "flex flex-col items-start pr-8 pl-[52%] before:absolute before:left-[48%] before:top-3 before:h-[2px] before:w-[7%] before:h-[1px] before:ml-15 before:bg-gray-200",
       className
     )}
     {...props}
@@ -55,7 +57,7 @@ const TimelineTitle = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("text-xl font-bold text-primary ml-30", className)}
+    className={cn("text-xl font-bold text-primary ml-30 mr-83", className)}
     {...props}
   >
     {children}
@@ -78,10 +80,29 @@ const TimelineDescription = React.forwardRef<
 ));
 TimelineDescription.displayName = "TimelineDescription";
 
+const TimelineImage = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement> & { src?: string }
+>(({ className, src, ...props }, ref) => (
+  <div ref={ref} className={cn("ml-30 mt-4 mr-25", className)} {...props}>
+    {src && (
+      <Image
+        src={src}
+        alt="Timeline image"
+        width={300}
+        height={700}
+        className=" "
+      />
+    )}
+  </div>
+));
+TimelineImage.displayName = "TimelineImage";
+
 export {
   Timeline,
   TimelineItem,
   TimelineHeader,
   TimelineTitle,
   TimelineDescription,
+  TimelineImage,
 };
