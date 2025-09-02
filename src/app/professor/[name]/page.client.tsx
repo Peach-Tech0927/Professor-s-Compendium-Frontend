@@ -78,8 +78,8 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
           <TabsContent value="seminor-info" className="w-full">
             <SeminarInfoView
                seminarName={seminarName}
-               description={seminarDescription}
-               descriptionImage={seminarDescriptionImage}
+               seminarDescription={seminarDescription}
+               seminarDescriptionImage={seminarDescriptionImage}
              />
           </TabsContent>
           <TabsContent value="personal" className="w-full">
