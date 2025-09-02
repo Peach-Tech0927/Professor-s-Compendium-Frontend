@@ -4,7 +4,7 @@
     "SK": "FACULTY#KEIZAI",
     "facultyName": "経済学部",
     "facultyDescription": "現代社会の経済を多角的に学ぶ。",
-    "FacultyImage": "https://hoeghogee",
+    "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
     "departments": [
       {
         "name": "経済経営学科",
@@ -17,7 +17,7 @@
     "SK": "FACULTY#BUNGAKU",
     "facultyName": "文学部",
     "facultyDescription": "文化と人間を深く探求する。",
-    "FacultyImage": "https://hoeghogee",
+    "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
     "departments": [
       {
         "name": "日本文学科",
