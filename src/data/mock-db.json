@@ -79,12 +79,22 @@
       {
         "year": "2010年",
         "event": "〇〇大学 経済学部 卒業",
-        "photo": "https://example.com/photos/tanaka_career1.jpg"
+        "photo": "/ProfileExample.png"
       },
       {
         "year": "2015年",
         "event": "△△大学院 博士課程修了",
         "photo": null
+      },
+      {
+        "year": "2015年",
+        "event": "成蹊大学で〇〇として勤める。〇〇文学について学びを深める",
+        "photo": null
+      },
+      {
+        "year": "2015年",
+        "event": "成蹊大学で〇〇として勤める。〇〇文学について学びを深める",
+        "photo": "/ProfileExample.png"
       }
     ]
   },

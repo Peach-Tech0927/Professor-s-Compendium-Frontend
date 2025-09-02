@@ -17,6 +17,11 @@ type ClientProfessorPageProps = {
   profileImages: string[];
   seminarDescription: string;
   seminarDescriptionImage: string;
+  careerHistory: {
+    year: string;
+    event: string;
+    photo: string | null;
+  }[];
 };
 
 const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
@@ -33,6 +38,7 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
   profileImages,
   seminarDescription,
   seminarDescriptionImage,
+  careerHistory,
 }) => {
   return (
     <>
@@ -70,6 +76,7 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
             <ProfileView
               profileText={profileText}
               profileImages={profileImages}
+              careerHistory={careerHistory}
             />
           </TabsContent>
           <TabsContent value="course" className="w-full">
