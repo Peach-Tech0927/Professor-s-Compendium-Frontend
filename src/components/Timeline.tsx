@@ -95,7 +95,7 @@ const TimelineImage = React.forwardRef<
 >(({ className, src, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("mt-4", "ml-4", "sm:ml-30 sm:mr-25 w-full", className)}
+    className={cn("mt-4", "ml-4", "sm:ml-30 sm:mr-25 w-[300px]", className)}
     {...props}
   >
     {src && <Image src={src} alt="Timeline image" width={300} height={700} />}
