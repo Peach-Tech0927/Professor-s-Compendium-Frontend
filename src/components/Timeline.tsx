@@ -25,10 +25,14 @@ const TimelineItem = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "group relative pb-8 w-full h-[200px]",
-      isEven
-        ? "flex flex-col items-end pl-8 pr-[60%] before:absolute before:right-[48%] before:top-3 before:h-[2px] before:w-[7%] before:h-[1px] before:mr-15 before:bg-gray-200"
-        : "flex flex-col items-start pr-8 pl-[52%] before:absolute before:left-[48%] before:top-3 before:h-[2px] before:w-[7%] before:h-[1px] before:ml-15 before:bg-gray-200",
+      "group relative pb-8 w-full h-[300px] sm:h-[200px]",
+      "flex flex-col items-start pl-8",
+      {
+        "sm:pl-22 sm:pr-[60%] sm:before:absolute sm:before:right-[48%] sm:before:top-3 sm:before:h-[2px] sm:before:w-[7%] sm:before:h-[1px] sm:before:mr-15 sm:before:bg-gray-200":
+          isEven,
+        "sm:pr-8 sm:pl-[52%] sm:before:absolute sm:before:left-[48%] sm:before:top-3 sm:before:h-[2px] sm:before:w-[7%] sm:before:h-[1px] sm:before:ml-15 sm:before:bg-gray-200":
+          !isEven,
+      },
       className
     )}
     {...props}
@@ -43,7 +47,11 @@ const TimelineHeader = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "mb-1 flex flex-col items-start before:absolute before:left-1/2 before:h-full before:-translate-x-1/2 before:translate-y-3 before:self-start before:bg-[#ff8888] before:px-px after:absolute after:left-1/2 after:box-content after:h-2 after:w-2 after:-translate-x-1/2 after:translate-y-1.5 after:rounded-full after:border-4 after:border-none after:bg-[#ff8888] group-last:before:hidden sm:flex-row",
+      "mb-1 flex flex-col items-start",
+      // モバイル時は左寄せ
+      "before:absolute before:left-8 before:h-full before:-translate-x-1/2 before:translate-y-3 before:self-start before:bg-[#ff8888] before:px-px after:absolute after:left-8 after:box-content after:h-2 after:w-2 after:-translate-x-1/2 after:translate-y-1.5 after:rounded-full after:border-4 after:border-none after:bg-[#ff8888] group-last:before:hidden",
+      // PC時は中央
+      "sm:before:left-1/2 sm:after:left-1/2 sm:flex-row",
       className
     )}
     {...props}
@@ -57,7 +65,7 @@ const TimelineTitle = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("text-xl font-bold text-primary ml-30 mr-83", className)}
+    className={cn("text-xl font-bold text-primary sm:ml-30", "ml-4", className)}
     {...props}
   >
     {children}
@@ -72,7 +80,8 @@ const TimelineDescription = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "text-muted-foreground min-w-[300px] max-w-[400px] ml-30",
+      "text-muted-foreground",
+      "min-w-[250px] max-w-[300px] ml-4 sm:ml-30 sm:min-w-[300px] sm:max-w-[400px]",
       className
     )}
     {...props}
@@ -84,16 +93,12 @@ const TimelineImage = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & { src?: string }
 >(({ className, src, ...props }, ref) => (
-  <div ref={ref} className={cn("ml-30 mt-4 mr-25", className)} {...props}>
-    {src && (
-      <Image
-        src={src}
-        alt="Timeline image"
-        width={300}
-        height={700}
-        className=" "
-      />
-    )}
+  <div
+    ref={ref}
+    className={cn("mt-4", "ml-4", "sm:ml-30 sm:mr-25 w-full", className)}
+    {...props}
+  >
+    {src && <Image src={src} alt="Timeline image" width={300} height={700} />}
   </div>
 ));
 TimelineImage.displayName = "TimelineImage";
