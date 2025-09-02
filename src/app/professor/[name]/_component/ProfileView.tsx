@@ -3,7 +3,7 @@ import Image from "next/image";
 import { User, History } from "lucide-react";
 import { CareerTimeline } from "../_component/ CareerTimeline";
 
-interface ProfileViewProps {
+type ProfileViewProps = {
   profileText: string;
   profileImages: string[];
   careerHistory: {
@@ -11,7 +11,7 @@ interface ProfileViewProps {
     event: string;
     photo: string | null;
   }[];
-}
+};
 
 const ProfileView = ({ profileText, profileImages, careerHistory }: ProfileViewProps) => {
   return (
