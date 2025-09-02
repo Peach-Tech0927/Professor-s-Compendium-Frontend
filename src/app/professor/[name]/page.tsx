@@ -52,6 +52,7 @@ export default async function ProfessorPage({
         mainPhotoUrl={basicInfo?.mainPhoto || ""}
         profileText={profile?.profileText || ""}
         profileImages={profile?.profileImages || []}
+        careerHistory={profile?.careerHistory || []}
       />
     </>
   );

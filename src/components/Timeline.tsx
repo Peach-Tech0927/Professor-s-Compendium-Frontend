@@ -3,11 +3,9 @@ import React from "react";
 import Image from "next/image";
 
 export type TimelineItemType = {
-  id: number;
-  title: string;
-  description?: string;
-  time: string;
-  image?: string;
+  year: string;
+  event: string;
+  photo: string | null;
 };
 
 const Timeline = React.forwardRef<
