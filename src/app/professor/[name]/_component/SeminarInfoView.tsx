@@ -11,7 +11,7 @@ const SeminarInfoView= ({ seminarName, description, descriptionImage }: SeminarI
     return (
     <div className="mt-10">
       <HeadLine
-        icon={<FlaskConical className="w-10 h-10 " />}
+        icon={<FlaskConical className="w-10 h-10 "/>}
         title={seminarName}
       />
       <div className="flex flex-col lg:flex-row gap-5 lg:gap-10 mt-5">
