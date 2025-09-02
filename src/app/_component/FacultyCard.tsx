@@ -43,21 +43,11 @@ export default function FacultyCard({
             />
           </div>
           
-          <div className="space-y-2">
-            <h3 className="text-lg font-semibold mb-2">
-              学科一覧
-            </h3>
-            <div className="space-y-2">
-              {departments.map((dept, index) => (
-                <div key={index} className="border-l-4 border-[#5BA7E5] pl-3 py-1">
-                  <div className="font-medium text-gray-800">
-                    {dept.name}
-                  </div>
-                  <div className="text-sm text-gray-500 break-words leading-relaxed">
-                    {dept.englishName}
-                  </div>
-                </div>
-              ))}
+          <div>
+            <div className="border-l-4 border-[#5BA7E5] pl-3 py-1">
+              <div className="font-medium text-gray-800">
+                {departments.map(d => d.name).join(' / ')}
+              </div>
             </div>
           </div>    
         </div>

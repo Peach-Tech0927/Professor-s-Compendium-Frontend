@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import ProfessorCard from "@/components/professorCard";
 
 const FacultyPage = () => {
   return(
@@ -18,6 +19,7 @@ const FacultyPage = () => {
           <p className="mt-10 font-medium max-w-2xl">説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文</p>
         </div>
       </div>
+      <ProfessorCard />
     </>
   );
 };
