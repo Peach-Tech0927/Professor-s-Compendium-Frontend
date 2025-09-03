@@ -4,7 +4,7 @@
     "SK": "FACULTY#KEIZAI",
     "facultyName": "経済学部",
     "facultyDescription": "現代社会の経済を多角的に学ぶ。",
-    "FacultyImage": "https://hoeghogee",
+    "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
     "departments": [
       {
         "name": "経済経営学科",
@@ -17,7 +17,7 @@
     "SK": "FACULTY#BUNGAKU",
     "facultyName": "文学部",
     "facultyDescription": "文化と人間を深く探求する。",
-    "FacultyImage": "https://hoeghogee",
+    "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
     "departments": [
       {
         "name": "日本文学科",
@@ -79,12 +79,22 @@
       {
         "year": "2010年",
         "event": "〇〇大学 経済学部 卒業",
-        "photo": "https://example.com/photos/tanaka_career1.jpg"
+        "photo": "/ProfileExample.png"
       },
       {
         "year": "2015年",
         "event": "△△大学院 博士課程修了",
         "photo": null
+      },
+      {
+        "year": "2015年",
+        "event": "成蹊大学で〇〇として勤める。〇〇文学について学びを深める",
+        "photo": null
+      },
+      {
+        "year": "2015年",
+        "event": "成蹊大学で〇〇として勤める。〇〇文学について学びを深める",
+        "photo": "/ProfileExample.png"
       }
     ]
   },
@@ -118,8 +128,8 @@
     "PK": "PROF#TANAKA",
     "SK": "SEMINAR",
     "seminarName": "田中太郎 研究会",
-    "description": "行動経済学の理論を実践に応用するゼミです。",
-    "descriptionImage": "https://example.com/photos/seminar_main.jpg",
+    "description": "行動経済学の理論を実践に応用するゼミです。ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ",
+    "descriptionImage": "/ProfileExample.png",
     "appealPoint": {
       "text": "毎年、企業と連携したプロジェクトを実施しています。",
       "image": ["https://example.com/photos/seminar_appeal.jpg"]
