@@ -2,8 +2,6 @@
 import HeadLine from "@/components/HeadLine";
 import Image from "next/image";
 import { IdCard } from "lucide-react";
-import { text } from "stream/consumers";
-
 
 //パーソナル情報の各項目コンポーネント
 
