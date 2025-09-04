@@ -158,23 +158,23 @@
     "SK": "PERSONAL",
     "hobby": {
       "text": "週末はロードバイクで遠出するのが趣味です。",
-      "photo": "https://example.com/photos/tanaka_hobby.jpg"
+      "photo": "/ProfileExample.png"
     },
     "occupationalHazard": {
       "text": "スーパーに行くとつい商品の価格設定を分析してしまいます。",
-      "photo": "https://example.com/photos/tanaka_job.jpg"
+      "photo": "/ProfileExample.png"
     },
     "favoriteFood": {
       "text": "好きな食べ物はカレーです。特にスパイスから作るのが好き。",
-      "photo": "https://example.com/photos/tanaka_food.jpg"
+      "photo": "/ProfileExample.png"
     },
     "personality": {
       "text": "学生からは「話好き」とよく言われます。",
-      "photo": "https://example.com/photos/tanaka_personality.jpg"
+      "photo": "/ProfileExample.png"
     },
     "StudentDays": {
       "text": "学生時代は勉強していました",
-      "photo": "https://example.com/photos/tanaka_student.jpg"
+      "photo": "/ProfileExample.png"
     },
     "youtubeUrl": "https://www.youtube.com/embed/yyyyy"
   },
