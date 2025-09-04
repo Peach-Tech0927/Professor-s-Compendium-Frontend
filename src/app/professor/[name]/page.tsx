@@ -59,6 +59,9 @@ export default async function ProfessorPage({
         profileText={profile?.profileText || ""}
         profileImages={profile?.profileImages || []}
         personalData={(personal || {}) as ProfessorPersonalData}
+        seminarDescription={seminar?.description || ""}
+        seminarDescriptionImage={seminar?.descriptionImage || ""}
+        careerHistory={profile?.careerHistory || []}
       />
     </>
   );
