@@ -7,9 +7,8 @@ export default async function ProfessorPage({
 }: {
   params: { name: string };
 }) {
-  const professorId = params.name;
-  //const { name } = await params;
-  //const professorId = name;
+  const { name } = await params;
+  const professorId = name;
 
   // mockdataから教授の基本情報を取得
   const basicInfo = mockData.find(

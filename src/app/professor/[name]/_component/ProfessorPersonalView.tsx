@@ -16,21 +16,16 @@ type PersonalItemProps = {
 const PersonalItem: React.FC<PersonalItemProps> = ({ title, text, photo }: PersonalItemProps) => {
   return (
     <div className="p-4 m-4 max-w-md">
-      {/* テキスト表示エリア */}
       <div className="flex items-center mb-2 text-[#FF8888]">
         <span className="text-xl mr-2">◆</span>
         <h3 className="text-xl font-semibold">{title}</h3>
       </div>
       <p className="text-gray-700 leading-relaxed mb-4">{text}</p>
-      {/* 画像表示エリア */}
       <div className="w-full max-w-lg mx-auto">
         <Image
         /*一時的に画像を/ProfileExample.pngに変更*/
-          
-          /*src={photo}*/
-          src="/ProfileExample.png"
-
-        /*ここまで変更点*/
+          /*src="/ProfileExample.png"*/
+          src={photo}
           alt={`${title}の画像`}
           width={500}
           height={500}
@@ -57,7 +52,7 @@ export type ProfessorPersonalData = {
   youtubeUrl?: string;
 };
 
-interface ProfessorPersonalViewsProps {
+type ProfessorPersonalViewsProps = {
   personalData: ProfessorPersonalData;
 }
 
