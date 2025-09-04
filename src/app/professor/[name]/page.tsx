@@ -33,7 +33,7 @@ export default async function ProfessorPage({
 
   //パーソナル情報を取得
   const personal = mockData.find(
-    (item: any) => item.PK === `PROF#${professorId}` && item.SK === "PERSONAL"
+    (item) => item.PK === `PROF#${professorId}` && item.SK === "PERSONAL"
   );
 
   if (!basicInfo) {
