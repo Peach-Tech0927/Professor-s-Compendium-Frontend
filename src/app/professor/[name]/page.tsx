@@ -1,10 +1,11 @@
 import mockData from "@/data/mock-db.json";
 import ClientProfessorPage from "./page.client";
+import { ProfessorPersonalData } from "./_component/ProfessorPersonalView";
 
 export default async function ProfessorPage({
   params,
 }: {
-  params: Promise<{ name: string }>;
+  params: { name: string };
 }) {
   const { name } = await params;
   const professorId = name;
@@ -30,6 +31,11 @@ export default async function ProfessorPage({
     (item) => item.PK === `PROF#${professorId}` && item.SK === "PROFILE"
   );
 
+  //パーソナル情報を取得
+  const personal = mockData.find(
+    (item) => item.PK === `PROF#${professorId}` && item.SK === "PERSONAL"
+  );
+
   if (!basicInfo) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -52,6 +58,9 @@ export default async function ProfessorPage({
         mainPhotoUrl={basicInfo?.mainPhoto || ""}
         profileText={profile?.profileText || ""}
         profileImages={profile?.profileImages || []}
+        personalData={(personal || {}) as ProfessorPersonalData}
+        seminarDescription={seminar?.description || ""}
+        seminarDescriptionImage={seminar?.descriptionImage || ""}
         careerHistory={profile?.careerHistory || []}
       />
     </>

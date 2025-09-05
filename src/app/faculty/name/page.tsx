@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import ProfessorCard from "@/components/professorCard";
 
 const FacultyPage = () => {
