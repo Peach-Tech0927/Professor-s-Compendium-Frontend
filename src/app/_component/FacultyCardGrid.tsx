@@ -16,17 +16,9 @@ type FacultyData = {
 }
 
 export default function FacultyCardGrid() {
-  const facultyData = mockData.filter((item: any) => 
+  const facultyData = mockData.filter((item: { PK: string; facultyName?: string; facultyDescription?: string }) => 
     item.PK === "FACULTIES" && item.facultyName && item.facultyDescription
   ) as FacultyData[]
-
-  const uniqueFaculties = facultyData.reduce((acc: FacultyData[], current) => {
-    const existing = acc.find(faculty => faculty.facultyName === current.facultyName)
-    if (!existing) {
-      acc.push(current)
-    }
-    return acc
-  }, [])
 
   // 学部ごとの色マッピング
   const getFacultyColor = (facultyName: string): string => {
@@ -44,7 +36,7 @@ export default function FacultyCardGrid() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {uniqueFaculties.map((faculty) => (
+        {facultyData.map((faculty) => (
           <FacultyCard
             key={faculty.facultyName}
             facultyName={faculty.facultyName}
