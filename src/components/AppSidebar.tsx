@@ -3,6 +3,7 @@ import {
   SidebarContent,
   SidebarHeader,
 } from "@/components/ui/sidebar";
+import Image from "next/image";
 
 export function AppSidebar() {
   return (
@@ -10,11 +11,12 @@ export function AppSidebar() {
       <SidebarHeader>
         <div className="flex justify-center p-4">
           <div className="flex flex-col items-center">
-            <img
+            <Image
               src="/KariPeachKun.png"
+              width={150}
+              height={150}
               alt="ピーチくん"
               className="mb-2"
-              style={{ width: "75%" }}
             />
             <h1 className="text-3xl font-bold mb-2">
               成蹊大学
