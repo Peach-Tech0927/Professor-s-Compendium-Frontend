@@ -33,9 +33,13 @@ const LessonCard: React.FC<LessonCardProps> = ({ lesson }) => {
         <AccordionItem value="item-3">
           <AccordionTrigger className="text-md">関連する資格</AccordionTrigger>
           <AccordionContent className="flex flex-col gap-4">
-            <p className="text-gray-500 text-md">
-              {lesson.relatedQualification}
-            </p>
+            {lesson.relatedQualification ? (
+              <p className="text-gray-500 text-md">
+                {lesson.relatedQualification}
+              </p>
+            ) : (
+              <p className="text-gray-500 text-md">関連する資格はありません</p>
+            )}
           </AccordionContent>
         </AccordionItem>
       </Accordion>
