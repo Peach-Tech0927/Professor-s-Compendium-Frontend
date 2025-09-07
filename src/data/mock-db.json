@@ -129,6 +129,28 @@
     "researchTheme": "国際金融論",
     "officeLocation": "3-502"
   },
+  {
+    "PK": "FACULTY#KEIZAI",
+    "SK": "PROF#MORIMOTO",
+    "professorName": "森本 二郎",
+    "yomigana": "もりもと にちろう",
+    "department": "経済経営学科",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "https://example.com/photos/suzuki_hover.jpg",
+    "researchTheme": "国際金融論",
+    "officeLocation": "3-502"
+  },
+  {
+    "PK": "FACULTY#KEIZAI",
+    "SK": "PROF#TAKAHASHI",
+    "professorName": "高橋 三郎",
+    "yomigana": "たかはし さんろう",
+    "department": "経済経営学科",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "https://example.com/photos/suzuki_hover.jpg",
+    "researchTheme": "国際金融論",
+    "officeLocation": "3-502"
+  },
 
   {
     "PK": "PROF#TANAKA",
