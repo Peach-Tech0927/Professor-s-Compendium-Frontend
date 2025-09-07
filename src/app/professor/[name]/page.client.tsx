@@ -6,7 +6,7 @@ import ProfessorPersonalView, {
   ProfessorPersonalData,
 } from "./_component/ProfessorPersonalView";
 import SeminarInfoView from "./_component/SeminarInfoView";
-import LessonListView from "./_component/LessonListView";
+import LessonListView, { Lesson } from "./_component/LessonListView";
 
 type ClientProfessorPageProps = {
   xLink: string;
@@ -28,6 +28,7 @@ type ClientProfessorPageProps = {
     event: string;
     photo: string | null;
   }[];
+  lessons: Lesson[];
 };
 
 const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
@@ -46,6 +47,7 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
   seminarDescription,
   seminarDescriptionImage,
   careerHistory,
+  lessons,
 }) => {
   return (
     <>
@@ -87,14 +89,14 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
             />
           </TabsContent>
           <TabsContent value="course" className="w-full">
-            <LessonListView />
+            <LessonListView lessons={lessons} />
           </TabsContent>
           <TabsContent value="seminor-info" className="w-full">
             <SeminarInfoView
-               seminarName={seminarName}
-               seminarDescription={seminarDescription}
-               seminarDescriptionImage={seminarDescriptionImage}
-             />
+              seminarName={seminarName}
+              seminarDescription={seminarDescription}
+              seminarDescriptionImage={seminarDescriptionImage}
+            />
           </TabsContent>
           <TabsContent value="personal" className="w-full">
             <ProfessorPersonalView personalData={personalData} />
