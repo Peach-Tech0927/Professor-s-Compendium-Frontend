@@ -37,7 +37,7 @@ export default async function ProfessorPage({
     (item) => item.PK === `PROF#${professorId}` && item.SK === "PERSONAL"
   );
   // 授業情報を取得
-  const rawLessons = mockData.filter(
+  const lessons = mockData.filter(
     (item) => item.PK === `PROF#${professorId}` && item.SK.startsWith("COURSE#")
   );
 
@@ -67,7 +67,7 @@ export default async function ProfessorPage({
         seminarDescription={seminar?.description || ""}
         seminarDescriptionImage={seminar?.descriptionImage || ""}
         careerHistory={profile?.careerHistory || []}
-        lessons={rawLessons as Lesson[]}
+        lessons={lessons as Lesson[]}
       />
     </>
   );
