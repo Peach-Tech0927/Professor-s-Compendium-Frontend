@@ -186,7 +186,7 @@
     "relatedQualification": "公認会計士（一部）",
     "targetGrade": ["1年生", "2年生"],
     "courseCode": "EC101",
-    "syllabusLinkUrl": "https://hogehoge"
+    "syllabusLinkUrl": "https://portal.seikei.ac.jp/campusweb/slbssrch.do"
   },
   {
     "PK": "PROF#TANAKA",
@@ -194,11 +194,11 @@
     "courseName": "ゲーム理論",
     "description": "戦略的意思決定を数理的に分析します。",
     "learningPoints": "交渉力・分析力を養う",
-    "learningStyle": "演習・講義",
+    "style": "演習・講義",
     "relatedQualification": null,
-    "targetGrade": ["3年生以上"],
+    "targetGrade": ["3年生", "4年生"],
     "courseCode": "EC305",
-    "syllabusLinkUrl": "https://hogehoge"
+    "syllabusLinkUrl": "https://portal.seikei.ac.jp/campusweb/slbssrch.do"
   },
 
   {
