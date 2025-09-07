@@ -2,8 +2,11 @@
 import ProfessorProfileCard from "./_component/ProfessorProfileCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProfileView from "./_component/ProfileView";
-import ProfessorPersonalView, { ProfessorPersonalData } from "./_component/ProfessorPersonalView";
+import ProfessorPersonalView, {
+  ProfessorPersonalData,
+} from "./_component/ProfessorPersonalView";
 import SeminarInfoView from "./_component/SeminarInfoView";
+import LessonListView from "./_component/LessonListView";
 
 type ClientProfessorPageProps = {
   xLink: string;
@@ -44,7 +47,6 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
   seminarDescriptionImage,
   careerHistory,
 }) => {
-  
   return (
     <>
       <ProfessorProfileCard
@@ -85,7 +87,7 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
             />
           </TabsContent>
           <TabsContent value="course" className="w-full">
-            ここは担当授業画面です
+            <LessonListView />
           </TabsContent>
           <TabsContent value="seminor-info" className="w-full">
             <SeminarInfoView
