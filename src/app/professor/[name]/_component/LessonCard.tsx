@@ -14,7 +14,7 @@ type LessonCardProps = {
 
 const LessonCard: React.FC<LessonCardProps> = ({ lesson }) => {
   return (
-    <div className="border border-gray-300 rounded-[24px] p-7 lg:mx-50 ">
+    <div className="border border-gray-300 rounded-[24px] p-7 lg:mx-50 mx-5 ">
       <p className="text-lg font-bold mb-2">{lesson.courseName}</p>
       <p className="text-gray-500">{lesson.description}</p>
       <Accordion type="single" collapsible className="w-full py-2">
