@@ -66,6 +66,7 @@ export default async function ProfessorPage({
         personalData={(personal || {}) as ProfessorPersonalData}
         seminarDescription={seminar?.description || ""}
         seminarDescriptionImage={seminar?.descriptionImage || ""}
+        activityDay={seminar?.activityDay || []}
         careerHistory={profile?.careerHistory || []}
         lessons={lessons as Lesson[]}
       />
