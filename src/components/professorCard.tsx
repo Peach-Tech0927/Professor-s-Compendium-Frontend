@@ -20,14 +20,14 @@ export default function ProfessorCard({
     <div className="w-full sm:w-auto p-4 bg-white rounded-lg shadow-lg">
       <div className="flex flex-row rounded-lg h-full">
         {/* プロフィール画像欄 */}
-        <div className="bg-muted-519 bg-[#f3c7c8] w-40 flex-shrink-0 rounded-lg">
-          <div className="relative h-48 w-full mt-4">
+        <div className="bg-muted-519 bg-[#f3c7c8] w-40 flex-shrink-0 rounded-lg pl-7  ">
+          <div className="relative h-48 w-full pt-2">
             <Image 
               src={"/ElenaFuji.png"} 
               alt={`${professorName}のプロフィール写真`} 
-              className="object-contain rounded-lg"
-              fill
-              sizes="160px"
+              className="rounded-lg"
+             width={100}
+             height={100}
             />
           </div>
         </div>
@@ -50,12 +50,12 @@ export default function ProfessorCard({
             style={{ minHeight: '3.5rem' }}
           >
             <span
-              className="text-xs sm:text-sm md:text-sm lg:text-base font-semibold mr-1"
+              className="text-xs sm:text-sm md:text-sm lg:text-lg font-semibold mr-1"
               style={{ writingMode: 'vertical-rl' }}
             >
               研究室
             </span>
-            <span className="text-xl sm:text-3xl md:text-3xl lg:text-3xl font-semibold">
+            <span className="text-xl sm:text-3xl md:text-3xl lg:text-4xl font-semibold">
               {officeLocation}
             </span>
           </div>
