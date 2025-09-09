@@ -19,7 +19,6 @@ export default function ProfessorCard({
   return (
     <div className="w-full sm:w-auto p-4 bg-white rounded-lg shadow-lg">
       <div className="flex flex-row rounded-lg h-full">
-        {/* プロフィール画像欄 */}
         <div className="bg-muted-519 bg-[#f3c7c8] w-40 flex-shrink-0 rounded-lg pl-7  ">
           <div className="relative h-48 w-full pt-2">
             <Image 
@@ -31,7 +30,6 @@ export default function ProfessorCard({
             />
           </div>
         </div>
-        {/* プロフィールテキスト欄 */}
         <div className="flex-1 ml-4 lg: mt-10 p-4 relative">
           <div className="mb-4">
             <h3 className="text-sm text-[#000]/70">名前</h3>
@@ -45,7 +43,6 @@ export default function ProfessorCard({
             <h3 className="text-sm text-[#000]/70">研究テーマ</h3>
             <div><h4 className="text-lg">{researchTheme}</h4></div>
           </div>
-          {/* 研究室No */}
           <div className="flex flex-row items-end justify-end text-[#bfbfbf] w-full "
             style={{ minHeight: '3.5rem' }}
           >
