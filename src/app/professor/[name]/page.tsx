@@ -62,6 +62,7 @@ export default async function ProfessorPage({
         seminarDescription={seminar?.description || ""}
         seminarDescriptionImage={seminar?.descriptionImage || ""}
         careerHistory={profile?.careerHistory || []}
+        seminarSchedule={seminar?.annualSchedule || []}
       />
     </>
   );

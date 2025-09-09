@@ -1,13 +1,18 @@
 import HeadLine from "@/components/HeadLine";
-import { FlaskConical } from "lucide-react";
+import { FlaskConical, History } from "lucide-react";
 import Image from "next/image";
+import { SeminarSchedule } from "../_component/SeminarSchedule";
 
 interface SeminarInfoViewProps {
   seminarName: string;
   seminarDescription: string;
   seminarDescriptionImage: string;
+  seminarSchedule: {
+    period: string;
+    task: string;
+  }[];
 }
-const SeminarInfoView= ({ seminarName, seminarDescription, seminarDescriptionImage }: SeminarInfoViewProps) => {
+const SeminarInfoView= ({ seminarName, seminarDescription, seminarDescriptionImage, seminarSchedule }: SeminarInfoViewProps) => {
     return (
     <div className="mt-10">
       <HeadLine
@@ -34,8 +39,14 @@ const SeminarInfoView= ({ seminarName, seminarDescription, seminarDescriptionIma
           </p>
         </div>
       </div>
+      <div className="mt-10">
+        <HeadLine icon={<History className="w-9 h-9 " />} title="年間スケジュール" />
+        <div className="mt-30">
+          <SeminarSchedule seminarSchedule={seminarSchedule} />
+        </div>
+      </div>
     </div>
   );
-    }
+};
 
 export default SeminarInfoView;

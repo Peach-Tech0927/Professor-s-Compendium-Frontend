@@ -6,6 +6,8 @@ export type TimelineItemType = {
   year: string;
   event: string;
   photo: string | null;
+  period:string;
+  task:string;
 };
 
 const Timeline = React.forwardRef<
