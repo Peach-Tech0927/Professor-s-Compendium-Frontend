@@ -4,7 +4,6 @@ import {
   TimelineTitle,
   TimelineDescription,
   TimelineHeader,
-  TimelineImage,
 } from "@/components/Timeline";
 
 export const SeminarSchedule = ({

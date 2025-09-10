@@ -2,13 +2,13 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import Image from "next/image";
 
-export type TimelineItemType = {
-  year: string;
-  event: string;
-  photo: string | null;
-  period:string;
-  task:string;
-};
+//export type TimelineItemType = {
+//  year: string;
+//  event: string;
+//  photo: string | null;
+//  period:string;
+//  task:string;
+//};
 
 const Timeline = React.forwardRef<
   HTMLDivElement,

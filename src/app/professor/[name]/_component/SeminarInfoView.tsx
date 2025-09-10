@@ -1,5 +1,5 @@
 import HeadLine from "@/components/HeadLine";
-import { FlaskConical, History } from "lucide-react";
+import { FlaskConical } from "lucide-react";
 import Image from "next/image";
 import { SeminarSchedule } from "../_component/SeminarSchedule";
 
@@ -40,7 +40,9 @@ const SeminarInfoView= ({ seminarName, seminarDescription, seminarDescriptionIma
         </div>
       </div>
       <div className="mt-10">
-        <HeadLine icon={<History className="w-9 h-9 " />} title="年間スケジュール" />
+        <div className="flex mx-4 lg:mx-50 gap-2 items-center">
+          <p className="text-lg lg:text-2xl font-bold">年間スケジュール</p>
+        </div>
         <div className="mt-30">
           <SeminarSchedule seminarSchedule={seminarSchedule} />
         </div>
