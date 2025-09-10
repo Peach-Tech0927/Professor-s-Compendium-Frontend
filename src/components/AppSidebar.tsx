@@ -5,15 +5,17 @@ import {
   SidebarHeader,
 } from "@/components/ui/sidebar";
 import Image from "next/image";
+import {Button} from "@/components/ui/button"
+import { ChevronDown } from "lucide-react";
 
 export function AppSidebar() {
   const faculties = [
-    { name: "経済学部", color: "#5BA7E5" },
-    { name: "経営学部", color: "#7B59A3" }, 
-    { name: "法学部", color: "#9CC715" },
-    { name: "文学部", color: "#E88E91" },
-    { name: "国際文化共創学部", color: "#C62F3E" },
-    { name: "理工学部", color: "#F4A000" }
+    { name: "経済学部", color: "#D6EFF9" },
+    { name: "経営学部", color: "#D2C7E0" }, 
+    { name: "法学部", color: "#D9E8A5" },
+    { name: "文学部", color: "#F3D0D1" },
+    { name: "国際文化共創学部", color: "#E8A8B1" },
+    { name: "理工学部", color: "#FDF0D6" }
   ];
 
   return (
@@ -45,16 +47,14 @@ export function AppSidebar() {
         <SidebarGroup>
           <div className="w-full space-y-4">
             {faculties.map((faculty) => (
-              <button
-                key={faculty.name}
-                className="w-full hover:opacity-90 transition-opacity duration-200 rounded-lg px-6 py-4 flex items-center justify-center text-white font-bold"
-                style={{ 
-                  backgroundColor: faculty.color,
-                  boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.5)'
-                }}
-              >
-                <span className="text-lg">{faculty.name}</span>
-              </button>
+                <Button
+                    key={faculty.name}
+                    variant="outline"
+                    className="relative w-full h-14 text-black rounded-sm shadow-md"
+                    style={{ backgroundColor: faculty.color }}>
+                    <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xl font-bold">{faculty.name}</span>
+                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2"/>
+                </Button>
             ))}
           </div>
         </SidebarGroup>
