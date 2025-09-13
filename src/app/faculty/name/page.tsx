@@ -1,4 +1,4 @@
-import ProfessorCard from "@/components/professorCard";
+import ProfessorCardGrid from "@/components/professorCardGrid";
 
 const FacultyPage = () => {
   return(
@@ -14,7 +14,7 @@ const FacultyPage = () => {
           <p className="mt-10 font-normal max-w-2xl mb-10">説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文</p>
         </div>
       </div>
-      <ProfessorCard />
+      <ProfessorCardGrid /> 
     </>
   );
 };
