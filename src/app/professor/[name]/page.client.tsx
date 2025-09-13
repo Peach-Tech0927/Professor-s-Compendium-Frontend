@@ -2,8 +2,11 @@
 import ProfessorProfileCard from "./_component/ProfessorProfileCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProfileView from "./_component/ProfileView";
-import ProfessorPersonalView, { ProfessorPersonalData } from "./_component/ProfessorPersonalView";
+import ProfessorPersonalView, {
+  ProfessorPersonalData,
+} from "./_component/ProfessorPersonalView";
 import SeminarInfoView from "./_component/SeminarInfoView";
+import LessonListView, { Lesson } from "./_component/LessonListView";
 
 type ClientProfessorPageProps = {
   xLink: string;
@@ -20,6 +23,7 @@ type ClientProfessorPageProps = {
   personalData: ProfessorPersonalData;
   seminarDescription: string;
   seminarDescriptionImage: string;
+  activityDay: string[];
   careerHistory: {
     year: string;
     event: string;
@@ -29,6 +33,7 @@ type ClientProfessorPageProps = {
     period: string;
     task: string;
   }[];
+  lessons: Lesson[];
 };
 
 const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
@@ -46,10 +51,11 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
   personalData,
   seminarDescription,
   seminarDescriptionImage,
+  activityDay,
   careerHistory,
   seminarSchedule,
+  lessons,
 }) => {
-  
   return (
     <>
       <ProfessorProfileCard
@@ -90,7 +96,7 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
             />
           </TabsContent>
           <TabsContent value="course" className="w-full">
-            ここは担当授業画面です
+            <LessonListView lessons={lessons} />
           </TabsContent>
           <TabsContent value="seminor-info" className="w-full">
             <SeminarInfoView
@@ -98,6 +104,7 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
                seminarDescription={seminarDescription}
                seminarDescriptionImage={seminarDescriptionImage}
                seminarSchedule={seminarSchedule}
+               activityDay={activityDay}
              />
           </TabsContent>
           <TabsContent value="personal" className="w-full">

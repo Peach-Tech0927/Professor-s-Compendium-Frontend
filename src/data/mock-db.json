@@ -14,6 +14,36 @@
   },
   {
     "PK": "FACULTIES",
+    "SK": "FACULTY#KEIEI",
+    "facultyName": "経営学部",
+    "facultyDescription": "ルドロジーの本質、歴史、文化的な意味を探求する",
+    "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
+    "departments": [
+      {
+        "name": "総合経営学科",
+        "englishName": "Department of Japanese Literature"
+      }
+    ]
+  },
+  {
+    "PK": "FACULTIES",
+    "SK": "FACULTY#BUNGAKU",
+    "facultyName": "法学部",
+    "facultyDescription": "文化と人間を深く探求する。",
+    "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
+    "departments": [
+      {
+        "name": "法学科",
+        "englishName": "Department of Japanese Literature"
+      },
+      {
+        "name": "政治学科",
+        "englishName": "Department of English and American Literature"
+      }
+    ]
+  },
+  {
+    "PK": "FACULTIES",
     "SK": "FACULTY#BUNGAKU",
     "facultyName": "文学部",
     "facultyDescription": "文化と人間を深く探求する。",
@@ -29,12 +59,59 @@
       }
     ]
   },
+  {
+    "PK": "FACULTIES",
+    "SK": "FACULTY#KOKUSAI",
+    "facultyName": "国際文化共創学部国際競争学科",
+    "facultyDescription": "持続可能な食料生産・供給システムを構想し、実現する",
+    "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
+    "departments": [
+      {
+        "name":"国際日本学専攻",
+        "englishName": "Department of Japanese Literature"
+      },
+      {
+        "name": "環境サステナビリティ学専攻",
+        "englishName": "Department of English and American Literature"
+      }
+    ]
+  },
+    {
+    "PK": "FACULTIES",
+    "SK": "FACULTY#RIKOU",
+    "facultyName": "理工学部",
+    "facultyDescription": "文化と人間を深く探求する。",
+    "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
+    "departments": [
+      {
+        "name":"データ数理専攻",
+        "englishName": "Department of Japanese Literature"
+      },
+      {
+        "name": "応用科学専攻",
+        "englishName": "Department of English and American Literature"
+      },
+      {
+        "name": "機械システム専攻",
+        "englishName": "Department of English and American Literature"
+      },
+      {
+        "name": "電気電子専攻",
+        "englishName": "Department of English and American Literature"
+      },
+      {
+        "name": "コンピュータ科学専攻",
+        "englishName": "Department of English and American Literature"
+      }
+    ]
+  },
+  
 
   {
     "PK": "FACULTY#KEIZAI",
     "SK": "PROF#TANAKA",
     "professorName": "田中 太郎",
-    "yomigana": "たなか たろう",
+    "yomigana": "Tanaka Tarou",
     "department": "経済経営学科",
     "mainPhoto": "/ElenaFuji.png",
     "hoverPhoto": "https://example.com/photos/tanaka_hover.jpg",
@@ -45,7 +122,29 @@
     "PK": "FACULTY#KEIZAI",
     "SK": "PROF#SUZUKI",
     "professorName": "鈴木 一郎",
-    "yomigana": "すずき いちろう",
+    "yomigana": "Suzuki Ichirou",
+    "department": "経済経営学科",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "https://example.com/photos/suzuki_hover.jpg",
+    "researchTheme": "国際金融論",
+    "officeLocation": "3-502"
+  },
+  {
+    "PK": "FACULTY#KEIZAI",
+    "SK": "PROF#MORIMOTO",
+    "professorName": "森本 二郎",
+    "yomigana": "Morimoto Niiro",
+    "department": "経済経営学科",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "https://example.com/photos/suzuki_hover.jpg",
+    "researchTheme": "国際金融論",
+    "officeLocation": "3-502"
+  },
+  {
+    "PK": "FACULTY#KEIZAI",
+    "SK": "PROF#TAKAHASHI",
+    "professorName": "高橋 三郎",
+    "yomigana": "Takahashi Sanro",
     "department": "経済経営学科",
     "mainPhoto": "/ElenaFuji.png",
     "hoverPhoto": "https://example.com/photos/suzuki_hover.jpg",
@@ -109,7 +208,7 @@
     "relatedQualification": "公認会計士（一部）",
     "targetGrade": ["1年生", "2年生"],
     "courseCode": "EC101",
-    "syllabusLinkUrl": "https://hogehoge"
+    "syllabusLinkUrl": "https://portal.seikei.ac.jp/campusweb/slbssrch.do"
   },
   {
     "PK": "PROF#TANAKA",
@@ -117,11 +216,11 @@
     "courseName": "ゲーム理論",
     "description": "戦略的意思決定を数理的に分析します。",
     "learningPoints": "交渉力・分析力を養う",
-    "learningStyle": "演習・講義",
+    "style": "演習・講義",
     "relatedQualification": null,
-    "targetGrade": ["3年生以上"],
+    "targetGrade": ["3年生", "4年生"],
     "courseCode": "EC305",
-    "syllabusLinkUrl": "https://hogehoge"
+    "syllabusLinkUrl": "https://portal.seikei.ac.jp/campusweb/slbssrch.do"
   },
 
   {
