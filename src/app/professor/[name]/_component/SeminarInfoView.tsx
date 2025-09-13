@@ -1,17 +1,24 @@
 import HeadLine from "@/components/HeadLine";
 import { FlaskConical } from "lucide-react";
 import Image from "next/image";
+import { SeminarSchedule } from "../_component/SeminarSchedule";
 
 interface SeminarInfoViewProps {
   seminarName: string;
   seminarDescription: string;
   seminarDescriptionImage: string;
+  seminarSchedule: {
+    period: string;
+    task: string;
+  }[];
   activityDay: string[];
 }
+
 const SeminarInfoView = ({
   seminarName,
   seminarDescription,
   seminarDescriptionImage,
+  seminarSchedule,
   activityDay,
 }: SeminarInfoViewProps) => {
   return (
@@ -38,6 +45,14 @@ const SeminarInfoView = ({
           <p className="leading-loose">
             {seminarDescription || "ゼミ情報がありません"}
           </p>
+        </div>
+      </div>
+      <div className="mt-10">
+        <div className="flex mx-4 lg:mx-50 gap-2 items-center">
+          <p className="text-lg lg:text-2xl font-bold">年間スケジュール</p>
+        </div>
+        <div className="mt-30">
+          <SeminarSchedule seminarSchedule={seminarSchedule} />
         </div>
       </div>
       <div className="flex mx-4 lg:mx-50 gap-2 items-center mt-10">

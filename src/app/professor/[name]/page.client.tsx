@@ -29,6 +29,10 @@ type ClientProfessorPageProps = {
     event: string;
     photo: string | null;
   }[];
+  seminarSchedule: {
+    period: string;
+    task: string;
+  }[];
   lessons: Lesson[];
 };
 
@@ -49,6 +53,7 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
   seminarDescriptionImage,
   activityDay,
   careerHistory,
+  seminarSchedule,
   lessons,
 }) => {
   return (
@@ -95,11 +100,12 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
           </TabsContent>
           <TabsContent value="seminor-info" className="w-full">
             <SeminarInfoView
-              seminarName={seminarName}
-              seminarDescription={seminarDescription}
-              seminarDescriptionImage={seminarDescriptionImage}
-              activityDay={activityDay}
-            />
+               seminarName={seminarName}
+               seminarDescription={seminarDescription}
+               seminarDescriptionImage={seminarDescriptionImage}
+               seminarSchedule={seminarSchedule}
+               activityDay={activityDay}
+             />
           </TabsContent>
           <TabsContent value="personal" className="w-full">
             <ProfessorPersonalView personalData={personalData} />

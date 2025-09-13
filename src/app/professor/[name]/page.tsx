@@ -68,6 +68,7 @@ export default async function ProfessorPage({
         seminarDescriptionImage={seminar?.descriptionImage || ""}
         activityDay={seminar?.activityDay || []}
         careerHistory={profile?.careerHistory || []}
+        seminarSchedule={seminar?.annualSchedule || []}
         lessons={lessons as Lesson[]}
       />
     </>
