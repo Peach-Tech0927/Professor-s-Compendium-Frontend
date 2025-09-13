@@ -1,11 +1,23 @@
 import {
   Sidebar,
   SidebarContent,
+  SidebarGroup,
   SidebarHeader,
 } from "@/components/ui/sidebar";
 import Image from "next/image";
+import {Button} from "@/components/ui/button"
+import { ChevronDown } from "lucide-react";
 
 export function AppSidebar() {
+  const faculties = [
+    { name: "経済学部", color: "#D6EFF9" },
+    { name: "経営学部", color: "#D2C7E0" }, 
+    { name: "法学部", color: "#D9E8A5" },
+    { name: "文学部", color: "#F3D0D1" },
+    { name: "国際文化共創学部", color: "#E8A8B1" },
+    { name: "理工学部", color: "#FDF0D6" }
+  ];
+
   return (
     <Sidebar>
       <SidebarHeader>
@@ -31,7 +43,22 @@ export function AppSidebar() {
           </div>
         </div>
       </SidebarHeader>
-      <SidebarContent />
+      <SidebarContent>
+        <SidebarGroup>
+          <div className="w-full space-y-4">
+            {faculties.map((faculty) => (
+                <Button
+                    key={faculty.name}
+                    variant="outline"
+                    className="relative w-full h-14 text-black rounded-sm shadow-md"
+                    style={{ backgroundColor: faculty.color }}>
+                    <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xl font-bold">{faculty.name}</span>
+                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2"/>
+                </Button>
+            ))}
+          </div>
+        </SidebarGroup>
+      </SidebarContent>
     </Sidebar>
   );
 }
