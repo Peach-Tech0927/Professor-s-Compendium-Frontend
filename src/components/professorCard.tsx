@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 type ProfessorCardProps = {
   professorName: string;
@@ -7,6 +8,8 @@ type ProfessorCardProps = {
   department: string;
   researchTheme: string;
   officeLocation: string;
+  mainPhoto: string;
+  hoverPhoto: string;
 }
 
 export default function ProfessorCard({
@@ -15,16 +18,35 @@ export default function ProfessorCard({
   department,
   researchTheme,
   officeLocation,
+  mainPhoto,
+  hoverPhoto,
 }: ProfessorCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   return (
     <div className="w-full sm:w-auto p-4 bg-white rounded-lg shadow-lg">
       <div className="flex flex-row rounded-lg h-full">
         <div className="bg-muted-519 bg-[#f3c7c8] w-40 flex-shrink-0 rounded-lg pl-7  ">
-          <div className="relative h-48 w-full pt-2">
-            <Image 
-              src={"/ElenaFuji.png"} 
-              alt={`${professorName}のプロフィール写真`} 
-              className="rounded-lg"
+          <div
+            className="relative h-48 w-full pt-2"
+            onMouseEnter={() => !isMobile && setIsHovered(true)}
+            onMouseLeave={() => !isMobile && setIsHovered(false)}
+          >
+            <Image
+              src={isHovered && !isMobile ? (hoverPhoto || mainPhoto) : (mainPhoto || '/ProfileExample.png')}
+              alt={`${professorName}のプロフィール写真`}
+              className="rounded-lg transition-all duration-300"
              width={100}
              height={100}
             />
