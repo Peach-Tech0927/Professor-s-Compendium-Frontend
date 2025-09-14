@@ -2,6 +2,7 @@ import HeadLine from "@/components/HeadLine";
 import { FlaskConical } from "lucide-react";
 import Image from "next/image";
 import { SeminarSchedule } from "../_component/SeminarSchedule";
+import { Badge } from "@/components/ui/badge";
 
 interface SeminarInfoViewProps {
   seminarName: string;
@@ -12,6 +13,7 @@ interface SeminarInfoViewProps {
     task: string;
   }[];
   activityDay: string[];
+  keywords: string[];
 }
 
 const SeminarInfoView = ({
@@ -20,6 +22,7 @@ const SeminarInfoView = ({
   seminarDescriptionImage,
   seminarSchedule,
   activityDay,
+  keywords,
 }: SeminarInfoViewProps) => {
   return (
     <div className="mt-10">
@@ -76,26 +79,42 @@ const SeminarInfoView = ({
           </p>
         </div>
       </div>
-      <div className="lg:ml-50 mt-10 px-6 lg:px-0">
-        <h2 className="text-xl font-bold mb-2">活動曜日・頻度</h2>
-        {activityDay && activityDay.length > 0 ? (
-          activityDay.map((day, index) => {
-            // 曜日とそれ以外の情報（今は時限）を分ける
-            const parts = day.split(" ");
-            const dayOfWeek = parts[0] || "";
-            const period = parts[1] || "";
+      <div className="flex justify-center items-start mt-10 gap-50">
+        <div>
+          <h2 className="text-xl font-bold mb-2">活動曜日・頻度</h2>
+          {activityDay && activityDay.length > 0 ? (
+            activityDay.map((day, index) => {
+              // 曜日とそれ以外の情報（今は時限）を分ける
+              const parts = day.split(" ");
+              const dayOfWeek = parts[0] || "";
+              const period = parts[1] || "";
 
-            return (
-              <div key={index} className="flex items-center mb-1 text-lg">
-                <span className="mr-2">・</span>
-                <span className="font-bold">{dayOfWeek}</span>
-                <span className="ml-4">{period}</span>
-              </div>
-            );
-          })
-        ) : (
-          <p>活動日の情報がありません</p>
-        )}
+              return (
+                <div key={index} className="flex items-center mb-1 text-lg">
+                  <span className="mr-2">・</span>
+                  <span className="font-bold">{dayOfWeek}</span>
+                  <span className="ml-4">{period}</span>
+                </div>
+              );
+            })
+          ) : (
+            <p>活動日の情報がありません</p>
+          )}
+        </div>
+        <div>
+          <h2 className="text-xl font-bold mb-2">特徴・キーワード</h2>
+          {keywords.map((keyword) => (
+            <Badge
+              key={keyword}
+              className="flex flex-col bg-[#fff7f9] text-[#FF8888] border border-[#FF8888] rounded-full px-4 m-2 text-sm"
+            >
+              # {keyword}
+            </Badge>
+          ))}
+        </div>
+        <div>
+          <h2 className="text-xl font-bold mb-2">卒業生の研究テーマ</h2>
+        </div>
       </div>
     </div>
   );

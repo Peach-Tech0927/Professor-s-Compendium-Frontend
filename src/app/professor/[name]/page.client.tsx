@@ -24,6 +24,7 @@ type ClientProfessorPageProps = {
   seminarDescription: string;
   seminarDescriptionImage: string;
   activityDay: string[];
+  keywords: string[];
   careerHistory: {
     year: string;
     event: string;
@@ -52,6 +53,7 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
   seminarDescription,
   seminarDescriptionImage,
   activityDay,
+  keywords,
   careerHistory,
   seminarSchedule,
   lessons,
@@ -105,6 +107,7 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
                seminarDescriptionImage={seminarDescriptionImage}
                seminarSchedule={seminarSchedule}
                activityDay={activityDay}
+               keywords={keywords}
              />
           </TabsContent>
           <TabsContent value="personal" className="w-full">
