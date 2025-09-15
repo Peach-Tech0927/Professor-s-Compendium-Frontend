@@ -14,6 +14,7 @@ interface SeminarInfoViewProps {
   }[];
   activityDay: string[];
   keywords: string[];
+  graduateThemes:string[];
 }
 
 const SeminarInfoView = ({
@@ -23,6 +24,7 @@ const SeminarInfoView = ({
   seminarSchedule,
   activityDay,
   keywords,
+  graduateThemes,
 }: SeminarInfoViewProps) => {
   return (
     <div className="mt-10">
@@ -114,6 +116,18 @@ const SeminarInfoView = ({
         </div>
         <div>
           <h2 className="text-xl font-bold mb-2">卒業生の研究テーマ</h2>
+          {graduateThemes && graduateThemes.length > 0 ? (
+            graduateThemes.map((theme, index) => {
+              return (
+                <div key={index} className="flex items-center mb-1 text-lg">
+                  <span className="mr-2">・</span>
+                  <span className="ml-4">{theme}</span>
+                </div>
+              );
+            })
+          ) : (
+            <p>卒業生の研究テーマの情報がありません</p>
+          )}
         </div>
       </div>
     </div>

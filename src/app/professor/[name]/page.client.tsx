@@ -24,7 +24,6 @@ type ClientProfessorPageProps = {
   seminarDescription: string;
   seminarDescriptionImage: string;
   activityDay: string[];
-  keywords: string[];
   careerHistory: {
     year: string;
     event: string;
@@ -35,6 +34,8 @@ type ClientProfessorPageProps = {
     task: string;
   }[];
   lessons: Lesson[];
+  graduateThemes: string[];
+  keywords: string[];
 };
 
 const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
@@ -53,10 +54,11 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
   seminarDescription,
   seminarDescriptionImage,
   activityDay,
-  keywords,
   careerHistory,
   seminarSchedule,
   lessons,
+  graduateThemes,
+  keywords,
 }) => {
   return (
     <>
@@ -107,6 +109,7 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
                seminarDescriptionImage={seminarDescriptionImage}
                seminarSchedule={seminarSchedule}
                activityDay={activityDay}
+               graduateThemes={graduateThemes}
                keywords={keywords}
              />
           </TabsContent>
