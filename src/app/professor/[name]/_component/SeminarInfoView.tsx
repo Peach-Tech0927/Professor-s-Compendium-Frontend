@@ -54,7 +54,7 @@ const SeminarInfoView = ({
       </div>
       
       <div className="flex mx-4 lg:mx-50 gap-2 items-center mt-30"> {/* ここのmtどのくらい開ければいいかわかりませんでした */}
-        <h1 className="text-lg lg:text-2xl font-bold">このゼミのアピールポイント</h1>
+        <h1 className="text-lg lg:text-2xl font-bold mb-5">このゼミのアピールポイント</h1>
       </div>
       <div className="mx-4 lg:mx-50">
         <SeminarAppealPoint
