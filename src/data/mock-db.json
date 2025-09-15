@@ -231,7 +231,7 @@
     "descriptionImage": "/ProfileExample.png",
     "appealPoint": {
       "text": "毎年、企業と連携したプロジェクトを実施しています。",
-      "image": ["https://example.com/photos/seminar_appeal.jpg"]
+      "images": ["/ProfileExample.png","/ProfileExample.png"]
     },
     "researchProcess": [
       {

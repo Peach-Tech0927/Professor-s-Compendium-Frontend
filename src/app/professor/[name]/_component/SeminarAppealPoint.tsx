@@ -12,7 +12,7 @@ const SeminarAppealPoint: React.FC<SeminarAppealPointProps> = ({
   images,
 }) => {
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="container mx-auto px-4 py-1">
 
       <div className="flex flex-col md:flex-row md:space-x-8">
         {/* 左側のテキスト部分 */}
