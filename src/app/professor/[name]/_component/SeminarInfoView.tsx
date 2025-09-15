@@ -2,6 +2,7 @@ import HeadLine from "@/components/HeadLine";
 import { FlaskConical } from "lucide-react";
 import Image from "next/image";
 import { SeminarSchedule } from "../_component/SeminarSchedule";
+import SeminarAppealPoint from "./SeminarAppealPoint";
 
 interface SeminarInfoViewProps {
   seminarName: string;
@@ -46,6 +47,18 @@ const SeminarInfoView = ({
             {seminarDescription || "ゼミ情報がありません"}
           </p>
         </div>
+      </div>
+      <div className="mx-4 lg:mx-50">
+        <div className="flex gap-2 items-center mb-5">
+          <p className="text-lg lg:text-2xl font-bold">このゼミのアピールポイント</p>
+        </div>
+        <SeminarAppealPoint
+          description="平安文学の奥深い世界を一緒に探求しましょう。\n古典作品を現代の視点で読み解く面白さを発見できます。"
+          images={[
+            "/ProfileExample.png",
+            "/ProfileExample.png"
+          ]}
+        />
       </div>
       <div className="mt-10">
         <div className="flex mx-4 lg:mx-50 gap-2 items-center">
