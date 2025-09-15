@@ -12,11 +12,10 @@ const SeminarAppealPoint: React.FC<SeminarAppealPointProps> = ({
   appealPointImages,
 }) => {
   return (
-    <section className="container mx-auto px-4 py-1">
-
+    <section className="py-1">
       <div className="flex flex-col md:flex-row md:space-x-8">
         {/* 左側のテキスト部分 */}
-        <div className="md:w-1/2 text-lg leading-relaxed mb-8 md:mb-0">
+        <div className="md:w-1/2 leading-relaxed mb-8 md:mb-0">
           {appealPointText.split('\n').map((paragraph, index) => (
             <p key={index} className="mb-4">
               {paragraph}
