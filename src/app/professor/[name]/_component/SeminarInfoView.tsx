@@ -13,6 +13,8 @@ interface SeminarInfoViewProps {
     task: string;
   }[];
   activityDay: string[];
+  appealPointText: string;
+  appealPointImages: string[];
 }
 
 const SeminarInfoView = ({
@@ -21,6 +23,8 @@ const SeminarInfoView = ({
   seminarDescriptionImage,
   seminarSchedule,
   activityDay,
+  appealPointText,
+  appealPointImages,
 }: SeminarInfoViewProps) => {
   return (
     <div className="mt-10">
@@ -53,11 +57,8 @@ const SeminarInfoView = ({
         <h1 className="text-lg lg:text-2xl font-bold">このゼミのアピールポイント</h1>
         </div>
         <SeminarAppealPoint
-          description="平安文学の奥深い世界を一緒に探求しましょう。平安文学の奥深い世界を一緒に探求しましょう。平安文学の奥深い世界を一緒に探求しましょう。平安文学の奥深い世界を一緒に探求しましょう。平安文学の奥深い世界を一緒に探求しましょう。平安文学の奥深い世界を一緒に探求しましょう。平安文学の奥深い世界を一緒に探求しましょう。平安文学の奥深い世界を一緒に探求しましょう。平安文学の奥深い世界を一緒に探求しましょう。平安文学の奥深い世界を一緒に探求しましょう。\n古典作品を現代の視点で読み解く面白さを発見できます。"
-          images={[
-            "/ProfileExample.png",
-            "/ProfileExample.png"
-          ]}
+          description={appealPointText}
+          images={appealPointImages}
         />
       </div>
       <div className="mt-10">
