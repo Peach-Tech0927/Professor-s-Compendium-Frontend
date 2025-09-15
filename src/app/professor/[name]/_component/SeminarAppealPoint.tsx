@@ -3,12 +3,12 @@ import React from 'react';
 import Image from 'next/image'; // Next.jsのImageコンポーネントを使用
 
 interface SeminarAppealPointProps {
-  description: string;
+  text: string;
   images: string[];
 }
 
 const SeminarAppealPoint: React.FC<SeminarAppealPointProps> = ({
-  description,
+  text,
   images,
 }) => {
   return (
@@ -17,7 +17,7 @@ const SeminarAppealPoint: React.FC<SeminarAppealPointProps> = ({
       <div className="flex flex-col md:flex-row md:space-x-8">
         {/* 左側のテキスト部分 */}
         <div className="md:w-1/2 text-lg leading-relaxed mb-8 md:mb-0">
-          {description.split('\n').map((paragraph, index) => (
+          {text.split('\n').map((paragraph, index) => (
             <p key={index} className="mb-4">
               {paragraph}
             </p>

@@ -57,7 +57,7 @@ const SeminarInfoView = ({
         <h1 className="text-lg lg:text-2xl font-bold">このゼミのアピールポイント</h1>
         </div>
         <SeminarAppealPoint
-          description={appealPointText}
+          text={appealPointText}
           images={appealPointImages}
         />
       </div>
