@@ -1,6 +1,6 @@
 // components/SeminarAppealPoint.tsx
 import React from 'react';
-import Image from 'next/image'; // Next.jsのImageコンポーネントを使用
+import Image from 'next/image'; 
 
 interface SeminarAppealPointProps {
   appealPointText: string;
