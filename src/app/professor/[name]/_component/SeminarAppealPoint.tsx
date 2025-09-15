@@ -27,13 +27,13 @@ const SeminarAppealPoint: React.FC<SeminarAppealPointProps> = ({
         {/* 右側の画像部分 */}
         <div className="md:w-1/2 flex flex-col space-y-1">
           {appealPointImages.map((imageSrc, index) => (
-            <div key={index} className={`relative ${images.length === 1 ? 'self-center' : (index % 2 === 0 ? 'self-start' : 'self-end')}`}>
+            <div key={index} className={`relative ${appealPointImages.length === 1 ? 'self-center' : (index % 2 === 0 ? 'self-start' : 'self-end')}`}>
               <Image
                 src={imageSrc}
                 alt="Seminar Appeal Point Image"
-                width={images.length === 1 ? 500 : 300}
-                height={images.length === 1 ? 400 : 200}
-                className={`object-cover ${images.length === 1 ? '' : (index % 2 === 0 ? 'rotate-5' : '-rotate-5')}`}
+                width={appealPointImages.length === 1 ? 500 : 300}
+                height={appealPointImages.length === 1 ? 400 : 200}
+                className={`object-cover ${appealPointImages.length === 1 ? '' : (index % 2 === 0 ? 'rotate-5' : '-rotate-5')}`}
               />
             </div>
           ))}
