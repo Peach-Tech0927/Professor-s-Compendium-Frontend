@@ -1,5 +1,3 @@
-// components/SeminarAppealPoint.tsx
-import React from 'react';
 import Image from 'next/image'; 
 
 interface SeminarAppealPointProps {
@@ -7,10 +5,10 @@ interface SeminarAppealPointProps {
   appealPointImages: string[];
 }
 
-const SeminarAppealPoint: React.FC<SeminarAppealPointProps> = ({
+function SeminarAppealPoint({
   appealPointText,
   appealPointImages,
-}) => {
+}: SeminarAppealPointProps) {
   return (
     <section className="py-1">
       <div className="flex flex-col md:flex-row md:space-x-8">
