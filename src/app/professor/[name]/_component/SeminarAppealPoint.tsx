@@ -12,7 +12,6 @@ function SeminarAppealPoint({
   return (
     <section className="py-1">
       <div className="flex flex-col md:flex-row md:space-x-8">
-        {/* 左側のテキスト部分 */}
         <div className="md:w-1/2 leading-relaxed mb-8 md:mb-0">
           {appealPointText.split('\n').map((paragraph, index) => (
             <p key={index} className="mb-4">
@@ -21,7 +20,6 @@ function SeminarAppealPoint({
           ))}
         </div>
 
-        {/* 右側の画像部分 */}
         <div className="md:w-1/2 flex flex-col space-y-1">
           {appealPointImages.map((imageSrc, index) => (
             <div key={index} className={`relative ${appealPointImages.length === 1 ? 'self-center' : (index % 2 === 0 ? 'self-start' : 'self-end')}`}>
