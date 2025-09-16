@@ -34,6 +34,8 @@ type ClientProfessorPageProps = {
     task: string;
   }[];
   lessons: Lesson[];
+  appealPointText: string;
+  appealPointImages: string[];
   graduateThemes: string[];
   keywords: string[];
 };
@@ -57,6 +59,8 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
   careerHistory,
   seminarSchedule,
   lessons,
+  appealPointText,
+  appealPointImages,
   graduateThemes,
   keywords,
 }) => {
@@ -109,6 +113,8 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
                seminarDescriptionImage={seminarDescriptionImage}
                seminarSchedule={seminarSchedule}
                activityDay={activityDay}
+               appealPointText={appealPointText}
+               appealPointImages={appealPointImages}
                graduateThemes={graduateThemes}
                keywords={keywords}
              />

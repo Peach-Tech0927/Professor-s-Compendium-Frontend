@@ -2,6 +2,7 @@ import HeadLine from "@/components/HeadLine";
 import { FlaskConical } from "lucide-react";
 import Image from "next/image";
 import { SeminarSchedule } from "../_component/SeminarSchedule";
+import SeminarAppealPoint from "./SeminarAppealPoint";
 import { Badge } from "@/components/ui/badge";
 
 interface SeminarInfoViewProps {
@@ -13,6 +14,8 @@ interface SeminarInfoViewProps {
     task: string;
   }[];
   activityDay: string[];
+  appealPointText: string;
+  appealPointImages: string[];
   keywords: string[];
   graduateThemes:string[];
 }
@@ -23,6 +26,8 @@ const SeminarInfoView = ({
   seminarDescriptionImage,
   seminarSchedule,
   activityDay,
+  appealPointText,
+  appealPointImages,
   keywords,
   graduateThemes,
 }: SeminarInfoViewProps) => {
@@ -51,6 +56,15 @@ const SeminarInfoView = ({
             {seminarDescription || "ゼミ情報がありません"}
           </p>
         </div>
+      </div>      
+      <div className="flex mx-4 lg:mx-50 gap-2 items-center mt-30">
+        <h1 className="text-lg lg:text-2xl font-bold mb-5">このゼミのアピールポイント</h1>
+      </div>
+      <div className="mx-4 lg:mx-50">
+        <SeminarAppealPoint
+          appealPointText={appealPointText}
+          appealPointImages={appealPointImages}
+          />
       </div>
       <div className="flex mx-4 lg:mx-50 gap-2 items-center mt-10">
         <h1 className="text-lg lg:text-2xl font-bold">研究の進め方</h1>

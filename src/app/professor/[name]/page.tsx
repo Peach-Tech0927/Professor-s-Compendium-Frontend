@@ -71,6 +71,8 @@ export default async function ProfessorPage({
         careerHistory={profile?.careerHistory || []}
         seminarSchedule={seminar?.annualSchedule || []}
         lessons={lessons as Lesson[]}
+        appealPointText={seminar?.appealPoint?.text || ""}
+        appealPointImages={seminar?.appealPoint?.images || []}
         graduateThemes={seminar?.graduateThemes||[]}
       />
     </>
