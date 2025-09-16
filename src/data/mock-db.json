@@ -3,6 +3,7 @@
     "PK": "FACULTIES",
     "SK": "FACULTY#KEIZAI",
     "facultyName": "経済学部",
+    "englishFacultyName": "Faculty of Economics",
     "facultyDescription": "現代社会の経済を多角的に学ぶ。",
     "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
     "departments": [
@@ -16,6 +17,7 @@
     "PK": "FACULTIES",
     "SK": "FACULTY#KEIEI",
     "facultyName": "経営学部",
+    "englishFacultyName": "Faculty of Business Administration",
     "facultyDescription": "ルドロジーの本質、歴史、文化的な意味を探求する",
     "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
     "departments": [
@@ -29,6 +31,7 @@
     "PK": "FACULTIES",
     "SK": "FACULTY#BUNGAKU",
     "facultyName": "法学部",
+    "englishFacultyName": "Faculty of Law",
     "facultyDescription": "文化と人間を深く探求する。",
     "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
     "departments": [
@@ -46,6 +49,7 @@
     "PK": "FACULTIES",
     "SK": "FACULTY#BUNGAKU",
     "facultyName": "文学部",
+    "englishFacultyName": "Faculty of Humanities",
     "facultyDescription": "文化と人間を深く探求する。",
     "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
     "departments": [
@@ -63,6 +67,7 @@
     "PK": "FACULTIES",
     "SK": "FACULTY#KOKUSAI",
     "facultyName": "国際文化共創学部国際競争学科",
+    "englishFacultyName": "Faculty of International Culture and Innovation",
     "facultyDescription": "持続可能な食料生産・供給システムを構想し、実現する",
     "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
     "departments": [
@@ -80,6 +85,7 @@
     "PK": "FACULTIES",
     "SK": "FACULTY#RIKOU",
     "facultyName": "理工学部",
+    "englishFacultyName": "Faculty of Science and Technology",
     "facultyDescription": "文化と人間を深く探求する。",
     "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
     "departments": [
