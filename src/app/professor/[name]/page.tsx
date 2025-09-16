@@ -67,9 +67,13 @@ export default async function ProfessorPage({
         seminarDescription={seminar?.description || ""}
         seminarDescriptionImage={seminar?.descriptionImage || ""}
         activityDay={seminar?.activityDay || []}
+        keywords={seminar?.keywords || []}
         careerHistory={profile?.careerHistory || []}
         seminarSchedule={seminar?.annualSchedule || []}
         lessons={lessons as Lesson[]}
+        appealPointText={seminar?.appealPoint?.text || ""}
+        appealPointImages={seminar?.appealPoint?.images || []}
+        graduateThemes={seminar?.graduateThemes||[]}
       />
     </>
   );
