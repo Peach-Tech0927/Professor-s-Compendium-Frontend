@@ -36,6 +36,8 @@ type ClientProfessorPageProps = {
   lessons: Lesson[];
   appealPointText: string;
   appealPointImages: string[];
+  graduateThemes: string[];
+  keywords: string[];
 };
 
 const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
@@ -59,6 +61,8 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
   lessons,
   appealPointText,
   appealPointImages,
+  graduateThemes,
+  keywords,
 }) => {
   return (
     <>
@@ -111,6 +115,8 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
                activityDay={activityDay}
                appealPointText={appealPointText}
                appealPointImages={appealPointImages}
+               graduateThemes={graduateThemes}
+               keywords={keywords}
              />
           </TabsContent>
           <TabsContent value="personal" className="w-full">
