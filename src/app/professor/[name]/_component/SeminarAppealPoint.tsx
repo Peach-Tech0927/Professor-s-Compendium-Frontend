@@ -1,9 +1,9 @@
 import Image from 'next/image'; 
 
-interface SeminarAppealPointProps {
+type SeminarAppealPointProps = {
   appealPointText: string;
   appealPointImages: string[];
-}
+};
 
 function SeminarAppealPoint({
   appealPointText,
