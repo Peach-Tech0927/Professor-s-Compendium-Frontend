@@ -43,13 +43,18 @@ export default function ProfessorCard({
             onMouseEnter={() => !isMobile && setIsHovered(true)}
             onMouseLeave={() => !isMobile && setIsHovered(false)}
           >
-            <Image
-              src={isHovered && !isMobile ? (hoverPhoto || mainPhoto) : (mainPhoto || '/ProfileExample.png')}
-              alt={`${professorName}のプロフィール写真`}
-              className="rounded-lg transition-all duration-300"
-             width={100}
-             height={100}
-            />
+          <Image
+        src={
+       isHovered && !isMobile
+        ? hoverPhoto ?? mainPhoto ?? '/ProfileExample.png'
+         : mainPhoto ?? '/ProfileExample.png'
+    }
+    alt={`${professorName ?? "不明"}のプロフィール写真`}
+    className="rounded-lg transition-all duration-300"
+    width={isHovered && !isMobile ? 120 : 100}
+    height={isHovered && !isMobile ? 120 : 100}
+  />
+
           </div>
         </div>
         <div className="flex-1 ml-4 lg: mt-10 p-4 relative">
