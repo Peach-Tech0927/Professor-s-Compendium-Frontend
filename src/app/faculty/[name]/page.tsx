@@ -29,7 +29,7 @@ const FacultyPage = async ({ params }: { params: { name: string } }) => {
           </p>
         </div>
       </div>
-      <ProfessorCardGrid />
+      <ProfessorCardGrid facultyKey={facultyData.SK} />
     </>
   );
 };

@@ -29,7 +29,7 @@
   },
   {
     "PK": "FACULTIES",
-    "SK": "FACULTY#BUNGAKU",
+    "SK": "FACULTY#HOUGAKU",
     "facultyName": "法学部",
     "englishFacultyName": "Faculty of Law",
     "facultyDescription": "文化と人間を深く探求する。",
@@ -72,7 +72,7 @@
     "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
     "departments": [
       {
-        "name":"国際日本学専攻",
+        "name": "国際日本学専攻",
         "englishName": "Department of Japanese Literature"
       },
       {
@@ -81,7 +81,7 @@
       }
     ]
   },
-    {
+  {
     "PK": "FACULTIES",
     "SK": "FACULTY#RIKOU",
     "facultyName": "理工学部",
@@ -90,7 +90,7 @@
     "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
     "departments": [
       {
-        "name":"データ数理専攻",
+        "name": "データ数理専攻",
         "englishName": "Department of Japanese Literature"
       },
       {
@@ -111,7 +111,6 @@
       }
     ]
   },
-  
 
   {
     "PK": "FACULTY#KEIZAI",
@@ -134,6 +133,28 @@
     "hoverPhoto": "https://example.com/photos/suzuki_hover.jpg",
     "researchTheme": "国際金融論",
     "officeLocation": "3-502"
+  },
+  {
+    "PK": "FACULTY#HOUGAKU",
+    "SK": "PROF#OGAWA",
+    "professorName": "小川 誠",
+    "yomigana": "Ogawa Makoto",
+    "department": "法学科",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "https://example.com/photos/ogawa_hover.jpg",
+    "researchTheme": "憲法学",
+    "officeLocation": "1-101"
+  },
+  {
+    "PK": "FACULTY#HOUGAKU",
+    "SK": "PROF#FUJITA",
+    "professorName": "藤田 純",
+    "yomigana": "Fujita Jun",
+    "department": "政治学科",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "https://example.com/photos/fujita_hover.jpg",
+    "researchTheme": "政治思想史",
+    "officeLocation": "1-102"
   },
   {
     "PK": "FACULTY#KEIZAI",
@@ -304,5 +325,97 @@
     "GSI1PK": "KEYWORD#データ分析",
     "professorId": "TANAKA",
     "professorName": "田中 太郎"
+  },
+
+  {
+    "PK": "FACULTY#KEIEI",
+    "SK": "PROF#KATO",
+    "professorName": "加藤 一成",
+    "yomigana": "Kato Issei",
+    "department": "総合経営学科",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "https://example.com/photos/kato_hover.jpg",
+    "researchTheme": "経営戦略論",
+    "officeLocation": "2-201"
+  },
+  {
+    "PK": "FACULTY#KEIEI",
+    "SK": "PROF#SATO",
+    "professorName": "佐藤 四郎",
+    "yomigana": "Sato Shiro",
+    "department": "総合経営学科",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "https://example.com/photos/sato_hover.jpg",
+    "researchTheme": "マーケティング論",
+    "officeLocation": "2-202"
+  },
+
+  {
+    "PK": "FACULTY#BUNGAKU",
+    "SK": "PROF#YAMADA",
+    "professorName": "山田 花子",
+    "yomigana": "Yamada Hanako",
+    "department": "日本文学科",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "https://example.com/photos/yamada_hover.jpg",
+    "researchTheme": "近世日本文学",
+    "officeLocation": "4-101"
+  },
+  {
+    "PK": "FACULTY#BUNGAKU",
+    "SK": "PROF#NAKAMURA",
+    "professorName": "中村 真",
+    "yomigana": "Nakamura Makoto",
+    "department": "英米文学科",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "https://example.com/photos/nakamura_hover.jpg",
+    "researchTheme": "英米詩学",
+    "officeLocation": "4-102"
+  },
+
+  {
+    "PK": "FACULTY#KOKUSAI",
+    "SK": "PROF#HAYASHI",
+    "professorName": "林 結衣",
+    "yomigana": "Hayashi Yui",
+    "department": "国際日本学専攻",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "https://example.com/photos/hayashi_hover.jpg",
+    "researchTheme": "国際コミュニケーション",
+    "officeLocation": "6-301"
+  },
+  {
+    "PK": "FACULTY#KOKUSAI",
+    "SK": "PROF#ITO",
+    "professorName": "伊藤 亮",
+    "yomigana": "Ito Ryo",
+    "department": "環境サステナビリティ学専攻",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "https://example.com/photos/ito_hover.jpg",
+    "researchTheme": "サステナビリティ政策",
+    "officeLocation": "6-302"
+  },
+
+  {
+    "PK": "FACULTY#RIKOU",
+    "SK": "PROF#AOKI",
+    "professorName": "青木 渉",
+    "yomigana": "Aoki Wataru",
+    "department": "データ数理専攻",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "https://example.com/photos/aoki_hover.jpg",
+    "researchTheme": "機械学習",
+    "officeLocation": "5-401"
+  },
+  {
+    "PK": "FACULTY#RIKOU",
+    "SK": "PROF#KOBAYASHI",
+    "professorName": "小林 涼",
+    "yomigana": "Kobayashi Ryo",
+    "department": "機械システム専攻",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "https://example.com/photos/kobayashi_hover.jpg",
+    "researchTheme": "ロボット工学",
+    "officeLocation": "5-402"
   }
 ]
