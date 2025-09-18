@@ -120,7 +120,9 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
              />
           </TabsContent>
           <TabsContent value="personal" className="w-full">
-            <ProfessorPersonalView personalData={personalData} />
+            <ProfessorPersonalView personalData={personalData}
+                                   professorName={professorName}
+                                   post={post} />
           </TabsContent>
         </Tabs>
       </div>
