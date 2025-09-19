@@ -42,6 +42,7 @@ export default function ProfessorCardGrid({
               officeLocation={professor.officeLocation}
             />
           </Link>
+
         ))}
       </div>
     </div>
