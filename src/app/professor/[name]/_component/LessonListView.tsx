@@ -1,5 +1,6 @@
 import HeadLine from "@/components/HeadLine";
 import { BookOpen } from "lucide-react";
+import { Clapperboard } from 'lucide-react';
 import LessonCard from "./LessonCard";
 
 export type Lesson = {
@@ -28,6 +29,7 @@ const LessonListView: React.FC<LessonListViewProps> = ({ lessons }) => {
           <LessonCard key={lesson.SK} lesson={lesson} />
         ))}
       </div>
+      <HeadLine icon={<Clapperboard className="w-10 h-10 " />} title="担当授業紹介動画" />
     </div>
   );
 };
