@@ -40,6 +40,8 @@ export default function ProfessorCardGrid({
               department={professor.department}
               researchTheme={professor.researchTheme}
               officeLocation={professor.officeLocation}
+              mainPhoto={professor.mainPhoto}
+              hoverPhoto={professor.hoverPhoto}
             />
           </Link>
 
