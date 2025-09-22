@@ -7,6 +7,7 @@ import {
 import Image from "next/image";
 import {Button} from "@/components/ui/button"
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 export function AppSidebar() {
   const faculties = [
@@ -54,6 +55,7 @@ export function AppSidebar() {
                     style={{ backgroundColor: faculty.color }}>
                     <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xl font-bold">{faculty.name}</span>
                     <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2"/>
+                    <Link href={`/faculty/${faculty.name}`} className="absolute inset-0 z-10" />
                 </Button>
             ))}
           </div>
