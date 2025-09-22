@@ -67,9 +67,11 @@ export function AppSidebar() {
           <div className="absolute -bottom-12 -left-6 w-32 h-32 bg-pink-100 rounded-full" />
           <div className="absolute -bottom-20 left-15 w-50 h-50 bg-pink-100 rounded-full" />
           <div className="absolute top-5 left-12 w-6 h-6 bg-pink-100 rounded-full" />
-          {/* copyrightテキスト */}
-          <p className="text-sm font-bold text-black drop-shadow-md mt-10">
-            copyright
+          {/* テキスト */}
+          <p className="text-xs font-bold text-center text-black drop-shadow-md mt-10">
+            欅プロジェクト-2025
+            <br />
+            3S, Peach.Tech
           </p>
         </div>
       </SidebarFooter>
