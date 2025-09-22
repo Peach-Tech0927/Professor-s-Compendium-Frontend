@@ -3,10 +3,10 @@ import {
   SidebarContent,
   SidebarGroup,
   SidebarHeader,
+  SidebarFooter,
 } from "@/components/ui/sidebar";
 import Image from "next/image";
 import {Button} from "@/components/ui/button"
-import { ChevronDown } from "lucide-react";
 
 export function AppSidebar() {
   const faculties = [
@@ -25,17 +25,17 @@ export function AppSidebar() {
           <div className="flex flex-col items-center">
             <Image
               src="/KariPeachKun.png"
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               alt="ピーチくん"
               className="mb-2"
             />
-            <h1 className="text-3xl font-bold mb-2">
+            <h1 className="text-2xl font-bold mb-2">
               成蹊大学
               <br />
               教授図鑑
             </h1>
-            <p className="text-s text-center">
+            <p className="text-xs text-center">
               SEIKEI UNIVERSITY
               <br />
               PROFESSOR CATALOG
@@ -47,18 +47,32 @@ export function AppSidebar() {
         <SidebarGroup>
           <div className="w-full space-y-4">
             {faculties.map((faculty) => (
-                <Button
-                    key={faculty.name}
-                    variant="outline"
-                    className="relative w-full h-14 text-black rounded-sm shadow-md"
-                    style={{ backgroundColor: faculty.color }}>
-                    <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xl font-bold">{faculty.name}</span>
-                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2"/>
-                </Button>
+              <Button
+                key={faculty.name}
+                variant="outline"
+                className="relative w-full h-14 text-black rounded-sm shadow-md"
+                style={{ backgroundColor: faculty.color }}
+              >
+                <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xl font-bold">
+                  {faculty.name}
+                </span>
+              </Button>
             ))}
           </div>
         </SidebarGroup>
       </SidebarContent>
+      <SidebarFooter>
+        <div className="relative w-full h-35 flex items-center justify-center overflow-hidden">
+          {/* ピンクの丸背景 */}
+          <div className="absolute -bottom-12 -left-6 w-32 h-32 bg-pink-100 rounded-full" />
+          <div className="absolute -bottom-20 left-15 w-50 h-50 bg-pink-100 rounded-full" />
+          <div className="absolute top-5 left-12 w-6 h-6 bg-pink-100 rounded-full" />
+          {/* copyrightテキスト */}
+          <p className="text-sm font-bold text-black drop-shadow-md mt-10">
+            copyright
+          </p>
+        </div>
+      </SidebarFooter>
     </Sidebar>
   );
 }
