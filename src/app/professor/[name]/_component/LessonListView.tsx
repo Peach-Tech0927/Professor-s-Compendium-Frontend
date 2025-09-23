@@ -32,9 +32,7 @@ const LessonListView: React.FC<LessonListViewProps> = ({ lessons, courseYoutubeU
         ))}
       </div>
       <HeadLine icon={<Clapperboard className="w-10 h-10 " />} title="担当授業紹介動画" />
-      {courseYoutubeUrl && (
-        <YouTubeVideo youtubeUrl={courseYoutubeUrl} title="担当授業紹介動画" />
-      )}
+      <YouTubeVideo youtubeUrl={courseYoutubeUrl} title="担当授業紹介動画" />
     </div>
   );
 };

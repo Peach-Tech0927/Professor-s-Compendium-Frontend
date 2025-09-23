@@ -152,9 +152,7 @@ const SeminarInfoView = ({
         icon={<Clapperboard className="w-10 h-10 "/>}
         title={seminarName + "紹介動画"}
       />
-      {youtubeUrl && (
-        <YouTubeVideo youtubeUrl={youtubeUrl} title="ゼミ紹介動画" />
-      )}
+      <YouTubeVideo youtubeUrl={youtubeUrl} title="ゼミ紹介動画" />
     </div>
   );
 };

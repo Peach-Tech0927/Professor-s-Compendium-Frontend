@@ -104,9 +104,7 @@ const ProfessorPersonalView:React.FC<ProfessorPersonalViewsProps> = ({personalDa
         icon={<Clapperboard className="w-10 h-10 "/>}
         title={professorName + post + "のパーソナルストーリー"}
       />
-      {personalData.youtubeUrl && (
-        <YouTubeVideo youtubeUrl={personalData.youtubeUrl} title="パーソナルストーリー動画" />
-      )}
+      <YouTubeVideo youtubeUrl={personalData.youtubeUrl} title="パーソナルストーリー動画" />
       </div>
   );
 };

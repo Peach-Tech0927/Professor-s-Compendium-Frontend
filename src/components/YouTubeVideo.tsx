@@ -1,9 +1,19 @@
 type YouTubeVideoProps = {
-  youtubeUrl: string;
+  youtubeUrl?: string;
   title?: string;
 };
 
-const YouTubeVideo: React.FC<YouTubeVideoProps> = ({ youtubeUrl, title = "動画" }) => {
+function YouTubeVideo({ youtubeUrl, title = "動画" }: YouTubeVideoProps) {
+  if (!youtubeUrl || youtubeUrl.trim() === "") {
+    return (
+      <div className="mt-5 mx-4 lg:mx-50">
+        <div className="flex items-center justify-center h-32 bg-gray-100 rounded-lg">
+          <p className="text-gray-500 text-lg">動画はありません</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="mt-5 mx-4 lg:mx-50">
       <div className="relative w-full aspect-video">
@@ -17,6 +27,6 @@ const YouTubeVideo: React.FC<YouTubeVideoProps> = ({ youtubeUrl, title = "動画
       </div>
     </div>
   );
-};
+}
 
 export default YouTubeVideo;
