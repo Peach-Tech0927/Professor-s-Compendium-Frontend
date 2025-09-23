@@ -2,6 +2,7 @@ import HeadLine from "@/components/HeadLine";
 import { BookOpen } from "lucide-react";
 import { Clapperboard } from 'lucide-react';
 import LessonCard from "./LessonCard";
+import YouTubeVideo from "@/components/YouTubeVideo";
 
 export type Lesson = {
   PK: string;
@@ -18,9 +19,10 @@ export type Lesson = {
 
 type LessonListViewProps = {
   lessons: Lesson[];
+  courseYoutubeUrl?: string;
 };
 
-const LessonListView: React.FC<LessonListViewProps> = ({ lessons }) => {
+const LessonListView: React.FC<LessonListViewProps> = ({ lessons, courseYoutubeUrl }) => {
   return (
     <div className="mt-10">
       <HeadLine icon={<BookOpen className="w-10 h-10 " />} title="担当授業" />
@@ -30,17 +32,9 @@ const LessonListView: React.FC<LessonListViewProps> = ({ lessons }) => {
         ))}
       </div>
       <HeadLine icon={<Clapperboard className="w-10 h-10 " />} title="担当授業紹介動画" />
-      <div className="mt-5 mx-4 lg:mx-50">
-        <div className="relative w-full aspect-video">
-          <iframe
-            src="https://www.youtube.com/embed/tAxcgLdFHrw"
-            title="担当授業紹介動画"
-            className="w-full h-full rounded-lg"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
-      </div>
+      {courseYoutubeUrl && (
+        <YouTubeVideo youtubeUrl={courseYoutubeUrl} title="担当授業紹介動画" />
+      )}
     </div>
   );
 };

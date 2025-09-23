@@ -3,6 +3,7 @@ import HeadLine from "@/components/HeadLine";
 import Image from "next/image";
 import { IdCard } from "lucide-react";
 import { Clapperboard } from 'lucide-react';
+import YouTubeVideo from "@/components/YouTubeVideo";
 
 //パーソナル情報の各項目コンポーネント
 
@@ -103,17 +104,9 @@ const ProfessorPersonalView:React.FC<ProfessorPersonalViewsProps> = ({personalDa
         icon={<Clapperboard className="w-10 h-10 "/>}
         title={professorName + post + "のパーソナルストーリー"}
       />
-      <div className="mt-5 mx-4 lg:mx-50">
-        <div className="relative w-full aspect-video">
-          <iframe
-            src="https://www.youtube.com/embed/tAxcgLdFHrw"
-            title="パーソナルストーリー動画"
-            className="w-full h-full rounded-lg"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
-      </div>
+      {personalData.youtubeUrl && (
+        <YouTubeVideo youtubeUrl={personalData.youtubeUrl} title="パーソナルストーリー動画" />
+      )}
       </div>
   );
 };
