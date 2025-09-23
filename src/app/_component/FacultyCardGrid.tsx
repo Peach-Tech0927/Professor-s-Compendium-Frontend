@@ -30,7 +30,7 @@ export default function FacultyCardGrid() {
       経営学部: "#7B59A3",
       法学部: "#9CC715",
       文学部: "#E88E91",
-      国際文化共創学部国際競争学科: "#C62F3E",
+      国際共創学部: "#C62F3E",
       理工学部: "#F4A000",
     };
     return colorMap[facultyName] || "#5BA7E5";

@@ -15,7 +15,7 @@ export function AppSidebar() {
     { name: "経営学部", color: "#D2C7E0" }, 
     { name: "法学部", color: "#D9E8A5" },
     { name: "文学部", color: "#F3D0D1" },
-    { name: "国際文化共創学部", color: "#E8A8B1" },
+    { name: "国際共創学部", color: "#E8A8B1" },
     { name: "理工学部", color: "#FDF0D6" }
   ];
 
