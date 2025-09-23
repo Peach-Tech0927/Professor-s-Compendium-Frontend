@@ -149,6 +149,17 @@ const SeminarInfoView = ({
         icon={<Clapperboard className="w-10 h-10 "/>}
         title={seminarName + "紹介動画"}
       />
+      <div className="mt-5 mx-4 lg:mx-50">
+        <div className="relative w-full aspect-video">
+          <iframe
+            src="https://www.youtube.com/embed/tAxcgLdFHrw"
+            title="ゼミ紹介動画"
+            className="w-full h-full rounded-lg"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      </div>
     </div>
   );
 };
