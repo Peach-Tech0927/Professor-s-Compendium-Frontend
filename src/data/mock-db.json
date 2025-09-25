@@ -119,7 +119,7 @@
     "yomigana": "Tanaka Tarou",
     "department": "経済経営学科",
     "mainPhoto": "/ElenaFuji.png",
-    "hoverPhoto": "https://example.com/photos/tanaka_hover.jpg",
+    "hoverPhoto": "/Elena_hoverImage.png",
     "researchTheme": "行動経済学の応用",
     "officeLocation": "3-501"
   },
@@ -130,7 +130,7 @@
     "yomigana": "Suzuki Ichirou",
     "department": "経済経営学科",
     "mainPhoto": "/ElenaFuji.png",
-    "hoverPhoto": "https://example.com/photos/suzuki_hover.jpg",
+    "hoverPhoto": "/Elena_hoverImage.png",
     "researchTheme": "国際金融論",
     "officeLocation": "3-502"
   },
@@ -141,7 +141,7 @@
     "yomigana": "Ogawa Makoto",
     "department": "法学科",
     "mainPhoto": "/ElenaFuji.png",
-    "hoverPhoto": "https://example.com/photos/ogawa_hover.jpg",
+    "hoverPhoto": "Elena_hoverImage.png",
     "researchTheme": "憲法学",
     "officeLocation": "1-101"
   },
@@ -152,7 +152,7 @@
     "yomigana": "Fujita Jun",
     "department": "政治学科",
     "mainPhoto": "/ElenaFuji.png",
-    "hoverPhoto": "https://example.com/photos/fujita_hover.jpg",
+    "hoverPhoto": "Elena_hoverImage.png",
     "researchTheme": "政治思想史",
     "officeLocation": "1-102"
   },
@@ -163,7 +163,7 @@
     "yomigana": "Morimoto Niiro",
     "department": "経済経営学科",
     "mainPhoto": "/ElenaFuji.png",
-    "hoverPhoto": "https://example.com/photos/suzuki_hover.jpg",
+    "hoverPhoto": "/Elena_hoverImage.png",
     "researchTheme": "国際金融論",
     "officeLocation": "3-502"
   },
@@ -174,7 +174,18 @@
     "yomigana": "Takahashi Sanro",
     "department": "経済経営学科",
     "mainPhoto": "/ElenaFuji.png",
-    "hoverPhoto": "https://example.com/photos/suzuki_hover.jpg",
+    "hoverPhoto": "/Elena_hoverImage.png",
+    "researchTheme": "国際金融論",
+    "officeLocation": "3-502"
+  },
+   {
+    "PK": "FACULTY#KEIZAI",
+    "SK": "PROF#YAMADA",
+    "professorName": "山田 四郎",
+    "yomigana": "Yamada Shiro",
+    "department": "経済経営学科",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "/Elena_hoverImage.png",
     "researchTheme": "国際金融論",
     "officeLocation": "3-502"
   },
@@ -257,13 +268,13 @@
     "description": "行動経済学の理論を実践に応用するゼミです。ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ",
     "descriptionImage": "/ProfileExample.png",
     "appealPoint": {
-      "text": "毎年、企業と連携したプロジェクトを実施しています。毎年、企業と連携したプロジェクトを実施しています。毎年、企業と連携したプロジェクトを実施しています。毎年、企業と連携したプロジェクトを実施しています。毎年、企業と連携したプロジェクトを実施しています。毎年、企業と連携したプロジェクトを実施しています。毎年、企業と連携したプロジェクトを実施しています。毎年、企業と連携したプロジェクトを実施しています。毎年、企業と連携したプロジェクトを実施しています。毎年、企業と連携したプロジェクトを実施しています。毎年、企業と連携したプロジェクトを実施しています。",
-      "images": ["/ProfileExample.png"]
+      "text": "毎年、企業と連携したプロジェクトを実施しています。",
+      "images": ["/ProfileExample.png","/ProfileExample.png"]
     },
     "researchProcess": [
       {
         "text": "前期は基礎文献の輪読を行います。",
-        "image": "https://example.com/photos/seminar_proc1.jpg"
+        "image": "/ProfileExample.png"
       }
     ],
     "annualSchedule": [
@@ -334,7 +345,7 @@
     "yomigana": "Kato Issei",
     "department": "総合経営学科",
     "mainPhoto": "/ElenaFuji.png",
-    "hoverPhoto": "https://example.com/photos/kato_hover.jpg",
+    "hoverPhoto": "/Elena_hoverImage.png",
     "researchTheme": "経営戦略論",
     "officeLocation": "2-201"
   },
@@ -345,7 +356,7 @@
     "yomigana": "Sato Shiro",
     "department": "総合経営学科",
     "mainPhoto": "/ElenaFuji.png",
-    "hoverPhoto": "https://example.com/photos/sato_hover.jpg",
+    "hoverPhoto": "/Elena_hoverImage.png",
     "researchTheme": "マーケティング論",
     "officeLocation": "2-202"
   },
@@ -357,7 +368,7 @@
     "yomigana": "Yamada Hanako",
     "department": "日本文学科",
     "mainPhoto": "/ElenaFuji.png",
-    "hoverPhoto": "https://example.com/photos/yamada_hover.jpg",
+    "hoverPhoto": "/Elena_hoverImage.png",
     "researchTheme": "近世日本文学",
     "officeLocation": "4-101"
   },
@@ -368,7 +379,7 @@
     "yomigana": "Nakamura Makoto",
     "department": "英米文学科",
     "mainPhoto": "/ElenaFuji.png",
-    "hoverPhoto": "https://example.com/photos/nakamura_hover.jpg",
+    "hoverPhoto": "/Elena_hoverImage.png",
     "researchTheme": "英米詩学",
     "officeLocation": "4-102"
   },
@@ -380,7 +391,7 @@
     "yomigana": "Hayashi Yui",
     "department": "国際日本学専攻",
     "mainPhoto": "/ElenaFuji.png",
-    "hoverPhoto": "https://example.com/photos/hayashi_hover.jpg",
+    "hoverPhoto": "/Elena_hoverImage.png",
     "researchTheme": "国際コミュニケーション",
     "officeLocation": "6-301"
   },
@@ -391,7 +402,7 @@
     "yomigana": "Ito Ryo",
     "department": "環境サステナビリティ学専攻",
     "mainPhoto": "/ElenaFuji.png",
-    "hoverPhoto": "https://example.com/photos/ito_hover.jpg",
+    "hoverPhoto": "/Elena_hoverImage.png",
     "researchTheme": "サステナビリティ政策",
     "officeLocation": "6-302"
   },
@@ -403,7 +414,7 @@
     "yomigana": "Aoki Wataru",
     "department": "データ数理専攻",
     "mainPhoto": "/ElenaFuji.png",
-    "hoverPhoto": "https://example.com/photos/aoki_hover.jpg",
+    "hoverPhoto": "/Elena_hoverImage.png",
     "researchTheme": "機械学習",
     "officeLocation": "5-401"
   },
@@ -414,7 +425,7 @@
     "yomigana": "Kobayashi Ryo",
     "department": "機械システム専攻",
     "mainPhoto": "/ElenaFuji.png",
-    "hoverPhoto": "https://example.com/photos/kobayashi_hover.jpg",
+    "hoverPhoto": "/Elena_hoverImage.png",
     "researchTheme": "ロボット工学",
     "officeLocation": "5-402"
   }

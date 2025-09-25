@@ -2,6 +2,7 @@
 import HeadLine from "@/components/HeadLine";
 import Image from "next/image";
 import { IdCard } from "lucide-react";
+import { Clapperboard } from 'lucide-react';
 
 //パーソナル情報の各項目コンポーネント
 
@@ -52,6 +53,8 @@ export type ProfessorPersonalData = {
 
 type ProfessorPersonalViewsProps = {
   personalData: ProfessorPersonalData;
+  professorName: string;
+  post: string;
 }
 
 const itemTitles:{[key:string]:string} = {
@@ -65,7 +68,7 @@ const itemTitles:{[key:string]:string} = {
 
 //パーソナル情報view
 
-const ProfessorPersonalView:React.FC<ProfessorPersonalViewsProps> = ({personalData})=>{
+const ProfessorPersonalView:React.FC<ProfessorPersonalViewsProps> = ({personalData, professorName, post})=>{
   const displayItems = Object.entries(personalData).filter(
     (entry):entry is [string, PersonalItemData] =>
       typeof entry[1] === "object" && entry[1] !== null && !!itemTitles[entry[0]]
@@ -96,6 +99,10 @@ const ProfessorPersonalView:React.FC<ProfessorPersonalViewsProps> = ({personalDa
         )}
         </div>
       </div>
+      <HeadLine
+        icon={<Clapperboard className="w-10 h-10 "/>}
+        title={professorName + post + "のパーソナルストーリー"}
+      />
       </div>
   );
 };

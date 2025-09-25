@@ -1,5 +1,6 @@
 import HeadLine from "@/components/HeadLine";
 import { FlaskConical } from "lucide-react";
+import { Clapperboard } from 'lucide-react';
 import Image from "next/image";
 import { SeminarSchedule } from "../_component/SeminarSchedule";
 import SeminarAppealPoint from "./SeminarAppealPoint";
@@ -144,6 +145,10 @@ const SeminarInfoView = ({
           )}
         </div>
       </div>
+      <HeadLine
+        icon={<Clapperboard className="w-10 h-10 "/>}
+        title={seminarName + "紹介動画"}
+      />
     </div>
   );
 };
