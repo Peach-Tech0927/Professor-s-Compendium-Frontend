@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/sidebar";
 import Image from "next/image";
 import {Button} from "@/components/ui/button"
+import Link from "next/link";
 
 export function AppSidebar() {
   const faculties = [
@@ -14,7 +15,7 @@ export function AppSidebar() {
     { name: "経営学部", color: "#D2C7E0" }, 
     { name: "法学部", color: "#D9E8A5" },
     { name: "文学部", color: "#F3D0D1" },
-    { name: "国際文化共創学部", color: "#E8A8B1" },
+    { name: "国際共創学部", color: "#E8A8B1" },
     { name: "理工学部", color: "#FDF0D6" }
   ];
 
@@ -47,16 +48,14 @@ export function AppSidebar() {
         <SidebarGroup>
           <div className="w-full space-y-4">
             {faculties.map((faculty) => (
-              <Button
-                key={faculty.name}
-                variant="outline"
-                className="relative w-full h-14 text-black rounded-sm shadow-md"
-                style={{ backgroundColor: faculty.color }}
-              >
-                <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xl font-bold">
-                  {faculty.name}
-                </span>
-              </Button>
+                <Button
+                    key={faculty.name}
+                    variant="outline"
+                    className="relative w-full h-14 text-black rounded-sm shadow-md"
+                    style={{ backgroundColor: faculty.color }}>
+                    <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xl font-bold">{faculty.name}</span>
+                    <Link href={`/faculty/${faculty.name}`} className="absolute inset-0 z-10" />
+                </Button>
             ))}
           </div>
         </SidebarGroup>
