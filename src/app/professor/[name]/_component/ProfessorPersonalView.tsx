@@ -100,10 +100,12 @@ const ProfessorPersonalView:React.FC<ProfessorPersonalViewsProps> = ({personalDa
         )}
         </div>
       </div>
-      <HeadLine
-        icon={<Clapperboard className="w-10 h-10 "/>}
-        title={professorName + post + "のパーソナルストーリー"}
-      />
+      <div className="mt-8">
+        <HeadLine
+            icon={<Clapperboard className="w-10 h-10 "/>}
+            title={professorName + post + "のパーソナルストーリー"}
+        />
+      </div>
       <YouTubeVideo youtubeUrl={personalData.youtubeUrl} title="パーソナルストーリー動画" />
       </div>
   );

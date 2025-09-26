@@ -148,10 +148,12 @@ const SeminarInfoView = ({
           )}
         </div>
       </div>
-      <HeadLine
-        icon={<Clapperboard className="w-10 h-10 "/>}
-        title={seminarName + "紹介動画"}
-      />
+      <div className="mt-8">
+        <HeadLine
+            icon={<Clapperboard className="w-10 h-10 "/>}
+            title={seminarName + "紹介動画"}
+        />
+      </div>
       <YouTubeVideo youtubeUrl={youtubeUrl} title="ゼミ紹介動画" />
     </div>
   );

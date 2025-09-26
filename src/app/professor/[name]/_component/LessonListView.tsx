@@ -31,7 +31,9 @@ const LessonListView: React.FC<LessonListViewProps> = ({ lessons, courseYoutubeU
           <LessonCard key={lesson.SK} lesson={lesson} />
         ))}
       </div>
-      <HeadLine icon={<Clapperboard className="w-10 h-10 " />} title="担当授業紹介動画" />
+      <div className="mt-8">
+        <HeadLine icon={<Clapperboard className="w-10 h-10 " />} title="担当授業紹介動画" />
+      </div>
       <YouTubeVideo youtubeUrl={courseYoutubeUrl} title="担当授業紹介動画" />
     </div>
   );
