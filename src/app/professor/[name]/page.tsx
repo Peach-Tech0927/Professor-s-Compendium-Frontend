@@ -74,6 +74,8 @@ export default async function ProfessorPage({
         appealPointText={seminar?.appealPoint?.text || ""}
         appealPointImages={seminar?.appealPoint?.images || []}
         graduateThemes={seminar?.graduateThemes||[]}
+        courseYoutubeUrl={metadata?.courseYoutubeUrl}
+        seminarYoutubeUrl={seminar?.youtubeUrl}
       />
     </>
   );

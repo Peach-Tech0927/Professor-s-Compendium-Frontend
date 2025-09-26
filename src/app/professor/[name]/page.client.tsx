@@ -38,6 +38,8 @@ type ClientProfessorPageProps = {
   appealPointImages: string[];
   graduateThemes: string[];
   keywords: string[];
+  courseYoutubeUrl?: string;
+  seminarYoutubeUrl?: string;
 };
 
 const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
@@ -63,6 +65,8 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
   appealPointImages,
   graduateThemes,
   keywords,
+  courseYoutubeUrl,
+  seminarYoutubeUrl,
 }) => {
   return (
     <>
@@ -104,7 +108,7 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
             />
           </TabsContent>
           <TabsContent value="course" className="w-full">
-            <LessonListView lessons={lessons} />
+            <LessonListView lessons={lessons} courseYoutubeUrl={courseYoutubeUrl} />
           </TabsContent>
           <TabsContent value="seminor-info" className="w-full">
             <SeminarInfoView
@@ -117,6 +121,7 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
                appealPointImages={appealPointImages}
                graduateThemes={graduateThemes}
                keywords={keywords}
+               youtubeUrl={seminarYoutubeUrl}
              />
           </TabsContent>
           <TabsContent value="personal" className="w-full">

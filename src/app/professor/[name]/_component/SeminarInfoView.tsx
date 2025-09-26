@@ -5,6 +5,7 @@ import Image from "next/image";
 import { SeminarSchedule } from "../_component/SeminarSchedule";
 import SeminarAppealPoint from "./SeminarAppealPoint";
 import { Badge } from "@/components/ui/badge";
+import YouTubeVideo from "@/components/YouTubeVideo";
 
 interface SeminarInfoViewProps {
   seminarName: string;
@@ -19,6 +20,7 @@ interface SeminarInfoViewProps {
   appealPointImages: string[];
   keywords: string[];
   graduateThemes:string[];
+  youtubeUrl?: string;
 }
 
 const SeminarInfoView = ({
@@ -31,6 +33,7 @@ const SeminarInfoView = ({
   appealPointImages,
   keywords,
   graduateThemes,
+  youtubeUrl,
 }: SeminarInfoViewProps) => {
   return (
     <div className="mt-10">
@@ -145,10 +148,13 @@ const SeminarInfoView = ({
           )}
         </div>
       </div>
-      <HeadLine
-        icon={<Clapperboard className="w-10 h-10 "/>}
-        title={seminarName + "紹介動画"}
-      />
+      <div className="mt-8">
+        <HeadLine
+            icon={<Clapperboard className="w-10 h-10 "/>}
+            title={seminarName + "紹介動画"}
+        />
+      </div>
+      <YouTubeVideo youtubeUrl={youtubeUrl} title="ゼミ紹介動画" />
     </div>
   );
 };
