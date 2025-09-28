@@ -178,7 +178,7 @@
     "researchTheme": "国際金融論",
     "officeLocation": "3-502"
   },
-   {
+  {
     "PK": "FACULTY#KEIZAI",
     "SK": "PROF#YAMADA",
     "professorName": "山田 四郎",
@@ -261,6 +261,42 @@
     "courseCode": "EC305",
     "syllabusLinkUrl": "https://portal.seikei.ac.jp/campusweb/slbssrch.do"
   },
+  {
+    "PK": "PROF#TANAKA",
+    "SK": "COURSE#EC102",
+    "courseName": "ミクロ経済学入門",
+    "description": "経済学の基本的な考え方を学びます。",
+    "learningPoints": "市場のメカニズムを理解する",
+    "style": "講義形式",
+    "relatedQualification": "公認会計士（一部）",
+    "targetGrade": ["1年生", "2年生"],
+    "courseCode": "EC101",
+    "syllabusLinkUrl": "https://portal.seikei.ac.jp/campusweb/slbssrch.do"
+  },
+  {
+    "PK": "PROF#TANAKA",
+    "SK": "COURSE#EC103",
+    "courseName": "ミクロ経済学入門",
+    "description": "経済学の基本的な考え方を学びます。",
+    "learningPoints": "市場のメカニズムを理解する",
+    "style": "講義形式",
+    "relatedQualification": "公認会計士（一部）",
+    "targetGrade": ["1年生", "2年生"],
+    "courseCode": "EC101",
+    "syllabusLinkUrl": "https://portal.seikei.ac.jp/campusweb/slbssrch.do"
+  },
+  {
+    "PK": "PROF#TANAKA",
+    "SK": "COURSE#EC104",
+    "courseName": "ミクロ経済学入門",
+    "description": "経済学の基本的な考え方を学びます。",
+    "learningPoints": "市場のメカニズムを理解する",
+    "style": "講義形式",
+    "relatedQualification": "公認会計士（一部）",
+    "targetGrade": ["1年生", "2年生"],
+    "courseCode": "EC101",
+    "syllabusLinkUrl": "https://portal.seikei.ac.jp/campusweb/slbssrch.do"
+  },
 
   {
     "PK": "PROF#TANAKA",
@@ -270,7 +306,7 @@
     "descriptionImage": "/ProfileExample.png",
     "appealPoint": {
       "text": "毎年、企業と連携したプロジェクトを実施しています。",
-      "images": ["/ProfileExample.png","/ProfileExample.png"]
+      "images": ["/ProfileExample.png", "/ProfileExample.png"]
     },
     "researchProcess": [
       {
