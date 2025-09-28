@@ -99,8 +99,8 @@ const SeminarInfoView = ({
           <SeminarSchedule seminarSchedule={seminarSchedule} />
         </div>
       </div>
-      <div className="flex justify-center items-start mt-10 gap-50">
-        <div>
+      <div className="flex flex-col max-w-[900px] mx-auto lg:flex-row justify-center items-start mt-10 gap-0 lg:gap-10">
+        <div className="max-w-[300px] lg:max-w-[500px] mx-auto mb-6 lg:mb-0">
           <h2 className="text-xl font-bold mb-2">活動曜日・頻度</h2>
           {activityDay && activityDay.length > 0 ? (
             activityDay.map((day, index) => {
@@ -121,7 +121,7 @@ const SeminarInfoView = ({
             <p>活動日の情報がありません</p>
           )}
         </div>
-        <div>
+        <div className="max-w-[300px] lg:max-w-[500px] mx-auto mb-6 lg:mb-0">
           <h2 className="text-xl font-bold mb-2">特徴・キーワード</h2>
           {keywords.map((keyword) => (
             <Badge
@@ -132,7 +132,7 @@ const SeminarInfoView = ({
             </Badge>
           ))}
         </div>
-        <div>
+        <div className="max-w-[300px] lg:max-w-[500px] mx-auto mb-6 lg:mb-0">
           <h2 className="text-xl font-bold mb-2">卒業生の研究テーマ</h2>
           {graduateThemes && graduateThemes.length > 0 ? (
             graduateThemes.map((theme, index) => {
