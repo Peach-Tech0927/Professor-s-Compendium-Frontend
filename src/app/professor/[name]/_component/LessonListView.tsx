@@ -1,7 +1,6 @@
 "use client";
 import HeadLine from "@/components/HeadLine";
-import { BookOpen, ChevronDown } from "lucide-react";
-import { Clapperboard } from "lucide-react";
+import { BookOpen, ChevronDown, Clapperboard } from "lucide-react";
 import LessonCard from "./LessonCard";
 import YouTubeVideo from "@/components/YouTubeVideo";
 import { useState } from "react";
