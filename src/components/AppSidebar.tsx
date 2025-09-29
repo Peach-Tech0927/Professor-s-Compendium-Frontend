@@ -76,7 +76,7 @@ export function AppSidebar() {
           <p className="text-xs font-bold text-center text-black drop-shadow-md mt-10">
             欅プロジェクト-2025
             <br />
-            3S, Peach.Tech
+            Seikei Startup Studio, Peach.Tech
           </p>
         </div>
       </SidebarFooter>
