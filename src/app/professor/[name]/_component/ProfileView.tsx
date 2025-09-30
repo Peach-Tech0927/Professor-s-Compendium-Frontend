@@ -1,7 +1,7 @@
-import HeadLine from "@/components/HeadLine";
+import HeadLine from "@/app/professor/[name]/_component/HeadLine";
 import Image from "next/image";
 import { User, History } from "lucide-react";
-import { CareerTimeline } from "../_component/CareerTimeline";
+import { CareerTimeline } from "./CareerTimeline";
 
 type ProfileViewProps = {
   profileText: string;

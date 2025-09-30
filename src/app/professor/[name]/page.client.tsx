@@ -1,6 +1,6 @@
 "use client";
 import ProfessorProfileCard from "./_component/ProfessorProfileCard";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/app/professor/[name]/_component/tabs";
 import ProfileView from "./_component/ProfileView";
 import ProfessorPersonalView, {
   ProfessorPersonalData,

@@ -4,7 +4,7 @@ import {
   TimelineTitle,
   TimelineDescription,
   TimelineHeader,
-} from "@/components/Timeline";
+} from "@/app/professor/[name]/_component/Timeline";
 
 export const SeminarSchedule = ({
   seminarSchedule,

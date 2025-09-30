@@ -1,8 +1,8 @@
 "use client";
-import HeadLine from "@/components/HeadLine";
+import HeadLine from "@/app/professor/[name]/_component/HeadLine";
 import { BookOpen, ChevronDown, Clapperboard } from "lucide-react";
 import LessonCard from "./LessonCard";
-import YouTubeVideo from "@/components/YouTubeVideo";
+import YouTubeVideo from "@/app/professor/[name]/_component/YouTubeVideo";
 import { useState } from "react";
 
 export type Lesson = {

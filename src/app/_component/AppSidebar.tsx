@@ -4,7 +4,7 @@ import {
   SidebarGroup,
   SidebarHeader,
   SidebarFooter,
-} from "@/components/ui/sidebar";
+} from "@/app/_component/sidebar";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
