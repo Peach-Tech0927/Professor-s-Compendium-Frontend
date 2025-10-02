@@ -4,7 +4,7 @@ import { Clapperboard } from 'lucide-react';
 import Image from "next/image";
 import { SeminarSchedule } from "../_component/SeminarSchedule";
 import SeminarAppealPoint from "./SeminarAppealPoint";
-import { Badge } from "@/app/professor/[name]/_component/badge";
+import { Badge } from "@/components/ui/badge";
 import YouTubeVideo from "@/app/professor/[name]/_component/YouTubeVideo";
 
 interface SeminarInfoViewProps {

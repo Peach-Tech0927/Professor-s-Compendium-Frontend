@@ -3,8 +3,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/app/professor/[name]/_component/accordion";
-import { Badge } from "@/app/professor/[name]/_component/badge";
+} from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
 import { Lesson } from "./LessonListView";
 import { ExternalLink } from "lucide-react";
 

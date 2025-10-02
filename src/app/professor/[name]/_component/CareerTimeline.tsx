@@ -5,7 +5,7 @@ import {
   TimelineDescription,
   TimelineHeader,
   TimelineImage,
-} from "@/app/professor/[name]/_component/Timeline";
+} from "@/components/ui/Timeline";
 
 export const CareerTimeline = ({
   careerHistory,
