@@ -106,7 +106,9 @@ const ProfessorPersonalView:React.FC<ProfessorPersonalViewsProps> = ({personalDa
             title={professorName + post + "のパーソナルストーリー"}
         />
       </div>
-      <YouTubeVideo youtubeUrl={personalData.youtubeUrl} title="パーソナルストーリー動画" />
+      <div className="mb-10">
+        <YouTubeVideo youtubeUrl={personalData.youtubeUrl} title="パーソナルストーリー動画" />
+      </div>
       </div>
   );
 };

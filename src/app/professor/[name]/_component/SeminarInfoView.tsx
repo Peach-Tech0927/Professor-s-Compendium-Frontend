@@ -156,7 +156,9 @@ const SeminarInfoView = ({
           title={seminarName + "紹介動画"}
         />
       </div>
-      <YouTubeVideo youtubeUrl={youtubeUrl} title="ゼミ紹介動画" />
+      <div className="mb-10">
+        <YouTubeVideo youtubeUrl={youtubeUrl} title="ゼミ紹介動画" />
+      </div>
     </div>
   );
 };
