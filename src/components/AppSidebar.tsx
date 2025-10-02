@@ -21,29 +21,31 @@ export function AppSidebar() {
 
   return (
     <Sidebar>
-      <SidebarHeader>
-        <div className="flex justify-center p-4">
-          <div className="flex flex-col items-center">
-            <Image
-              src="/KariPeachKun.png"
-              width={100}
-              height={100}
-              alt="ピーチくん"
-              className="mb-2"
-            />
-            <h1 className="text-2xl font-bold mb-2">
-              成蹊大学
-              <br />
-              教授図鑑
-            </h1>
-            <p className="text-xs text-center">
-              SEIKEI UNIVERSITY
-              <br />
-              PROFESSOR CATALOG
-            </p>
+      <Link href={"/"}>
+        <SidebarHeader>
+          <div className="flex justify-center p-4">
+            <div className="flex flex-col items-center">
+              <Image
+                src="/KariPeachKun.png"
+                width={100}
+                height={100}
+                alt="ピーチくん"
+                className="mb-2"
+              />
+              <h1 className="text-2xl font-bold mb-2">
+                成蹊大学
+                <br/>
+                教授図鑑
+              </h1>
+              <p className="text-xs text-center">
+                SEIKEI UNIVERSITY
+                <br />
+                PROFESSOR CATALOG
+              </p>
+            </div>
           </div>
-        </div>
-      </SidebarHeader>
+        </SidebarHeader>
+      </Link>
       <SidebarContent>
         <SidebarGroup>
           <div className="w-full space-y-3">
