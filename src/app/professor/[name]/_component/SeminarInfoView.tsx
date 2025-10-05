@@ -38,7 +38,7 @@ const SeminarInfoView = ({
   return (
     <div className="mt-10">
       <HeadLine
-        icon={<FlaskConical className="w-10 h-10 "/>}
+        icon={<FlaskConical className="w-10 h-10 " />}
         title={seminarName}
       />
       <div className="flex flex-col lg:flex-row gap-5 lg:gap-10 mt-5">
@@ -60,15 +60,17 @@ const SeminarInfoView = ({
             {seminarDescription || "ゼミ情報がありません"}
           </p>
         </div>
-      </div>      
+      </div>
       <div className="flex mx-4 lg:mx-50 gap-2 items-center mt-30">
-        <h1 className="text-lg lg:text-2xl font-bold mb-5">このゼミのアピールポイント</h1>
+        <h1 className="text-lg lg:text-2xl font-bold mb-5">
+          このゼミのアピールポイント
+        </h1>
       </div>
       <div className="mx-4 lg:mx-50">
         <SeminarAppealPoint
           appealPointText={appealPointText}
           appealPointImages={appealPointImages}
-          />
+        />
       </div>
       <div className="flex mx-4 lg:mx-50 gap-2 items-center mt-10">
         <h1 className="text-lg lg:text-2xl font-bold">研究の進め方</h1>
@@ -99,8 +101,8 @@ const SeminarInfoView = ({
           <SeminarSchedule seminarSchedule={seminarSchedule} />
         </div>
       </div>
-      <div className="flex justify-center items-start mt-10 gap-50">
-        <div>
+      <div className="flex flex-col lg:flex-row gap-5 lg:gap-10 mt-5 ml-5">
+        <div className="max-w-[300px] lg:max-w-[500px] lg:mx-auto lg:mb-0">
           <h2 className="text-xl font-bold mb-2">活動曜日・頻度</h2>
           {activityDay && activityDay.length > 0 ? (
             activityDay.map((day, index) => {
@@ -121,18 +123,18 @@ const SeminarInfoView = ({
             <p>活動日の情報がありません</p>
           )}
         </div>
-        <div>
+        <div className="max-w-[300px] lg:max-w-[500px] lg:mx-auto lg:mb-0">
           <h2 className="text-xl font-bold mb-2">特徴・キーワード</h2>
           {keywords.map((keyword) => (
             <Badge
               key={keyword}
-              className="flex flex-col bg-[#fff7f9] text-[#FF8888] border border-[#FF8888] rounded-full px-4 m-2 text-sm"
+              className="flex flex-col bg-[#fff7f9] text-[#FF8888] border border-[#FF8888] rounded-full px-4 mb-2 text-sm"
             >
               # {keyword}
             </Badge>
           ))}
         </div>
-        <div>
+        <div className="max-w-[300px] lg:max-w-[500px] lg:mx-auto lg:mb-0">
           <h2 className="text-xl font-bold mb-2">卒業生の研究テーマ</h2>
           {graduateThemes && graduateThemes.length > 0 ? (
             graduateThemes.map((theme, index) => {
@@ -150,11 +152,13 @@ const SeminarInfoView = ({
       </div>
       <div className="mt-8">
         <HeadLine
-            icon={<Clapperboard className="w-10 h-10 "/>}
-            title={seminarName + "紹介動画"}
+          icon={<Clapperboard className="w-10 h-10 " />}
+          title={seminarName + "紹介動画"}
         />
       </div>
-      <YouTubeVideo youtubeUrl={youtubeUrl} title="ゼミ紹介動画" />
+      <div className="mb-10">
+        <YouTubeVideo youtubeUrl={youtubeUrl} title="ゼミ紹介動画" />
+      </div>
     </div>
   );
 };

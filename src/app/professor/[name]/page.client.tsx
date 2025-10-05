@@ -100,14 +100,14 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
               パーソナル
             </TabsTrigger>
           </TabsList>
-          <TabsContent value="profile" className="w-full">
+          <TabsContent value="profile" className="w-full mb-10">
             <ProfileView
               profileText={profileText}
               profileImages={profileImages}
               careerHistory={careerHistory}
             />
           </TabsContent>
-          <TabsContent value="course" className="w-full">
+          <TabsContent value="course" className="w-full mb-10">
             <LessonListView lessons={lessons} courseYoutubeUrl={courseYoutubeUrl} />
           </TabsContent>
           <TabsContent value="seminor-info" className="w-full">
