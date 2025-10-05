@@ -2,10 +2,10 @@ import HeadLine from "@/app/professor/[name]/_component/HeadLine";
 import { FlaskConical } from "lucide-react";
 import { Clapperboard } from 'lucide-react';
 import Image from "next/image";
-import { SeminarSchedule } from "../_component/SeminarSchedule";
-import SeminarAppealPoint from "./SeminarAppealPoint";
 import { Badge } from "@/components/ui/badge";
 import YouTubeVideo from "@/app/professor/[name]/_component/YouTubeVideo";
+import { SeminarSchedule } from "./SeminarSchedule";
+import SeminarAppealPoint from "./SeminarAppealPoint";
 
 interface SeminarInfoViewProps {
   seminarName: string;
