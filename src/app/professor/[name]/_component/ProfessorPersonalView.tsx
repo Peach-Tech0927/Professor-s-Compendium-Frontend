@@ -1,9 +1,9 @@
 "use client";
-import HeadLine from "@/components/HeadLine";
+import HeadLine from "@/app/professor/[name]/_component/HeadLine";
 import Image from "next/image";
 import { IdCard } from "lucide-react";
 import { Clapperboard } from 'lucide-react';
-import YouTubeVideo from "@/components/YouTubeVideo";
+import YouTubeVideo from "@/app/professor/[name]/_component/YouTubeVideo";
 
 //パーソナル情報の各項目コンポーネント
 

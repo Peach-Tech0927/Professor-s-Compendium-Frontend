@@ -6,7 +6,7 @@ import {
   SidebarInset,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/AppSidebar";
+import { AppSidebar } from "@/app/_component/AppSidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
