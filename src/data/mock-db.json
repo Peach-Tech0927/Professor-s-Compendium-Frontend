@@ -141,7 +141,7 @@
     "yomigana": "Ogawa Makoto",
     "department": "法学科",
     "mainPhoto": "/ElenaFuji.png",
-    "hoverPhoto": "Elena_hoverImage.png",
+    "hoverPhoto": "/Elena_hoverImage.png",
     "researchTheme": "憲法学",
     "officeLocation": "1-101"
   },
@@ -152,7 +152,7 @@
     "yomigana": "Fujita Jun",
     "department": "政治学科",
     "mainPhoto": "/ElenaFuji.png",
-    "hoverPhoto": "Elena_hoverImage.png",
+    "hoverPhoto": "/Elena_hoverImage.png",
     "researchTheme": "政治思想史",
     "officeLocation": "1-102"
   },
