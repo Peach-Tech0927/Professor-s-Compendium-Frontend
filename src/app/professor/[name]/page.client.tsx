@@ -1,12 +1,12 @@
 "use client";
-import ProfessorProfileCard from "./_component/ProfessorProfileCard";
+import ProfessorProfileCard from "./_component/personal/ProfessorProfileCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import ProfileView from "./_component/ProfileView";
+import ProfileView from "./_component/profile/ProfileView";
 import ProfessorPersonalView, {
   ProfessorPersonalData,
-} from "./_component/ProfessorPersonalView";
-import SeminarInfoView from "./_component/SeminarInfoView";
-import LessonListView, { Lesson } from "./_component/LessonListView";
+} from "./_component/personal/ProfessorPersonalView";
+import LessonListView, { Lesson } from "./_component/lesson/LessonListView";
+import SeminarInfoView from "./_component/seminar/SeminarInfoView";
 
 type ClientProfessorPageProps = {
   xLink: string;
@@ -108,26 +108,31 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
             />
           </TabsContent>
           <TabsContent value="course" className="w-full mb-10">
-            <LessonListView lessons={lessons} courseYoutubeUrl={courseYoutubeUrl} />
+            <LessonListView
+              lessons={lessons}
+              courseYoutubeUrl={courseYoutubeUrl}
+            />
           </TabsContent>
           <TabsContent value="seminor-info" className="w-full">
             <SeminarInfoView
-               seminarName={seminarName}
-               seminarDescription={seminarDescription}
-               seminarDescriptionImage={seminarDescriptionImage}
-               seminarSchedule={seminarSchedule}
-               activityDay={activityDay}
-               appealPointText={appealPointText}
-               appealPointImages={appealPointImages}
-               graduateThemes={graduateThemes}
-               keywords={keywords}
-               youtubeUrl={seminarYoutubeUrl}
-             />
+              seminarName={seminarName}
+              seminarDescription={seminarDescription}
+              seminarDescriptionImage={seminarDescriptionImage}
+              seminarSchedule={seminarSchedule}
+              activityDay={activityDay}
+              appealPointText={appealPointText}
+              appealPointImages={appealPointImages}
+              graduateThemes={graduateThemes}
+              keywords={keywords}
+              youtubeUrl={seminarYoutubeUrl}
+            />
           </TabsContent>
           <TabsContent value="personal" className="w-full">
-            <ProfessorPersonalView personalData={personalData}
-                                   professorName={professorName}
-                                   post={post} />
+            <ProfessorPersonalView
+              personalData={personalData}
+              professorName={professorName}
+              post={post}
+            />
           </TabsContent>
         </Tabs>
       </div>

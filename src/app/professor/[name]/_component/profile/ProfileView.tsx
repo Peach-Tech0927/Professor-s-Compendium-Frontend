@@ -1,7 +1,7 @@
 import HeadLine from "@/app/professor/[name]/_component/HeadLine";
 import Image from "next/image";
 import { User, History } from "lucide-react";
-import { CareerTimeline } from "./CareerTimeline";
+import { CareerTimeline } from "../CareerTimeline";
 
 type ProfileViewProps = {
   profileText: string;
@@ -13,7 +13,11 @@ type ProfileViewProps = {
   }[];
 };
 
-const ProfileView = ({ profileText, profileImages, careerHistory }: ProfileViewProps) => {
+const ProfileView = ({
+  profileText,
+  profileImages,
+  careerHistory,
+}: ProfileViewProps) => {
   return (
     <>
       <div className="mt-10">

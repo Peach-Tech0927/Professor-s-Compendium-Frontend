@@ -5,8 +5,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { Lesson } from "./LessonListView";
 import { ExternalLink } from "lucide-react";
+import { Lesson } from "./LessonListView";
 
 type LessonCardProps = {
   lesson: Lesson;

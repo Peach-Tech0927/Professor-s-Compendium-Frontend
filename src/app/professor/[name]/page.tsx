@@ -1,7 +1,7 @@
 import mockData from "@/data/mock-db.json";
 import ClientProfessorPage from "./page.client";
-import { ProfessorPersonalData } from "./_component/ProfessorPersonalView";
-import { Lesson } from "./_component/LessonListView";
+import { ProfessorPersonalData } from "./_component/personal/ProfessorPersonalView";
+import { Lesson } from "./_component/lesson/LessonListView";
 
 export default async function ProfessorPage({
   params,
@@ -73,7 +73,7 @@ export default async function ProfessorPage({
         lessons={lessons as Lesson[]}
         appealPointText={seminar?.appealPoint?.text || ""}
         appealPointImages={seminar?.appealPoint?.images || []}
-        graduateThemes={seminar?.graduateThemes||[]}
+        graduateThemes={seminar?.graduateThemes || []}
         courseYoutubeUrl={metadata?.courseYoutubeUrl}
         seminarYoutubeUrl={seminar?.youtubeUrl}
       />
