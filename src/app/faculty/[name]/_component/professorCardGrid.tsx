@@ -1,6 +1,6 @@
-import ProfessorCard from "@/components/professorCard";
 import mockData from "@/data/mock-db.json";
 import Link from "next/link";
+import ProfessorCard from "./professorCard";
 
 type ProfessorData = {
   PK: string;
@@ -44,7 +44,6 @@ export default function ProfessorCardGrid({
               hoverPhoto={professor.hoverPhoto}
             />
           </Link>
-
         ))}
       </div>
     </div>
