@@ -1,23 +1,15 @@
-"use client";
-
-import { useState } from "react";
 import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarHeader,
+  SidebarFooter,
+} from "@/components/ui/sidebar";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Menu } from "lucide-react";
-import { useRouter } from "next/navigation";
 
 export function AppSidebar() {
-  const [open, setOpen] = useState(false);
-  const router = useRouter();
-  
   const faculties = [
     { name: "経済学部", color: "#D6EFF9" },
     { name: "経営学部", color: "#D2C7E0" },
@@ -27,22 +19,12 @@ export function AppSidebar() {
     { name: "理工学部", color: "#FDF0D6" },
   ];
 
-  const handleFacultyClick = (facultyName: string) => {
-    setOpen(false);
-    router.push(`/faculty/${facultyName}`);
-  };
-
   return (
-    <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild>
-        <Button variant="outline" className="absolute top-4 left-4 z-20">
-          <Menu className="h-4 w-4" />
-        </Button>
-      </SheetTrigger>
-      <SheetContent side="left" className="w-[280px] p-0">
-        <SheetHeader className="p-4">
-          <SheetTitle className="text-center">
-            <Link href={"/"} className="flex flex-col items-center">
+    <Sidebar>
+      <Link href={"/"}>
+        <SidebarHeader>
+          <div className="flex justify-center p-4">
+            <div className="flex flex-col items-center">
               <Image
                 src="/KariPeachKun.png"
                 width={100}
@@ -60,43 +42,46 @@ export function AppSidebar() {
                 <br />
                 PROFESSOR CATALOG
               </p>
-            </Link>
-          </SheetTitle>
-        </SheetHeader>
-        
-        <div className="flex-1 px-4 pb-4">
+            </div>
+          </div>
+        </SidebarHeader>
+      </Link>
+      <SidebarContent>
+        <SidebarGroup>
           <div className="w-full space-y-3">
             {faculties.map((faculty) => (
               <Button
                 key={faculty.name}
                 variant="outline"
-                className="w-full h-12 text-black rounded-sm shadow-md"
+                className="relative w-full h-12 text-black rounded-sm shadow-md"
                 style={{ backgroundColor: faculty.color }}
-                onClick={() => handleFacultyClick(faculty.name)}
               >
-                <span className="text-xl font-bold">
+                <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xl font-bold">
                   {faculty.name}
                 </span>
+                <Link
+                  href={`/faculty/${faculty.name}`}
+                  className="absolute inset-0 z-10"
+                />
               </Button>
             ))}
           </div>
+        </SidebarGroup>
+      </SidebarContent>
+      <SidebarFooter>
+        <div className="relative w-full h-35 flex items-center justify-center overflow-hidden">
+          {/* ピンクの丸背景 */}
+          <div className="absolute -bottom-12 -left-6 w-32 h-32 bg-pink-100 rounded-full" />
+          <div className="absolute -bottom-20 left-15 w-50 h-50 bg-pink-100 rounded-full" />
+          <div className="absolute top-5 left-12 w-6 h-6 bg-pink-100 rounded-full" />
+          {/* テキスト */}
+          <p className="text-xs font-bold text-center text-black drop-shadow-md mt-10">
+            欅プロジェクト-2025
+            <br />
+            Seikei Startup Studio, Peach.Tech
+          </p>
         </div>
-        
-        <div className="px-4 pb-4">
-          <div className="relative w-full h-35 flex items-center justify-center overflow-hidden">
-            {/* ピンクの丸背景 */}
-            <div className="absolute -bottom-12 -left-6 w-32 h-32 bg-pink-100 rounded-full" />
-            <div className="absolute -bottom-20 left-15 w-50 h-50 bg-pink-100 rounded-full" />
-            <div className="absolute top-5 left-12 w-6 h-6 bg-pink-100 rounded-full" />
-            {/* テキスト */}
-            <p className="text-xs font-bold text-center text-black drop-shadow-md mt-10">
-              欅プロジェクト-2025
-              <br />
-              Seikei Startup Studio, Peach.Tech
-            </p>
-          </div>
-        </div>
-      </SheetContent>
-    </Sheet>
+      </SidebarFooter>
+    </Sidebar>
   );
 }
