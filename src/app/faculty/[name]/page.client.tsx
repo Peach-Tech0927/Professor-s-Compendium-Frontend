@@ -17,7 +17,7 @@ const ClientFacultyPage: React.FC<ClientFacultyPageProps> = ({ facultyData, facu
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 350) {
+            if (window.scrollY > 300) {
                 setIsSticky(true);
             } else {
                 setIsSticky(false);
@@ -62,8 +62,8 @@ const ClientFacultyPage: React.FC<ClientFacultyPageProps> = ({ facultyData, facu
               style={{ backgroundImage: "url('/faculty_header.png')" }}
             >
                 <div className="absolute inset-0 bg-white/60"/>
-                <div className="relative flex items-center flex-col pt-5 pb-5">
-                    <h1 className="text-3xl font-bold">{facultyName}</h1>
+                <div className="relative flex items-center justify-center flex-col pt-5 pb-5">
+                    <h1 className="text-5xl font-bold">{facultyName}</h1>
                     <p className="mt-1 font-bold text-xl font-serif tracking-tight">
                         {facultyData.englishFacultyName}
                     </p>
