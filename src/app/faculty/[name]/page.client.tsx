@@ -1,6 +1,11 @@
 "use client"
-import Image from 'next/image';
-import {useState,useEffect, use} from 'react';
+import {useState,useEffect} from 'react';
+import {
+  SidebarProvider,
+  SidebarInset,
+  SidebarTrigger,
+} from "@/components/ui/sidebar";
+import { AppSidebar } from "@/app/_component/AppSidebar";
 
 type ClientFacultyPageProps = {
   facultyData: any; 
@@ -12,7 +17,7 @@ const ClientFacultyPage: React.FC<ClientFacultyPageProps> = ({ facultyData, facu
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 200) {
+            if (window.scrollY > 350) {
                 setIsSticky(true);
             } else {
                 setIsSticky(false);
@@ -48,7 +53,7 @@ const ClientFacultyPage: React.FC<ClientFacultyPageProps> = ({ facultyData, facu
         </div>
         {/* スクロール時のヘッダー */}
         <header
-            className={`transition-opacity ease-in-out duration-300 w-full fixed top-0 left-0 z-50 ${
+            className={`transition-opacity ease-in-out duration-300 w-full fixed top-0 left-0 z-10 ${
             isSticky ? "opacity-100" : "opacity-0 pointer-events-none"
             } `}
         >
@@ -57,13 +62,13 @@ const ClientFacultyPage: React.FC<ClientFacultyPageProps> = ({ facultyData, facu
               style={{ backgroundImage: "url('/faculty_header.png')" }}
             >
                 <div className="absolute inset-0 bg-white/60"/>
-                <div className="relative flex items-center flex-col">
-                    <h1 className="text-[5.5rem] font-bold pt-20">{facultyName}</h1>
-                    <p className="mt-1 font-bold text-2xl font-serif tracking-tight">
+                <div className="relative flex items-center flex-col pt-5 pb-5">
+                    <h1 className="text-3xl font-bold">{facultyName}</h1>
+                    <p className="mt-1 font-bold text-xl font-serif tracking-tight">
                         {facultyData.englishFacultyName}
                     </p>
                 </div>
-            </div> 
+            </div>
         </header>
     </>
   );

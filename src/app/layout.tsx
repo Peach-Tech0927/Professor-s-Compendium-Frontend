@@ -42,7 +42,7 @@ export default function RootLayout({
         <SidebarProvider defaultOpen={false}>
           <AppSidebar />
           <SidebarInset>
-            <div className="absolute top-4 left-4 z-20">
+            <div className="fixed top-4 left-4 z-20">
               <SidebarTrigger />
             </div>
             {children}
