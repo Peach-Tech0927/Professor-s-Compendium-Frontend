@@ -1,4 +1,5 @@
 "use client";
+import React, { useState } from "react";
 import ProfessorProfileCard from "./_component/personal/ProfessorProfileCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProfileView from "./_component/profile/ProfileView";
@@ -68,6 +69,16 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
   courseYoutubeUrl,
   seminarYoutubeUrl,
 }) => {
+  type TabKey = "profile" | "course" | "seminor-info" | "personal";
+  const [selectedTab, setSelectedTab] = useState<TabKey>("profile");
+
+  const tabPositions: Record<TabKey, string> = {
+    profile: "20%",
+    course: "40%",
+    "seminor-info": "60%",
+    personal: "80%",
+  };
+
   return (
     <>
       <ProfessorProfileCard
@@ -81,9 +92,27 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
         researchField={researchField}
         mainPhotoUrl={mainPhotoUrl}
       />
-      <div className="flex justify-center items-center">
+
+      <div className="flex flex-col justify-center items-center relative w-full">
+        <div className="relative w-[400px] h-15 flex justify-center items-end">
+          <div
+            className="absolute transition-all duration-300 ease-in-out"
+            style={{
+              left: tabPositions[selectedTab],
+              transform: "translateX(-50%)",
+            }}
+          >
+            <img
+              src="/KariPeachKun.png"
+              alt="ピーチくん"
+              className="h-12"
+            />
+          </div>
+        </div>
+
         <Tabs
-          defaultValue="profile"
+          value={selectedTab}
+          onValueChange={(value) => setSelectedTab(value as TabKey)}
           className="display flex justify-center items-center w-full"
         >
           <TabsList className="grid grid-cols-4 h-10 rounded-sm">
