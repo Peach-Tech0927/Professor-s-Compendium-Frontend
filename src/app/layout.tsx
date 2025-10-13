@@ -42,7 +42,7 @@ export default function RootLayout({
         <SidebarProvider defaultOpen={false}>
           <AppSidebar />
           <SidebarInset>
-            <div className="fixed top-5 left-5 z-20 bg-white/50 rounded-lg">
+            <div className="fixed top-5 left-5 z-20 bg-white/50 rounded-md">
               <SidebarTrigger />
             </div>
             {children}

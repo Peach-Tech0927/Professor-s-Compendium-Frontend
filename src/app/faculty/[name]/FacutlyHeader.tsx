@@ -1,11 +1,5 @@
 "use client"
 import {useState,useEffect} from 'react';
-import {
-  SidebarProvider,
-  SidebarInset,
-  SidebarTrigger,
-} from "@/components/ui/sidebar";
-import { AppSidebar } from "@/app/_component/AppSidebar";
 
 type ClientFacultyPageProps = {
   facultyData: any; 
