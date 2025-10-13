@@ -101,21 +101,23 @@ const SeminarInfoView = ({
           <SeminarSchedule seminarSchedule={seminarSchedule} />
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row gap-5 lg:gap-10 mt-5 ml-5">
-        <div className="max-w-[300px] lg:max-w-[500px] lg:mx-auto lg:mb-0">
-          <h2 className="text-xl font-bold mb-2">活動曜日・頻度</h2>
+      <div className="grid lg:grid-cols-[auto_1fr_auto] px-4 lg:px-[200px] gap-5">
+        <div className="lg:justify-self-start">
+          <h2 className="text-lg lg:text-xl font-bold mb-2">活動曜日・頻度</h2>
           {activityDay && activityDay.length > 0 ? (
             activityDay.map((day, index) => {
-              // 曜日とそれ以外の情報（今は時限）を分ける
               const parts = day.split(" ");
               const dayOfWeek = parts[0] || "";
               const period = parts[1] || "";
 
               return (
-                <div key={index} className="flex items-center mb-1 text-lg">
+                <div
+                  key={index}
+                  className="flex items-center mb-1 ml-2 text-lg"
+                >
                   <span className="mr-2">・</span>
-                  <span className="font-bold">{dayOfWeek}</span>
-                  <span className="ml-4">{period}</span>
+                  <span className="lg:font-bold ml-4">{dayOfWeek}</span>
+                  <span className="ml-2">{period}</span>
                 </div>
               );
             })
@@ -123,23 +125,30 @@ const SeminarInfoView = ({
             <p>活動日の情報がありません</p>
           )}
         </div>
-        <div className="max-w-[300px] lg:max-w-[500px] lg:mx-auto lg:mb-0">
-          <h2 className="text-xl font-bold mb-2">特徴・キーワード</h2>
+        <div className="lg:justify-self-center">
+          <h2 className="text-lg lg:text-xl font-bold mb-2">
+            特徴・キーワード
+          </h2>
           {keywords.map((keyword) => (
             <Badge
               key={keyword}
-              className="flex flex-col bg-[#fff7f9] text-[#FF8888] border border-[#FF8888] rounded-full px-4 mb-2 text-sm"
+              className="flex flex-col bg-[#fff7f9] text-[#FF8888] border border-[#FF8888] rounded-full px-4 ml-2 mb-2 text-sm"
             >
               # {keyword}
             </Badge>
           ))}
         </div>
-        <div className="max-w-[300px] lg:max-w-[500px] lg:mx-auto lg:mb-0">
-          <h2 className="text-xl font-bold mb-2">卒業生の研究テーマ</h2>
+        <div className="lg:justify-self-end">
+          <h2 className="text-lg lg:text-xl font-bold mb-2">
+            卒業生の研究テーマ
+          </h2>
           {graduateThemes && graduateThemes.length > 0 ? (
             graduateThemes.map((theme, index) => {
               return (
-                <div key={index} className="flex items-center mb-1 text-lg">
+                <div
+                  key={index}
+                  className="flex items-center mb-1 ml-2 text-lg"
+                >
                   <span className="mr-2">・</span>
                   <span className="ml-4">{theme}</span>
                 </div>
