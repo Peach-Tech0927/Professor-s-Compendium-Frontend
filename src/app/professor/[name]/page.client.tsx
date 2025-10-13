@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import ProfessorProfileCard from "./_component/personal/ProfessorProfileCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProfileView from "./_component/profile/ProfileView";
@@ -102,9 +103,11 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
               transform: "translateX(-50%)",
             }}
           >
-            <img
+            <Image
               src="/KariPeachKun.png"
               alt="ピーチくん"
+              width={48}
+              height={48}
               className="h-12"
             />
           </div>
