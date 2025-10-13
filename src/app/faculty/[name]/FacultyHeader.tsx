@@ -6,7 +6,7 @@ type ClientFacultyPageProps = {
   facultyName: string;
 }
 
-const ClientFacultyPage: React.FC<ClientFacultyPageProps> = ({ facultyData, facultyName }) => {
+const FacultyHeader: React.FC<ClientFacultyPageProps> = ({ facultyData, facultyName }) => {
     const [isSticky, setIsSticky] = useState(false);
 
     useEffect(() => {
@@ -67,4 +67,4 @@ const ClientFacultyPage: React.FC<ClientFacultyPageProps> = ({ facultyData, facu
     </>
   );
 }
-export default ClientFacultyPage;
+export default FacultyHeader;

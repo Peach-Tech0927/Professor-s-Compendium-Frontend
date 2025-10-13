@@ -1,7 +1,7 @@
 import mockData from "@/data/mock-db.json";
 import { FacultyData } from "@/app/_component/FacultyCardGrid";
 import ProfessorCardGrid from "./_component/professorCardGrid";
-import ClientFacultyPage from "./FacutlyHeader";
+import FacultyHeader from "./FacultyHeader";
 
 const FacultyPage = async ({ params }: { params: { name: string } }) => {
   const { name } = await params;
@@ -20,7 +20,7 @@ const FacultyPage = async ({ params }: { params: { name: string } }) => {
 
   return (
     <>
-      <ClientFacultyPage facultyData={facultyData} facultyName={facultyName} />
+      <FacultyHeader facultyData={facultyData} facultyName={facultyName} />
       <ProfessorCardGrid facultyKey={facultyData.SK} />
     </>
   );
