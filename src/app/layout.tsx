@@ -35,9 +35,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${robotoSlab.variable} antialiased`}
       >
         <AppSidebar />
-        <main className="w-full h-screen overflow-auto">
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );
