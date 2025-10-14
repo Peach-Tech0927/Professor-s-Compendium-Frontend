@@ -1,7 +1,7 @@
 import mockData from "@/data/mock-db.json";
 import { FacultyData } from "@/app/_component/FacultyCardGrid";
 import ProfessorCardGrid from "./_component/professorCardGrid";
-import FacultyHeader from "./FacultyHeader";
+import FacultyHeader from "./_component/FacultyHeader";
 import Footer from "@/app/_component/Footer";
 
 const FacultyPage = async ({ params }: { params: { name: string } }) => {
