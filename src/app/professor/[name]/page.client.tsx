@@ -74,10 +74,10 @@ const ClientProfessorPage: React.FC<ClientProfessorPageProps> = ({
   const [selectedTab, setSelectedTab] = useState<TabKey>("profile");
 
   const tabPositions: Record<TabKey, string> = {
-    profile: "20%",
-    course: "40%",
-    "seminor-info": "60%",
-    personal: "80%",
+    profile: "12%",
+    course: "36%",
+    "seminor-info": "62%",
+    personal: "88%",
   };
 
   return (
