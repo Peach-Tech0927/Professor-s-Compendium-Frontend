@@ -1,8 +1,9 @@
 "use client"
+import { FacultyData } from '@/app/_component/FacultyCardGrid';
 import {useState,useEffect} from 'react';
 
 type ClientFacultyPageProps = {
-  facultyData: any; 
+  facultyData: FacultyData; 
   facultyName: string;
 }
 
