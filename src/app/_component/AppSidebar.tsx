@@ -35,11 +35,11 @@ export function AppSidebar() {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="outline" className="absolute top-4 left-4 z-20">
+        <Button variant="outline" className="fixed top-4 left-4 z-50">
           <Menu className="h-4 w-4" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-[280px] p-0">
+      <SheetContent side="left" className="w-[280px] p-0 z-50">
         <SheetHeader className="p-4">
           <SheetTitle className="text-center">
             <Link href={"/"} className="flex flex-col items-center">
