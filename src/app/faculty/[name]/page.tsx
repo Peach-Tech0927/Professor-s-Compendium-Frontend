@@ -4,7 +4,11 @@ import ProfessorCardGrid from "./_component/professorCardGrid";
 import FacultyHeader from "./_component/FacultyHeader";
 import Footer from "@/app/_component/Footer";
 
-const FacultyPage = async ({ params }: { params: { name: string } }) => {
+const FacultyPage = async ({
+  params,
+}: {
+  params: Promise<{ name: string }>;
+}) => {
   const { name } = await params;
   const facultyName = decodeURIComponent(name);
 

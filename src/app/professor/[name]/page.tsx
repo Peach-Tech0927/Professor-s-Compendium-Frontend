@@ -6,7 +6,7 @@ import { Lesson } from "./_component/lesson/LessonListView";
 export default async function ProfessorPage({
   params,
 }: {
-  params: { name: string };
+  params: Promise<{ name: string }>;
 }) {
   const { name } = await params;
   const professorId = name;
