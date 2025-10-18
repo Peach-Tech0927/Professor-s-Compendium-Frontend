@@ -22,32 +22,36 @@
 import json
 import boto3
 import decimal
+from pathlib import Path
 
 TABLE_NAME = 'dev-professors-compendium'
-FILE_PATH = 'C:\\Users\\sobat\\Professor-s-Compendium-Frontend\\src\\data\\mock-db.json'
+MOCK_DATA_FILENAME = 'mock-db.json'
+
+FILE_PATH = Path(__file__).resolve().parent / MOCK_DATA_FILENAME
 
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table(TABLE_NAME)
 
 
 def put_items_dynamodb():
-   put_item = convert_json_dict(FILE_PATH)
+    put_item = convert_json_dict(FILE_PATH)
 
-   try:
-       with table.batch_writer() as batch:
-           for item in put_item:
-               batch.put_item(
-                   Item=item
-               )
-   except Exception as e:
-       print(e)
+    try:
+        with table.batch_writer() as batch:
+            for item in put_item:
+                batch.put_item(
+                    Item=item
+                )
+        print(f"Successfully put {len(put_item)} items into {TABLE_NAME}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 
 def convert_json_dict(json_file_name):
-   with open(json_file_name, encoding='utf-8') as json_file:
-       d = json.load(json_file, parse_float=decimal.Decimal)
+    with open(json_file_name, encoding='utf-8') as json_file:
+        d = json.load(json_file, parse_float=decimal.Decimal)
 
-   return d
+    return d
 
-
-put_items_dynamodb()
+if __name__ == "__main__":
+    put_items_dynamodb()
