@@ -5,21 +5,26 @@ import { ProfessorPersonalData } from "./_component/personal/ProfessorPersonalVi
 import { Lesson } from "./_component/lesson/LessonListView";
 
 
-export default async function ProfessorPage({params}:{params: { name: string };}) {
-  const ProfessorID = params.name;
-  const[
-    metadata,
-    seminar,
-    profile,
-    personal,
-    lessons
-  ]=await Promise.all([
-    getDynamoDBItem(ProfessorID,"METADATA"),
-    getDynamoDBItem(ProfessorID,"SEMINAR"),
-    getDynamoDBItem(ProfessorID,"PROFILE"),
-    getDynamoDBItem(ProfessorID,"PERSONAL"),
-    queryDynamoDBItems(ProfessorID,"COURSE#")
-  ]);
+export default async function ProfessorPage({
+  params,
+  }: {
+    params: Promise<{ name: string }>;
+  }) {
+    const {name} = await params;
+    const ProfessorID = name;
+    const[
+      metadata,
+      seminar,
+      profile,
+      personal,
+      lessons
+    ]=await Promise.all([
+      getDynamoDBItem(ProfessorID,"METADATA"),
+      getDynamoDBItem(ProfessorID,"SEMINAR"),
+      getDynamoDBItem(ProfessorID,"PROFILE"),
+      getDynamoDBItem(ProfessorID,"PERSONAL"),
+      queryDynamoDBItems(ProfessorID,"COURSE#")
+    ]);
 
   if (!metadata||!profile) {
     return (

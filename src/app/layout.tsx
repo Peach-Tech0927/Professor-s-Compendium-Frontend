@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Roboto_Slab } from "next/font/google";
+//import { Geist, Geist_Mono, Roboto_Slab } from "next/font/google";
+import {Roboto_Slab} from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+
 import "./globals.css";
 import { AppSidebar } from "@/app/_component/AppSidebar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const robotoSlab = Roboto_Slab({
   variable: "--font-roboto-slab",
@@ -32,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${robotoSlab.variable} antialiased`}
+        className={`${GeistSans.variable} ${GeistMono.variable} ${robotoSlab.variable} antialiased`}
       >
         <AppSidebar />
         {children}
