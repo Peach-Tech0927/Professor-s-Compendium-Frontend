@@ -12,6 +12,7 @@ export default async function ProfessorPage({
   }) {
     const {name} = await params;
     const professorId = name;
+    const s3BaseUrl=process.env.NEXT_PUBLIC_S3_BASE_URL||"";
     const[
       basicInfo,
       metadata,
@@ -35,12 +36,16 @@ export default async function ProfessorPage({
       </div>
     );
   }
+  let mainPhotoUrl:string | null = basicInfo?.mainPhoto||null;
+  if (mainPhotoUrl && !mainPhotoUrl.startsWith('/') && !mainPhotoUrl.startsWith('http')) {
+    mainPhotoUrl = `${s3BaseUrl}/${mainPhotoUrl.replace(/^\//,'')}`;
+  }
 
   return(
     <>
       <ClientProfessorPage
         // basicInfoから
-        mainPhotoUrl={basicInfo?.mainPhoto || null}
+        mainPhotoUrl={mainPhotoUrl}
         faculty={basicInfo?.department || ""} // basicInfoのdepartmentをfacultyとして流用
 
         // metadataから
