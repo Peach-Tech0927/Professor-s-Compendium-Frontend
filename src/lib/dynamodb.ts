@@ -1,11 +1,31 @@
 //AWS import
 import {DynamoDBClient} from "@aws-sdk/client-dynamodb";
-import {DynamoDBDocumentClient, GetCommand,QueryCommand} from "@aws-sdk/lib-dynamodb";
+import { DynamoDBDocumentClient, GetCommand, QueryCommand } from "@aws-sdk/lib-dynamodb";
 const dynamodbClient = new DynamoDBClient({
     region: 'ap-northeast-1',
 });
 
 const docClient = DynamoDBDocumentClient.from(dynamodbClient);
+
+export async function getBasicInfo(professorId: string) {
+  const params = {
+    TableName: 'dev-professors-compendium',
+    IndexName: 'GSI1',
+    KeyConditionExpression: 'SK = :sk', 
+    ExpressionAttributeValues: {
+      ':sk': `PROF#${professorId}`,
+    },
+    Limit: 1,
+  };try {
+    const command = new QueryCommand(params);
+    const response = await docClient.send(command);
+    return response.Items ? response.Items[0] : null;
+  } catch (error) {
+    console.error("DynamoDB (GSI Query) でエラー:", error);
+    return null;
+  }
+}
+
 
 export async function getDynamoDBItem(professorId: string, sk:string) {
   const params = {

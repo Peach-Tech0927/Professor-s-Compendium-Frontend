@@ -1,5 +1,5 @@
 
-import { getDynamoDBItem,queryDynamoDBItems } from "@/lib/dynamodb";
+import { getDynamoDBItem,queryDynamoDBItems,getBasicInfo } from "@/lib/dynamodb";
 import ClientProfessorPage from "./page.client";
 import { ProfessorPersonalData } from "./_component/personal/ProfessorPersonalView";
 import { Lesson } from "./_component/lesson/LessonListView";
@@ -11,22 +11,24 @@ export default async function ProfessorPage({
     params: Promise<{ name: string }>;
   }) {
     const {name} = await params;
-    const ProfessorID = name;
+    const professorId = name;
     const[
+      basicInfo,
       metadata,
       seminar,
       profile,
       personal,
       lessons
     ]=await Promise.all([
-      getDynamoDBItem(ProfessorID,"METADATA"),
-      getDynamoDBItem(ProfessorID,"SEMINAR"),
-      getDynamoDBItem(ProfessorID,"PROFILE"),
-      getDynamoDBItem(ProfessorID,"PERSONAL"),
-      queryDynamoDBItems(ProfessorID,"COURSE#")
-    ]);
 
-  if (!metadata||!profile) {
+      getBasicInfo(professorId),
+      getDynamoDBItem(professorId,"METADATA"),
+      getDynamoDBItem(professorId,"SEMINAR"),
+      getDynamoDBItem(professorId,"PROFILE"),
+      getDynamoDBItem(professorId,"PERSONAL"),
+      queryDynamoDBItems(professorId,"COURSE#")
+    ]);
+  if (!basicInfo) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-xl">教授が見つかりませんでした</div>
@@ -37,6 +39,10 @@ export default async function ProfessorPage({
   return(
     <>
       <ClientProfessorPage
+        // basicInfoから
+        mainPhotoUrl={basicInfo?.mainPhoto || null}
+        faculty={basicInfo?.department || ""} // basicInfoのdepartmentをfacultyとして流用
+
         // metadataから
         xLink={metadata?.socialLinks?.x || ""}
         facebookLink={metadata?.socialLinks?.facebook || ""}
@@ -44,21 +50,19 @@ export default async function ProfessorPage({
         professorNameRoma={metadata?.professorNameRoma || ""}
         post={metadata?.post || ""}
         researchField={metadata?.ResearchField || ""}
+        courseYoutubeUrl={metadata?.courseYoutubeUrl || null}
 
-        mainPhotoUrl={metadata?.mainPhoto || ""}
-        faculty={metadata?.faculty || ""}
-          
-        //seminarから
+        // seminarから
         seminarName={seminar?.seminarName || ""}
         seminarDescription={seminar?.description || ""}
-        seminarDescriptionImage={seminar?.descriptionImage || ""}
+        seminarDescriptionImage={seminar?.descriptionImage || null}
         activityDay={seminar?.activityDay || []}
         keywords={seminar?.keywords || []}
         seminarSchedule={seminar?.annualSchedule || []}
         appealPointText={seminar?.appealPoint?.text || ""}
         appealPointImages={seminar?.appealPoint?.images || []}
         graduateThemes={seminar?.graduateThemes || []}
-        seminarYoutubeUrl={seminar?.youtubeUrl || ""}
+        seminarYoutubeUrl={seminar?.youtubeUrl || null}
 
         // profileから
         profileText={profile?.profileText || ""}
@@ -67,7 +71,7 @@ export default async function ProfessorPage({
 
         // personalから
         personalData={(personal || {}) as ProfessorPersonalData}
-        
+
         // lessonsから
         lessons={lessons as Lesson[] || []}
         />
