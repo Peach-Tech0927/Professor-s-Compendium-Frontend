@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FacultyCard from "./FacultyCard";
-import mockData from "@/data/mock-db.json";
+import { queryByPK } from "@/lib/dynamodb";
+//import mockData from "@/data/mock-db.json";
 
 type Department = {
   name: string;
@@ -18,12 +19,12 @@ export type FacultyData = {
 };
 
 export default function FacultyCardGrid() {
-  const facultyData = mockData.filter(
+  const facultyData = queryByPK.filter(
     (item: { PK: string; facultyName?: string; facultyDescription?: string }) =>
       item.PK === "FACULTIES" && item.facultyName && item.facultyDescription
   ) as FacultyData[];
 
-  // 学部ごとの色マッピング
+// 学部ごとの色マッピング
   const getFacultyColor = (facultyName: string): string => {
     const colorMap: { [key: string]: string } = {
       経済学部: "#5BA7E5",
