@@ -1,6 +1,7 @@
 //AWS import
 import {DynamoDBClient} from "@aws-sdk/client-dynamodb";
 import { DynamoDBDocumentClient, GetCommand, QueryCommand } from "@aws-sdk/lib-dynamodb";
+import { Table } from "lucide-react";
 const dynamodbClient = new DynamoDBClient({
     region: 'ap-northeast-1',
 });
@@ -63,3 +64,22 @@ export async function queryDynamoDBItems(professorId: string, skPrefix: string) 
         return [];
     }
 };
+
+export async function queryByPK(pk: string) {
+  const params={
+    TableName:'dev-professors-compendium',
+    KeyConditionExpression: 'PK = :pk',
+    ExpressionAttributeValues: {
+      ':pk': pk
+    }
+  };
+
+  try {
+    const command = new QueryCommand(params);
+    const response = await docClient.send(command);
+    return response.Items;
+  } catch (error) {
+    console.error("DynamoDB (Query) でエラー:", error);
+    return [];
+  }
+}
