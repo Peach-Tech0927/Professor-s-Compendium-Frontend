@@ -1,4 +1,6 @@
-import mockData from "@/data/mock-db.json";
+import { queryByPK } from "@/lib/dynamodb";
+
+// import mockData from "@/data/mock-db.json";
 import Link from "next/link";
 import ProfessorCard from "./professorCard";
 
@@ -21,7 +23,7 @@ type ProfessorCardGridProps = {
 export default function ProfessorCardGrid({
   facultyKey,
 }: ProfessorCardGridProps) {
-  const professorData = mockData.filter(
+  const professorData = queryByPK.filter(
     (item: { PK: string; SK: string }) =>
       item.PK.startsWith("FACULTY#") &&
       item.SK.startsWith("PROF#") &&
