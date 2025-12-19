@@ -4,6 +4,10 @@ import { DynamoDBDocumentClient, GetCommand, QueryCommand } from "@aws-sdk/lib-d
 import { Table } from "lucide-react";
 const dynamodbClient = new DynamoDBClient({
     region: 'ap-northeast-1',
+    credentials: {
+      accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
+      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
+    }
 });
 
 const docClient = DynamoDBDocumentClient.from(dynamodbClient);
