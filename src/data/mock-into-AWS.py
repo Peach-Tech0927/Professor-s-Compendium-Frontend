@@ -25,11 +25,13 @@ import decimal
 from pathlib import Path
 
 TABLE_NAME = 'dev-professors-compendium'
-MOCK_DATA_FILENAME = 'mock-db.json'
+MOCK_DATA_FILENAME = 'real.txt'
+PROFILE_NAME = 'kyoju'
 
 FILE_PATH = Path(__file__).resolve().parent / MOCK_DATA_FILENAME
 
-dynamodb = boto3.resource('dynamodb')
+session = boto3.Session(profile_name=PROFILE_NAME)
+dynamodb = session.resource('dynamodb')
 table = dynamodb.Table(TABLE_NAME)
 
 

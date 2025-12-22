@@ -1,0 +1,262 @@
+[
+  {
+    "PK": "FACULTIES",
+    "SK": "FACULTY#KEIZAI",
+    "facultyName": "経済学部",
+    "englishFacultyName": "Faculty of Economics",
+    "facultyDescription": "現代社会の経済を多角的に学ぶ。",
+    "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
+    "departments": [
+      {
+        "name": "経済経営学科",
+        "englishName": "Department of Economics and Management"
+      }
+    ]
+  },
+  {
+    "PK": "FACULTIES",
+    "SK": "FACULTY#KEIEI",
+    "facultyName": "経営学部",
+    "englishFacultyName": "Faculty of Business Administration",
+    "facultyDescription": "ルドロジーの本質、歴史、文化的な意味を探求する",
+    "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
+    "departments": [
+      {
+        "name": "総合経営学科",
+        "englishName": "Department of Japanese Literature"
+      }
+    ]
+  },
+  {
+    "PK": "FACULTIES",
+    "SK": "FACULTY#HOUGAKU",
+    "facultyName": "法学部",
+    "englishFacultyName": "Faculty of Law",
+    "facultyDescription": "文化と人間を深く探求する。",
+    "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
+    "departments": [
+      {
+        "name": "法学科",
+        "englishName": "Department of Japanese Literature"
+      },
+      {
+        "name": "政治学科",
+        "englishName": "Department of English and American Literature"
+      }
+    ]
+  },
+  {
+    "PK": "FACULTIES",
+    "SK": "FACULTY#BUNGAKU",
+    "facultyName": "文学部",
+    "englishFacultyName": "Faculty of Humanities",
+    "facultyDescription": "文化と人間を深く探求する。",
+    "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
+    "departments": [
+      {
+        "name": "日本文学科",
+        "englishName": "Department of Japanese Literature"
+      },
+      {
+        "name": "英米文学科",
+        "englishName": "Department of English and American Literature"
+      }
+    ]
+  },
+  {
+    "PK": "FACULTIES",
+    "SK": "FACULTY#KOKUSAI",
+    "facultyName": "国際共創学部",
+    "englishFacultyName": "Faculty of Global Studies and Sustainability",
+    "facultyDescription": "持続可能な食料生産・供給システムを構想し、実現する",
+    "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
+    "departments": [
+      {
+        "name": "国際日本学専攻",
+        "englishName": "Department of Japanese Literature"
+      },
+      {
+        "name": "環境サステナビリティ学専攻",
+        "englishName": "Department of English and American Literature"
+      }
+    ]
+  },
+  {
+    "PK": "FACULTIES",
+    "SK": "FACULTY#RIKOU",
+    "facultyName": "理工学部",
+    "englishFacultyName": "Faculty of Science and Technology",
+    "facultyDescription": "文化と人間を深く探求する。",
+    "FacultyImage": "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=300&fit=crop",
+    "departments": [
+      {
+        "name": "データ数理専攻",
+        "englishName": "Department of Japanese Literature"
+      },
+      {
+        "name": "応用科学専攻",
+        "englishName": "Department of English and American Literature"
+      },
+      {
+        "name": "機械システム専攻",
+        "englishName": "Department of English and American Literature"
+      },
+      {
+        "name": "電気電子専攻",
+        "englishName": "Department of English and American Literature"
+      },
+      {
+        "name": "コンピュータ科学専攻",
+        "englishName": "Department of English and American Literature"
+      }
+    ]
+  },
+
+  {
+    "PK": "FACULTY#HOUGAKU",
+    "SK": "PROF#SHIOZAWA",
+    "professorName": "塩澤 一洋",
+    "yomigana": "Kazuhiro Shiozawa",
+    "department": "法律学科",
+    "mainPhoto": "/ElenaFuji.png",
+    "hoverPhoto": "/Elena_hoverImage.png",
+    "researchTheme": "民法体系と著作権制度を解剖し法学教育手法を開発",
+    "officeLocation": ""
+  },
+
+  {
+    "PK": "PROF#SHIOZAWA",
+    "SK": "METADATA",
+    "professorName": "塩澤 一洋",
+    "professorNameRoma": "Kazuhiro Shiozawa",
+    "post": "教授",
+    "ResearchField": "民法体系と著作権制度",
+    "socialLinks": {
+      "x": "https://x.com/shiology",
+      "facebook": "https://www.facebook.com/shiozawa"
+    },
+    "courseYoutubeUrl": ""
+  },
+
+  {
+    "PK": "PROF#SHIOZAWA",
+    "SK": "PROFILE",
+    "profileText": "人生、アドリブ!!　法律は面白い。民法は美しい。著作権法は多彩。それをみなさんに伝えるのがshioのミッションです。人の自由を最大化するのが法律の目的。一人一人が多彩な生き方を楽しむための仕組みです。2000年4月法学部着任以来、成蹊愛25年。應援指導部、水泳部、ヨット部、サッカー部、写真部の顧問です。",
+    "profileImages": [
+      "/ProfileExample.png",
+      "/ProfileExample.png",
+      "/ProfileExample.png"
+    ],
+    "careerHistory": [
+      {
+        "year": "1980年代",
+        "event": "慶應義塾大学経済学部卒業",
+        "photo": null
+      },
+      {
+        "year": "1980年代",
+        "event": "慶應義塾大学法学部卒業",
+        "photo": null
+      },
+      {
+        "year": "1990年代",
+        "event": "慶應義塾大学大学院修士課程・博士課程修了",
+        "photo": null
+      },
+      {
+        "year": "2000年",
+        "event": "成蹊大学法学部着任",
+        "photo": null
+      },
+      {
+        "year": "2008年",
+        "event": "成蹊大学法学部教授に就任",
+        "photo": null
+      }
+    ]
+  },
+
+  {
+    "PK": "PROF#SHIOZAWA",
+    "SK": "SEMINAR",
+    "seminarName": "shioゼミ",
+    "description": "2〜4年次合同で、民法・著作権法などの重要判例を研究し、判例評釈を執筆する。有斐閣『判例百選』を模した『shioゼミ判例十選』を製作する。法的三段論法に基づいた法的論述力を養う訓練を徹底する。",
+    "descriptionImage": "/ProfileExample.png",
+    "appealPoint": {
+      "text": "①文献を読み解く力、②論理的な思考力、③法的論理的な論述力、④プレゼンテーション力が身につく。学外の卒業生や社会人も参加する合宿（春・夏）があり、交流が深い。",
+      "images": ["/ProfileExample.png", "/ProfileExample.png"]
+    },
+    "researchProcess": [
+      {
+        "text": "前期：全員で判例を選び、判例の読み方と評釈の書き方を学ぶ。後期：各自が判例を選び評釈を執筆し、全員分で『shioゼミ判例十選』を製作（3月上旬完成）。",
+        "image": "/ProfileExample.png"
+      }
+    ],
+    "annualSchedule": [
+      { "period": "4月", "task": "春合宿（1泊2日）" },
+      { "period": "前期", "task": "判例の読み方と評釈の書き方を学ぶ" },
+      { "period": "夏休み", "task": "夏合宿（4泊5日）" },
+      { "period": "後期", "task": "判例評釈を執筆" },
+      { "period": "3月上旬", "task": "『shioゼミ判例十選』完成" }
+    ],
+    "activityDay": ["金曜日 5限"],
+    "keywords": ["ビジネス法務", "契約ルール", "知的財産と著作権"],
+    "graduateThemes": [
+      "売買契約における買主の受領義務",
+      "事情変更の法理の要件とその適用",
+      "著作権法からフォントを考える",
+      "模写作品が著作物と認められるための要件",
+      "動機の錯誤による意思表示の無効"
+    ],
+    "youtubeUrl": ""
+  },
+
+  {
+    "PK": "PROF#SHIOZAWA",
+    "SK": "PERSONAL",
+    "hobby": {
+      "text": "自作ヴァイオリン、自作ヴィオラ、ピアノ、フルート、パンフルートなど楽器のアドリブ演奏、写真撮影、ヨット、アーチェリー、授業、楽問",
+      "photo": "/ProfileExample.png"
+    },
+    "occupationalHazard": {
+      "text": "数字を聞くと（見ると）民法や著作権法の条文が思い浮かぶ",
+      "photo": "/ProfileExample.png"
+    },
+    "favoriteFood": {
+      "text": "瑞穂の豆大福、紅梅堂の麩饅頭",
+      "photo": "/ProfileExample.png"
+    },
+    "personality": {
+      "text": "ミニマリスト",
+      "photo": "/ProfileExample.png"
+    },
+    "StudentDays": {
+      "text": "家庭教師、ボランティア、キャンプ、ヨット、スキー三昧",
+      "photo": "/ProfileExample.png"
+    },
+    "youtubeUrl": ""
+  },
+
+  {
+    "PK": "PROF#SHIOZAWA",
+    "SK": "KEYWORD#ビジネス法務",
+    "GSI1PK": "KEYWORD#ビジネス法務",
+    "professorId": "SHIOZAWA",
+    "professorName": "塩澤 一洋"
+  },
+  {
+    "PK": "PROF#SHIOZAWA",
+    "SK": "KEYWORD#契約ルール",
+    "GSI1PK": "KEYWORD#契約ルール",
+    "professorId": "SHIOZAWA",
+    "professorName": "塩澤 一洋"
+  },
+  {
+    "PK": "PROF#SHIOZAWA",
+    "SK": "KEYWORD#知的財産と著作権",
+    "GSI1PK": "KEYWORD#知的財産と著作権",
+    "professorId": "SHIOZAWA",
+    "professorName": "塩澤 一洋"
+  }
+
+]
