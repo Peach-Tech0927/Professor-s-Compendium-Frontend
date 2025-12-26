@@ -45,7 +45,7 @@ export default async function ProfessorPage({
     <>
       <ClientProfessorPage
         // basicInfoから
-        mainPhotoUrl={mainPhotoUrl}
+        mainPhotoUrl={mainPhotoUrl || ""}
         faculty={basicInfo?.department || ""} // basicInfoのdepartmentをfacultyとして流用
 
         // metadataから
