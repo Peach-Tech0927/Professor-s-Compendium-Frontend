@@ -1,33 +1,10 @@
 
-import { getDynamoDBItem,queryDynamoDBItems,getBasicInfo,queryByPK } from "@/lib/dynamodb";
+import { getDynamoDBItem,queryDynamoDBItems,getBasicInfo } from "@/lib/dynamodb";
 import ClientProfessorPage from "./page.client";
 import { ProfessorPersonalData } from "./_component/personal/ProfessorPersonalView";
 import { Lesson } from "./_component/lesson/LessonListView";
 
-type DynamoDBFacultyItem = {
-  SK: string;
-  [key: string]: unknown;
-};
-
-export async function generateStaticParams() {
-  // すべての学部を取得
-  const allFaculties = (await queryByPK("FACULTIES")) as DynamoDBFacultyItem[] | undefined;
-
-  if (!allFaculties) return [];
-
-  // 各学部の教授を取得
-  const professorPromises = allFaculties.map(async (faculty) => {
-    const professors = (await queryByPK(faculty.SK)) as DynamoDBFacultyItem[] | undefined;
-    return (professors || [])
-      .filter((item) => item.SK.startsWith("PROF#"))
-      .map((prof) => ({
-        name: prof.SK.replace("PROF#", ""),
-      }));
-  });
-
-  const professorArrays = await Promise.all(professorPromises);
-  return professorArrays.flat();
-}
+export const dynamicParams = true;
 
 export default async function ProfessorPage({
   params,

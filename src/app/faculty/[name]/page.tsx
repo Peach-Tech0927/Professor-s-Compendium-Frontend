@@ -5,13 +5,7 @@ import ProfessorCardGrid from "./_component/professorCardGrid";
 import FacultyHeader from "./_component/FacultyHeader";
 import Footer from "@/app/_component/Footer";
 
-export async function generateStaticParams() {
-  const allFaculties = (await queryByPK("FACULTIES")) as FacultyData[];
-
-  return (allFaculties || []).map((faculty) => ({
-    name: encodeURIComponent(faculty.facultyName),
-  }));
-}
+export const dynamicParams = true;
 
 const FacultyPage = async ({
   params,
