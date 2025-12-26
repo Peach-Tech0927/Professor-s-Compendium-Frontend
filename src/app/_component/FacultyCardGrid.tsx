@@ -46,7 +46,7 @@ if (!allFaculties || allFaculties.length === 0) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {allFaculties.map((faculty) => (
           <Link
-            href={`/faculty/${faculty.facultyName}`}
+            href={`/faculty/${encodeURIComponent(faculty.facultyName)}`}
             key={faculty.facultyName}
           >
             <FacultyCard
