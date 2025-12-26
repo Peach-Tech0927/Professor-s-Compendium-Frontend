@@ -4,6 +4,7 @@ import { FacultyData } from "@/app/_component/FacultyCardGrid";
 import ProfessorCardGrid from "./_component/professorCardGrid";
 import FacultyHeader from "./_component/FacultyHeader";
 import Footer from "@/app/_component/Footer";
+import { notFound } from "next/navigation";
 
 export const dynamicParams = true;
 
@@ -22,13 +23,7 @@ const FacultyPage = async ({
   ) as FacultyData| undefined;
 
   if (!facultyData) {
-    return(
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-xl">
-          学部データ「{facultyName}」が見つかりませんでした。
-        </div>
-      </div>
-    );
+    notFound();
   }
 
 //  const facultyData = mockData
