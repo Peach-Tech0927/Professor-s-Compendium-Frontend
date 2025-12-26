@@ -1,29 +1,13 @@
 import Link from "next/link";
 import FacultyCard from "./FacultyCard";
-import mockData from "@/data/mock-db.json";
+import { queryByPK } from "@/lib/dynamodb";
+import { FacultyData } from "@/app/_component/FacultyCardGrid";
+//import mockData from "@/data/mock-db.json";
 
-type Department = {
-  name: string;
-  englishName: string;
-};
+const FacultyCardGrid = async()=>{
+  const allFaculties = (await queryByPK("FACULTIES"))as FacultyData[]| undefined;
 
-export type FacultyData = {
-  PK: string;
-  SK: string;
-  facultyName: string;
-  englishFacultyName: string;
-  facultyDescription: string;
-  FacultyImage: string;
-  departments: Department[];
-};
 
-export default function FacultyCardGrid() {
-  const facultyData = mockData.filter(
-    (item: { PK: string; facultyName?: string; facultyDescription?: string }) =>
-      item.PK === "FACULTIES" && item.facultyName && item.facultyDescription
-  ) as FacultyData[];
-
-  // 学部ごとの色マッピング
   const getFacultyColor = (facultyName: string): string => {
     const colorMap: { [key: string]: string } = {
       経済学部: "#5BA7E5",
@@ -36,10 +20,19 @@ export default function FacultyCardGrid() {
     return colorMap[facultyName] || "#5BA7E5";
   };
 
+
+if (!allFaculties || allFaculties.length === 0) {
+  return (
+      <div className="container mx-auto px-4 py-8">
+        <p>学部情報が見つかりませんでした。</p>
+      </div>
+    );
+}
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {facultyData.map((faculty) => (
+        {allFaculties.map((faculty) => (
           <Link
             href={`/faculty/${faculty.facultyName}`}
             key={faculty.facultyName}
@@ -57,4 +50,7 @@ export default function FacultyCardGrid() {
       </div>
     </div>
   );
-}
+};
+
+
+export default FacultyCardGrid;
