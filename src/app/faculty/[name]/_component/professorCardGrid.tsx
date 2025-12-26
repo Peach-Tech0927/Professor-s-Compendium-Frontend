@@ -8,13 +8,25 @@ type ProfessorCardGridProps = {
   facultyKey: string;
 };
 
+type DynamoDBItem = {
+  PK: string;
+  SK: string;
+  professorName: string;
+  yomigana: string;
+  department: string;
+  researchTheme: string;
+  officeLocation: string;
+  mainPhoto: string;
+  hoverPhoto: string;
+};
+
 export default async function ProfessorCardGrid({
   facultyKey,
 }: ProfessorCardGridProps) {
   const rawData = await queryByPK(facultyKey);
 
-  const professorData = (rawData||[]).filter(
-    (item:any) => item.SK.startsWith("PROF#")
+  const professorData = ((rawData as DynamoDBItem[])||[]).filter(
+    (item: DynamoDBItem) => item.SK.startsWith("PROF#")
   );
 
 
@@ -32,7 +44,7 @@ export default async function ProfessorCardGrid({
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {professorData.map((professor:any) => {
+        {professorData.map((professor: DynamoDBItem) => {
           let mainPhotoUrl = professor.mainPhoto;
           if (mainPhotoUrl && !mainPhotoUrl.startsWith("http")) {
             // 先頭のスラッシュを削除して結合
@@ -54,8 +66,8 @@ export default async function ProfessorCardGrid({
               department={professor.department}
               researchTheme={professor.researchTheme}
               officeLocation={professor.officeLocation}
-              mainPhoto={professor.mainPhotoUrl}
-              hoverPhoto={professor.hoverPhotoUrl}
+              mainPhoto={mainPhotoUrl}
+              hoverPhoto={hoverPhotoUrl}
             />
           </Link>
           )
