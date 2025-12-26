@@ -5,6 +5,8 @@ import ProfessorCardGrid from "./_component/professorCardGrid";
 import FacultyHeader from "./_component/FacultyHeader";
 import Footer from "@/app/_component/Footer";
 
+export const dynamic = 'force-dynamic';
+
 const FacultyPage = async ({
   params,
 }: {

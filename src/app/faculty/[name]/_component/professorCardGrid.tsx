@@ -36,6 +36,12 @@ export default async function ProfessorCardGrid({
     return (
       <div className="container mx-auto px-4 py-8">
         <p>教授情報が見つかりませんでした。</p>
+        <p className="text-sm text-gray-500 mt-2">
+          検索キー: {facultyKey}
+        </p>
+        <p className="text-sm text-gray-500">
+          取得データ件数: {rawData?.length || 0}件
+        </p>
       </div>
     );
   }

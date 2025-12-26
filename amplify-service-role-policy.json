@@ -1,0 +1,52 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PushLogs",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "arn:aws:logs:ap-northeast-1:588699679784:log-group:/aws/amplify/*:log-stream:*"
+        },
+        {
+            "Sid": "CreateLogGroup",
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": "arn:aws:logs:ap-northeast-1:588699679784:log-group:/aws/amplify/*"
+        },
+        {
+            "Sid": "DescribeLogGroups",
+            "Effect": "Allow",
+            "Action": "logs:DescribeLogGroups",
+            "Resource": "arn:aws:logs:ap-northeast-1:588699679784:log-group:*"
+        },
+        {
+            "Sid": "DynamoDBAccess",
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:GetItem",
+                "dynamodb:Query",
+                "dynamodb:Scan",
+                "dynamodb:BatchGetItem"
+            ],
+            "Resource": [
+                "arn:aws:dynamodb:ap-northeast-1:588699679784:table/dev-professors-compendium",
+                "arn:aws:dynamodb:ap-northeast-1:588699679784:table/dev-professors-compendium/index/*"
+            ]
+        },
+        {
+            "Sid": "S3Access",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::dev-professors-compendium",
+                "arn:aws:s3:::dev-professors-compendium/*"
+            ]
+        }
+    ]
+}
