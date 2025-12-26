@@ -7,6 +7,7 @@ export type FacultyData = {
   PK: string;
   SK: string;
   facultyName: string;
+  englishFacultyName: string;
   facultyDescription: string;
   FacultyImage: string;
   departments: Array<{
