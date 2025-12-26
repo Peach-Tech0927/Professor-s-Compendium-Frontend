@@ -4,8 +4,6 @@ import ClientProfessorPage from "./page.client";
 import { ProfessorPersonalData } from "./_component/personal/ProfessorPersonalView";
 import { Lesson } from "./_component/lesson/LessonListView";
 
-export const dynamic = 'force-dynamic';
-
 export default async function ProfessorPage({
   params,
   }: {
