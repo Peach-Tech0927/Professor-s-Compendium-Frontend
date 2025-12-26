@@ -1,8 +1,19 @@
 import Link from "next/link";
 import FacultyCard from "./FacultyCard";
 import { queryByPK } from "@/lib/dynamodb";
-import { FacultyData } from "@/app/_component/FacultyCardGrid";
 //import mockData from "@/data/mock-db.json";
+
+export type FacultyData = {
+  PK: string;
+  SK: string;
+  facultyName: string;
+  facultyDescription: string;
+  FacultyImage: string;
+  departments: Array<{
+    name: string;
+    englishName: string;
+  }>;
+};
 
 const FacultyCardGrid = async()=>{
   const allFaculties = (await queryByPK("FACULTIES"))as FacultyData[]| undefined;
