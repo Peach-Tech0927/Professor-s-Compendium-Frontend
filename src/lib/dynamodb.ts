@@ -2,6 +2,16 @@
 import {DynamoDBClient} from "@aws-sdk/client-dynamodb";
 import { DynamoDBDocumentClient, GetCommand, QueryCommand } from "@aws-sdk/lib-dynamodb";
 
+// デバッグ用ログ
+console.log('DynamoDB環境変数チェック:', {
+    hasDynamoDBAccessKey: !!process.env.DYNAMODB_ACCESS_KEY_ID,
+    hasDynamoDBSecretKey: !!process.env.DYNAMODB_SECRET_ACCESS_KEY,
+    hasAWSAccessKey: !!process.env.AWS_ACCESS_KEY_ID,
+    hasAWSSecretKey: !!process.env.AWS_SECRET_ACCESS_KEY,
+    region: process.env.DYNAMODB_REGION || process.env.AWS_REGION || 'ap-northeast-1',
+    allEnvKeys: Object.keys(process.env).filter(key => key.includes('DYNAMO') || key.includes('AWS'))
+});
+
 const dynamodbClient = new DynamoDBClient({
     region: process.env.DYNAMODB_REGION || process.env.AWS_REGION || 'ap-northeast-1',
     credentials: process.env.DYNAMODB_ACCESS_KEY_ID && process.env.DYNAMODB_SECRET_ACCESS_KEY
