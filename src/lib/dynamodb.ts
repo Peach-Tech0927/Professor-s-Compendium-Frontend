@@ -2,51 +2,62 @@
 import {DynamoDBClient} from "@aws-sdk/client-dynamodb";
 import { DynamoDBDocumentClient, GetCommand, QueryCommand } from "@aws-sdk/lib-dynamodb";
 
-// Amplify環境かローカル環境かを判定
-const isAmplifyEnvironment = process.env.AWS_EXECUTION_ENV?.includes('AWS_Lambda') ||
-                             process.env.AWS_LAMBDA_FUNCTION_NAME !== undefined ||
-                             process.env.AMPLIFY_COMPUTE === 'true';
+// DynamoDBクライアントのシングルトン（遅延初期化）
+let docClient: DynamoDBDocumentClient | null = null;
 
-// 認証情報の設定
-const getCredentials = () => {
-    // Amplify環境では必ずundefined（IAMロールを使用）
-    if (isAmplifyEnvironment) {
-        console.log('[DynamoDB] Amplify環境を検出: IAMロールを使用します');
+// DynamoDBクライアントを取得（初回呼び出し時に初期化）
+const getDocClient = () => {
+    if (docClient) {
+        return docClient;
+    }
+
+    // Amplify環境かローカル環境かを判定
+    const isAmplifyEnvironment = process.env.AWS_EXECUTION_ENV?.includes('AWS_Lambda') ||
+                                 process.env.AWS_LAMBDA_FUNCTION_NAME !== undefined ||
+                                 process.env.AMPLIFY_COMPUTE === 'true';
+
+    // 認証情報の設定
+    const getCredentials = () => {
+        // Amplify環境では必ずundefined（IAMロールを使用）
+        if (isAmplifyEnvironment) {
+            console.log('[DynamoDB] Amplify環境を検出: IAMロールを使用します');
+            return undefined;
+        }
+
+        // ローカル環境では.envファイルの認証情報を使用
+        if (process.env.AWS_ACCESS_KEY_ID && process.env.AWS_SECRET_ACCESS_KEY) {
+            console.log('[DynamoDB] ローカル環境を検出: .env認証情報を使用します');
+            return {
+                accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+                secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+            };
+        }
+
+        console.log('[DynamoDB] 認証情報が見つかりません: デフォルトプロバイダーチェーンを使用');
         return undefined;
-    }
+    };
 
-    // ローカル環境では.envファイルの認証情報を使用
-    if (process.env.AWS_ACCESS_KEY_ID && process.env.AWS_SECRET_ACCESS_KEY) {
-        console.log('[DynamoDB] ローカル環境を検出: .env認証情報を使用します');
-        return {
-            accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-            secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-        };
-    }
+    const dynamodbClient = new DynamoDBClient({
+        region: process.env.AWS_REGION || 'ap-northeast-1',
+        credentials: getCredentials(),
+    });
 
-    console.log('[DynamoDB] 認証情報が見つかりません: デフォルトプロバイダーチェーンを使用');
-    return undefined;
+    docClient = DynamoDBDocumentClient.from(dynamodbClient);
+    return docClient;
 };
-
-const dynamodbClient = new DynamoDBClient({
-    region: process.env.AWS_REGION || 'ap-northeast-1',
-    credentials: getCredentials(),
-});
-
-const docClient = DynamoDBDocumentClient.from(dynamodbClient);
 
 export async function getBasicInfo(professorId: string) {
   const params = {
     TableName: 'dev-professors-compendium',
     IndexName: 'GSI1',
-    KeyConditionExpression: 'SK = :sk', 
+    KeyConditionExpression: 'SK = :sk',
     ExpressionAttributeValues: {
       ':sk': `PROF#${professorId}`,
     },
     Limit: 1,
   };try {
     const command = new QueryCommand(params);
-    const response = await docClient.send(command);
+    const response = await getDocClient().send(command);
     return response.Items ? response.Items[0] : null;
   } catch (error) {
     console.error("DynamoDB (GSI Query) でエラー:", error);
@@ -65,7 +76,7 @@ export async function getDynamoDBItem(professorId: string, sk:string) {
   };
   try {
     const command = new GetCommand(params);
-    const response = await docClient.send(command);
+    const response = await getDocClient().send(command);
     return response.Item;
   } catch (error) {
     console.error("DynamoDB (GetItem) でエラー:", error);
@@ -84,7 +95,7 @@ export async function queryDynamoDBItems(professorId: string, skPrefix: string) 
     };
     try {
         const command = new QueryCommand(params);
-        const response = await docClient.send(command);
+        const response = await getDocClient().send(command);
         return response.Items || [];
     } catch (error) {
         console.error("DynamoDB (Query) でエラー:", error);
@@ -103,7 +114,7 @@ export async function queryByPK(pk: string) {
 
   try {
     const command = new QueryCommand(params);
-    const response = await docClient.send(command);
+    const response = await getDocClient().send(command);
     return response.Items;
   } catch (error) {
     console.error("DynamoDB (Query) でエラー:", error);
