@@ -32,7 +32,8 @@
                 "dynamodb:BatchGetItem"
             ],
             "Resource": [
-                "*"
+                "arn:aws:dynamodb:ap-northeast-1:588699679784:table/dev-professors-compendium",
+                "arn:aws:dynamodb:ap-northeast-1:588699679784:table/dev-professors-compendium/index/*"
             ]
         },
         {
